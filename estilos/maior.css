@@ -1,0 +1,76 @@
+/* Estilos para Telas Grandes (Desktop e Tablets em Paisagem) */
+@media screen and (min-width: 768px) {
+  /* Ocultar botão hambúrguer */
+  .menu-hamburguer {
+    display: none;
+  }
+
+  /* Exibir menu de navegação horizontal */
+  .navegacao-site ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .navegacao-site a {
+    border-bottom: none;
+    border-right: 1px solid var(--cor-secundaria);
+    padding: 0.85rem 1.75rem;
+  }
+
+  .navegacao-site a.ativo {
+    border-left: none;
+    border-bottom: 4px solid #38bdf8;
+    background-color: #0f172a;
+  }
+
+  /* Layout de 2 colunas para as seções superiores */
+  .secoes-superiores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .secao-foto .secao-corpo {
+    min-height: 280px;
+  }
+
+  .foto-estudante {
+    width: 250px;
+  }
+
+  /* Grade de 3 colunas para os cartões de cursos */
+  .cursos-grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .curso-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Ajuste no cabeçalho */
+  .cabecalho-site {
+    padding: 1rem 2rem;
+  }
+
+  .marca-site img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .marca-site span {
+    font-size: 1.4rem;
+  }
+
+  .conteudo-principal {
+    padding: 2rem;
+  }
+
+  .conteudo-principal h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+}

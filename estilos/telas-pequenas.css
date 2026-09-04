@@ -1,0 +1,304 @@
+/* Paleta de Cores e Tipografia Base */
+:root {
+  --cor-primaria: #1e293b;
+  --cor-secundaria: #334155;
+  --cor-fundo: #f8fafc;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1e293b;
+  --cor-texto-claro: #ffffff;
+  --cor-borda: #cbd5e1;
+  --cor-concluido-bg: #dcfce7;
+  --cor-concluido-texto: #14532d;
+  --cor-concluido-borda: #86efac;
+  --cor-pendente-bg: #f1f5f9;
+  --cor-pendente-texto: #334155;
+  --cor-pendente-borda: #cbd5e1;
+  --fonte-principal: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+.cabecalho-site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cor-superficie);
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--cor-primaria);
+}
+
+.marca-site {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.marca-site img {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.marca-site span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+/* Botão Hamburguer */
+.menu-hamburguer {
+  background: none;
+  border: 1px solid var(--cor-primaria);
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
+  cursor: pointer;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.menu-hamburguer:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+/* Navegação */
+.navegacao-site {
+  background-color: var(--cor-primaria);
+}
+
+.navegacao-site ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+}
+
+.navegacao-site.aberto ul {
+  display: flex;
+}
+
+.navegacao-site a {
+  display: block;
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.navegacao-site a:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.navegacao-site a.ativo {
+  background-color: #0f172a;
+  border-left: 4px solid #38bdf8;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+.conteudo-principal h1 {
+  font-size: 1.75rem;
+  color: var(--cor-primaria);
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--cor-borda);
+  padding-bottom: 0.5rem;
+}
+
+/* Seções */
+.secoes-superiores {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.secao-bloco {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.secao-bloco h2 {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  margin: 0;
+  padding: 0.65rem 1rem;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.secao-corpo {
+  padding: 1rem;
+}
+
+.secao-foto .secao-corpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f5f9;
+}
+
+.foto-estudante {
+  max-width: 100%;
+  width: 280px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* Seção de Cursos */
+.secao-cursos {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.secao-cursos h2 {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  margin: 0;
+  padding: 0.65rem 1rem;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.cursos-painel {
+  padding: 1rem;
+}
+
+/* Botões de Filtro */
+.botoes-grupo {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.botao-opcao {
+  font-family: var(--fonte-principal);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  background-color: #e2e8f0;
+  color: var(--cor-primaria);
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botao-opcao:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+}
+
+.botao-opcao.ativo {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  border-color: var(--cor-primaria);
+}
+
+/* Grade de Cursos */
+.cursos-grade {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.curso-item {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid var(--cor-borda);
+  transition: transform 0.15s ease;
+}
+
+.curso-concluido {
+  background-color: var(--cor-concluido-bg);
+  color: var(--cor-concluido-texto);
+  border-color: var(--cor-concluido-borda);
+}
+
+.curso-pendente {
+  background-color: var(--cor-pendente-bg);
+  color: var(--cor-pendente-texto);
+  border-color: var(--cor-pendente-borda);
+}
+
+.creditos-resumo {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--cor-primaria);
+  margin-top: 1rem;
+}
+
+/* Rodapé */
+.rodape-site {
+  background-color: #e2e8f0;
+  border-top: 1px solid var(--cor-borda);
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.redes-sociais a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.redes-sociais a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.redes-sociais img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.rodape-info p {
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: var(--cor-primaria);
+}

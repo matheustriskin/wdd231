@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial - Matheus Santana | WDD 231</title>
+  <meta name="description"
+    content="Página inicial do curso WDD 231 de Matheus Santana. Demonstração de habilidades em desenvolvimento web frontend, HTML, CSS responsivo e JavaScript moderno.">
+  <meta name="author" content="Matheus Santana">
+  <link rel="icon" type="image/svg+xml" href="imagens/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/telas-pequenas.css">
+  <link rel="stylesheet" href="estilos/maior.css">
+  <script src="scripts/navegacao.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/curso.js" defer></script>
+</head>
+
+<body>
+  <header class="cabecalho-site">
+    <div class="marca-site">
+      <img src="imagens/logo.svg" alt="Logotipo do site pessoal de Matheus Santana" width="44" height="44">
+      <span>Matheus Santana</span>
+    </div>
+    <button id="botao-menu" class="menu-hamburguer" aria-label="Abrir Menu">&#9776;</button>
+  </header>
+
+  <nav id="navegacao-principal" class="navegacao-site">
+    <ul>
+      <li><a href="index.html" class="ativo">Página Inicial</a></li>
+      <li><a href="#">Projeto da Câmara</a></li>
+      <li><a href="#">Projeto Final</a></li>
+    </ul>
+  </nav>
+
+  <main class="conteudo-principal">
+    <h1>Página Inicial</h1>
+
+    <div class="secoes-superiores">
+      <section class="secao-bloco secao-sobre">
+        <h2>Sobre Mim</h2>
+        <div class="secao-corpo">
+          <p>Olá! Meu nome é Matheus Santana, sou estudante de Desenvolvimento de Software com ênfase em tecnologias Web
+            Frontend. Sou apaixonado por criar interfaces modernas, acessíveis e de alta usabilidade. Tenho experiência
+            prática com HTML5, CSS3, JavaScript moderno, Python e C#, sempre focado em soluções elegantes e eficientes.
+          </p>
+          <p>Nas horas livres, gosto de pesquisar sobre novas tendências da tecnologia, praticar programação e
+            desenvolver aplicações web que facilitem o dia a dia das pessoas.</p>
+        </div>
+      </section>
+
+      <section class="secao-bloco secao-foto">
+        <h2>Foto do Estudante</h2>
+        <div class="secao-corpo">
+          <img src="imagens/perfil.webp" alt="Fotografia de perfil de Matheus Santana" class="foto-estudante"
+            width="280" height="280">
+        </div>
+      </section>
+    </div>
+
+    <section class="secao-cursos">
+      <h2>Cursos de Certificação Web</h2>
+      <div class="cursos-painel">
+        <div class="botoes-grupo">
+          <button id="filtro-todos" class="botao-opcao ativo">Todos</button>
+          <button id="filtro-cse" class="botao-opcao">CSE</button>
+          <button id="filtro-wdd" class="botao-opcao">WDD</button>
+        </div>
+        <div id="cursos-container" class="cursos-grade"></div>
+        <p class="creditos-resumo">O total de créditos para os cursos listados acima é: <span
+            id="valor-creditos">0</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-site">
+    <div class="redes-sociais">
+      <a href="https://github.com/matheustriskin" target="_blank" rel="noopener"
+        aria-label="Perfil de Matheus Santana no GitHub"><img src="imagens/icone-github.svg"
+          alt="Ícone com link para o GitHub de Matheus Santana" width="28" height="28"></a>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener"
+        aria-label="Perfil de Matheus Santana no LinkedIn"><img src="imagens/icone-linkedin.svg"
+          alt="Ícone com link para o LinkedIn de Matheus Santana" width="28" height="28"></a>
+      <a href="https://x.com" target="_blank" rel="noopener"
+        aria-label="Perfil de Matheus Santana na rede social X"><img src="imagens/icone-x.svg"
+          alt="Ícone com link para a rede social X" width="28" height="28"></a>
+    </div>
+    <div class="rodape-info">
+      <p>&copy; <span id="anoAtual"></span> • Matheus Santana • Bahia, Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </div>
+  </footer>
+</body>
+
+</html>
