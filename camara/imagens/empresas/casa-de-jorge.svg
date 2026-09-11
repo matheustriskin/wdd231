@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <rect width="200" height="120" rx="12" fill="#451a03"/>
+  <circle cx="55" cy="60" r="26" fill="#d97706" opacity="0.25"/>
+  <path d="M40 70 Q55 85 70 70 L68 55 Q55 58 42 55 Z" fill="#f59e0b"/>
+  <path d="M48 50 Q55 42 52 36" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M58 50 Q65 42 62 36" stroke="#fbbf24" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="95" y="55" fill="#fef3c7" font-family="Arial, sans-serif" font-size="14" font-weight="bold">CASA DE JORGE</text>
+  <text x="95" y="73" fill="#f59e0b" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">GASTRONOMIA</text>
+</svg>

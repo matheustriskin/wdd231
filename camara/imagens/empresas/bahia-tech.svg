@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <rect width="200" height="120" rx="12" fill="#0f172a"/>
+  <circle cx="55" cy="60" r="28" fill="#0284c7" opacity="0.2"/>
+  <polygon points="55,38 75,50 75,70 55,82 35,70 35,50" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="55" cy="60" r="8" fill="#38bdf8"/>
+  <text x="95" y="55" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">BAHIA TECH</text>
+  <text x="95" y="75" fill="#38bdf8" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">INOVACAO</text>
+</svg>
