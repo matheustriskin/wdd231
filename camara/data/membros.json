@@ -1,0 +1,82 @@
+[
+  {
+    "nome": "Bahia Tech Inovação",
+    "endereco": "Av. Tancredo Neves, 1200 - Caminho das Árvores, Salvador - BA",
+    "telefone": "(71) 3270-4500",
+    "site": "https://bahiatech.com.br",
+    "imagem": "imagens/empresas/bahia-tech.svg",
+    "nivelAssociacao": 3,
+    "categoria": "Tecnologia da Informação",
+    "descricao": "Soluções corporativas em nuvem, cibersegurança e inteligência de dados para o Nordeste."
+  },
+  {
+    "nome": "Restaurante Casa de Jorge",
+    "endereco": "Largo do Pelourinho, 45 - Centro Histórico, Salvador - BA",
+    "telefone": "(71) 3321-8890",
+    "site": "https://casadejorgeculinaria.com.br",
+    "imagem": "imagens/empresas/casa-de-jorge.svg",
+    "nivelAssociacao": 3,
+    "categoria": "Gastronomia Regional",
+    "descricao": "Culinária afro-baiana autêntica com ingredientes locais e ambiente cultural imersivo."
+  },
+  {
+    "nome": "Salvador Logística & Cargas",
+    "endereco": "Porto de Salvador, Armazém 3 - Comércio, Salvador - BA",
+    "telefone": "(71) 3115-7700",
+    "site": "https://salvadorlog.com.br",
+    "imagem": "imagens/empresas/salvador-log.svg",
+    "nivelAssociacao": 3,
+    "categoria": "Logística e Comércio Exterior",
+    "descricao": "Transporte multimodal e assessoria aduaneira interligando a Bahia aos maiores mercados globais."
+  },
+  {
+    "nome": "Clínica Bem Estar & Saúde",
+    "endereco": "Av. Anita Garibaldi, 890 - Ondina, Salvador - BA",
+    "telefone": "(71) 3452-1120",
+    "site": "https://clinicabemestarba.med.br",
+    "imagem": "imagens/empresas/clinica-bem-estar.svg",
+    "nivelAssociacao": 2,
+    "categoria": "Saúde & Medicina",
+    "descricao": "Centro médico multidisciplinar especializado em diagnósticos rápidos e medicina preventiva."
+  },
+  {
+    "nome": "Solar da Barra Engenharia",
+    "endereco": "Av. Oceânica, 410 - Barra, Salvador - BA",
+    "telefone": "(71) 3264-9002",
+    "site": "https://solardabarraeng.com.br",
+    "imagem": "imagens/empresas/solar-da-barra.svg",
+    "nivelAssociacao": 2,
+    "categoria": "Construção & Arquitetura",
+    "descricao": "Construção sustentável, reformas de alto padrão e projetos com eficiência energética."
+  },
+  {
+    "nome": "EcoBahia Energia Solar",
+    "endereco": "Estrada do Coco, Km 12 - Lauro de Freitas / Salvador - BA",
+    "telefone": "(71) 3379-6400",
+    "site": "https://ecobahiaenergia.com.br",
+    "imagem": "imagens/empresas/ecobahia.svg",
+    "nivelAssociacao": 2,
+    "categoria": "Energia Renovável",
+    "descricao": "Pioneira na instalação de sistemas solares fotovoltaicos para residências e condomínios."
+  },
+  {
+    "nome": "Livraria & Café Farol Cultural",
+    "endereco": "Rua da Paciência, 214 - Rio Vermelho, Salvador - BA",
+    "telefone": "(71) 3334-1875",
+    "site": "https://farolculturalba.com.br",
+    "imagem": "imagens/empresas/farol-cultural.svg",
+    "nivelAssociacao": 1,
+    "categoria": "Cultura & Lazer",
+    "descricao": "Acervo diversificado de literatura baiana, cafés especiais e espaço de coworking colaborativo."
+  },
+  {
+    "nome": "Ateliê Marítimo Artesanatos",
+    "endereco": "Rua Chile, 78 - Centro Histórico, Salvador - BA",
+    "telefone": "(71) 3243-5510",
+    "site": "https://ateliemaritimo.com.br",
+    "imagem": "imagens/empresas/atelie-maritimo.svg",
+    "nivelAssociacao": 1,
+    "categoria": "Artesanato & Design",
+    "descricao": "Peças manuais exclusivas, biojoias e cerâmicas que celebram a identidade marítima da Baía de Todos-os-Santos."
+  }
+]

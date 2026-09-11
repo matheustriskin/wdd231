@@ -91,7 +91,7 @@ async function inicializarDiretorio() {
  * Busca a lista de membros no arquivo JSON local via fetch com async/await
  */
 async function buscarMembros() {
-  const resposta = await fetch('dados/membros.json');
+  const resposta = await fetch('data/membros.json');
   if (!resposta.ok) {
     throw new Error(`Falha HTTP ao buscar membros: status ${resposta.status}`);
   }
@@ -147,7 +147,7 @@ function renderizarMembros(membros, container) {
       </div>
 
       <div class="cabecalho-lista-item">
-        <h2 class="nome-empresa">${membro.nome}</h2>
+        <h3 class="nome-empresa">${membro.nome}</h3>
         <span class="badge-nivel ${nivel.classe}">${nivel.rotulo}</span>
       </div>
 

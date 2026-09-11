@@ -1,64 +1,17 @@
 /* ==========================================================================
    CÂMARA DE COMÉRCIO DE SALVADOR - DIRETÓRIO DE MEMBROS
-   Estilo Autoral e Responsivo (Vanilla CSS) | WDD 231 - Matheus Santana
+   Estilo Otimizado (Vanilla CSS) | WDD 231 - Matheus Santana
    ========================================================================== */
 
-:root {
-  /* Paleta Institucional */
-  --cor-primaria: #0b2545;
-  --cor-primaria-suave: #133c55;
-  --cor-primaria-clara: #1f5f8b;
-  --cor-ouro: #c49a45;
-  --cor-ouro-claro: #d4af37;
-  --cor-ouro-brilho: #f3d06a;
-  
-  /* Níveis de Associação */
-  --badge-ouro-bg: linear-gradient(135deg, #d4af37 0%, #a67c1e 100%);
-  --badge-prata-bg: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
-  --badge-membro-bg: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-
-  /* Neutros e Superfícies */
-  --cor-fundo: #f4f7fa;
-  --cor-card-bg: #ffffff;
-  --cor-texto: #1e293b;
-  --cor-texto-mutado: #64748b;
-  --cor-borda: #e2e8f0;
-  --cor-borda-hover: #cbd5e1;
-
-  /* Tipografia */
-  --fonte-principal: 'Montserrat', system-ui, -apple-system, sans-serif;
-  --fonte-secundaria: 'Open Sans', system-ui, -apple-system, sans-serif;
-
-  /* Sombras e Transições */
-  --sombra-sm: 0 2px 4px rgba(11, 37, 69, 0.05);
-  --sombra-md: 0 4px 16px rgba(11, 37, 69, 0.08);
-  --sombra-lg: 0 10px 28px rgba(11, 37, 69, 0.12);
-  --transicao-padrao: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --raio-borda: 10px;
-}
-
-/* Reset Básico de Box-Sizing */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: var(--fonte-secundaria);
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--cor-texto);
-  background-color: var(--cor-fundo);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font: 1rem/1.6 'Open Sans', sans-serif;
+  color: #1e293b;
+  background-color: #f4f7fa;
 }
 
 img {
@@ -68,106 +21,83 @@ img {
 }
 
 a {
-  color: var(--cor-primaria-suave);
+  color: #133c55;
   text-decoration: none;
-  transition: var(--transicao-padrao);
 }
 
 a:hover {
-  color: var(--cor-ouro-claro);
+  color: #d4af37;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--fonte-principal);
-  color: var(--cor-primaria);
-  margin-top: 0;
-  line-height: 1.25;
+h1, h2, h3, .titulo-rodape, .subtitulo-rodape {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b2545;
+  margin: 0 0 0.5rem;
 }
 
-/* Layout Container */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
 .container {
-  width: 100%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
-/* ==========================================================================
-   CABEÇALHO & MARCA
-   ========================================================================== */
+/* CABEÇALHO E NAVEGAÇÃO */
 .cabecalho-principal {
-  background-color: var(--cor-primaria);
+  background-color: #0b2545;
   color: #ffffff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border-bottom: 3px solid var(--cor-ouro-claro);
+  border-bottom: 3px solid #d4af37;
 }
 
 .container-cabecalho {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding: 0.75rem 1.25rem;
 }
 
 .marca-camara .link-logo {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   color: #ffffff;
 }
 
 .logo-camara {
   width: 48px;
   height: 48px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
-}
-
-.texto-marca {
-  display: flex;
-  flex-direction: column;
 }
 
 .nome-camara {
-  font-family: var(--fonte-principal);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  display: block;
+  font: 700 1.2rem 'Montserrat', sans-serif;
   color: #ffffff;
 }
 
 .subtitulo-camara {
+  display: block;
   font-size: 0.75rem;
-  color: var(--cor-ouro-brilho);
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  color: #f3d06a;
 }
 
-/* ==========================================================================
-   BOTÃO HAMBÚRGUER & NAVEGAÇÃO MOBILE
-   ========================================================================== */
 .botao-hamburguer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 42px;
   height: 42px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background-color: #133c55;
+  border: 1px solid #d4af37;
   border-radius: 6px;
   cursor: pointer;
   padding: 8px;
-  transition: var(--transicao-padrao);
-}
-
-.botao-hamburguer:hover {
-  background-color: rgba(255, 255, 255, 0.16);
-  border-color: var(--cor-ouro-claro);
 }
 
 .icone-barra {
@@ -175,7 +105,7 @@ h1, h2, h3, h4 {
   height: 3px;
   background-color: #ffffff;
   border-radius: 2px;
-  transition: var(--transicao-padrao);
+  transition: 0.25s ease;
 }
 
 .botao-hamburguer.aberto .icone-barra:nth-child(1) {
@@ -191,455 +121,272 @@ h1, h2, h3, h4 {
 }
 
 .navegacao-principal {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: var(--cor-primaria);
-  border-bottom: 2px solid var(--cor-ouro-claro);
+  background-color: #0b2545;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease-in-out;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transition: max-height 0.3s ease;
 }
 
 .navegacao-principal.ativo {
-  max-height: 320px;
+  max-height: 280px;
 }
 
 .lista-navegacao {
   list-style: none;
   margin: 0;
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 1.25rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .link-navegacao {
   display: block;
-  font-family: var(--fonte-principal);
-  font-weight: 600;
-  font-size: 1rem;
-  color: #e2e8f0;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  transition: var(--transicao-padrao);
+  font: 600 1rem 'Montserrat', sans-serif;
+  color: #f8fafc;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
 }
 
 .link-navegacao:hover {
-  background-color: rgba(212, 175, 55, 0.15);
-  color: var(--cor-ouro-brilho);
-  padding-left: 1.25rem;
+  background-color: #133c55;
+  color: #f3d06a;
 }
 
 .link-navegacao.ativo {
-  background-color: var(--cor-ouro-claro);
-  color: var(--cor-primaria);
+  background-color: #d4af37;
+  color: #0b2545;
 }
 
-/* ==========================================================================
-   CONTEÚDO PRINCIPAL DO DIRETÓRIO
-   ========================================================================== */
+/* CONTEÚDO E CONTROLES DO DIRETÓRIO */
 .conteudo-diretorio {
-  flex: 1 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 3.5rem;
+  padding: 2rem 0 3.5rem;
 }
 
 .cabecalho-secao-diretorio {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
   margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--cor-borda);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .titulo-area h1 {
   font-size: 1.85rem;
-  font-weight: 700;
-  color: var(--cor-primaria);
   margin-bottom: 0.35rem;
 }
 
 .descricao-pagina {
-  color: var(--cor-texto-mutado);
-  margin: 0;
+  color: #334155;
+  margin: 0 0 1.25rem;
   max-width: 720px;
-  font-size: 1rem;
 }
 
-/* Controles de Visualização (Grade / Lista) */
 .controles-visualizacao {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  background-color: var(--cor-card-bg);
-  padding: 0.4rem 0.6rem;
-  border-radius: 8px;
-  border: 1px solid var(--cor-borda);
-  box-shadow: var(--sombra-sm);
-  align-self: flex-start;
+  gap: 0.5rem;
 }
 
 .rotulo-visualizacao {
-  font-family: var(--fonte-principal);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--cor-texto-mutado);
-  margin-right: 0.25rem;
+  font: 600 0.85rem 'Montserrat', sans-serif;
+  color: #334155;
 }
 
 .botao-modo {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid transparent;
-  background-color: transparent;
-  color: var(--cor-texto-mutado);
-  font-family: var(--fonte-principal);
-  font-weight: 600;
-  font-size: 0.85rem;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #334155;
+  font: 600 0.85rem 'Montserrat', sans-serif;
   border-radius: 6px;
   cursor: pointer;
-  transition: var(--transicao-padrao);
 }
 
 .botao-modo:hover {
-  color: var(--cor-primaria);
-  background-color: #f1f5f9;
+  background-color: #f8fafc;
+  color: #0b2545;
 }
 
 .botao-modo.ativo {
-  background-color: var(--cor-primaria);
+  background-color: #0b2545;
   color: #ffffff;
-  border-color: var(--cor-primaria);
-  box-shadow: 0 2px 6px rgba(11, 37, 69, 0.2);
+  border-color: #0b2545;
 }
 
 .botao-modo.ativo .icone-modo {
-  fill: var(--cor-ouro-brilho);
+  fill: #f3d06a;
 }
 
-/* ==========================================================================
-   ESTILOS DOS MEMBROS - MODO GRADE (.grade)
-   ========================================================================== */
+/* EXIBIÇÃO EM GRADE (.grade) */
 .membros-container.grade {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
-@media (min-width: 580px) {
-  .membros-container.grade {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-}
-
 .membros-container.grade .cartao-membro {
-  background-color: var(--cor-card-bg);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio-borda);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #0b2545;
+  border-radius: 8px;
+  padding: 1.25rem;
   text-align: center;
-  box-shadow: var(--sombra-sm);
-  transition: var(--transicao-padrao);
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 2px 8px #0b25450d;
 }
 
-.membros-container.grade .cartao-membro:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--sombra-lg);
-  border-color: var(--cor-ouro-claro);
+.membros-container.grade .cartao-membro.ouro {
+  border-top-color: #d4af37;
 }
 
-.membros-container.grade .cartao-membro::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-color: var(--cor-primaria-suave);
-  transition: var(--transicao-padrao);
-}
-
-.membros-container.grade .cartao-membro.ouro::before {
-  background: var(--badge-ouro-bg);
-}
-
-.membros-container.grade .cartao-membro.prata::before {
-  background: var(--badge-prata-bg);
-}
-
-.membros-container.grade .cartao-membro.membro::before {
-  background: var(--badge-membro-bg);
+.membros-container.grade .cartao-membro.prata {
+  border-top-color: #64748b;
 }
 
 .membros-container.grade .logo-empresa-wrapper {
-  width: 100%;
-  max-width: 180px;
-  height: 100px;
-  margin-bottom: 1.25rem;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
-  background-color: #f8fafc;
-  border-radius: 8px;
-  border: 1px solid #edf2f7;
+  margin-bottom: 1rem;
 }
 
 .membros-container.grade .logo-empresa {
-  max-height: 85px;
-  max-width: 100%;
-  object-fit: contain;
+  max-height: 80px;
 }
 
 .membros-container.grade .nome-empresa {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
 }
 
-.membros-container.grade .badge-nivel {
+.badge-nivel {
   display: inline-block;
-  font-family: var(--fonte-principal);
-  font-size: 0.72rem;
-  font-weight: 700;
+  font: 700 0.72rem 'Montserrat', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.75px;
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 50px;
-  color: #ffffff;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.5rem;
 }
 
 .badge-nivel.ouro {
-  background: var(--badge-ouro-bg);
-  box-shadow: 0 2px 6px rgba(184, 134, 11, 0.35);
+  background-color: #d4af37;
+  color: #0b2545;
 }
 
 .badge-nivel.prata {
-  background: var(--badge-prata-bg);
+  background-color: #64748b;
+  color: #ffffff;
 }
 
 .badge-nivel.membro {
-  background: var(--badge-membro-bg);
+  background-color: #0284c7;
+  color: #ffffff;
 }
 
 .membros-container.grade .categoria-empresa {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--cor-primaria-suave);
-  margin-bottom: 0.6rem;
+  color: #133c55;
+  margin: 0 0 0.4rem;
 }
 
 .membros-container.grade .descricao-empresa {
   font-size: 0.88rem;
-  color: var(--cor-texto-mutado);
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
+  color: #334155;
+  margin: 0 0 1rem;
 }
 
 .membros-container.grade .detalhes-contato {
-  width: 100%;
-  border-top: 1px solid var(--cor-borda);
-  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 0.75rem;
   font-size: 0.88rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
 }
 
 .membros-container.grade .item-contato {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  color: var(--cor-texto);
+  margin: 0.35rem 0;
+  color: #334155;
 }
 
 .membros-container.grade .link-site-btn {
   display: inline-block;
-  margin-top: 0.6rem;
-  padding: 0.5rem 1.25rem;
-  background-color: var(--cor-primaria);
+  margin-top: 0.5rem;
+  padding: 0.45rem 1rem;
+  background-color: #0b2545;
   color: #ffffff;
-  font-family: var(--fonte-principal);
-  font-size: 0.82rem;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: var(--transicao-padrao);
+  font: 600 0.82rem 'Montserrat', sans-serif;
+  border-radius: 4px;
 }
 
 .membros-container.grade .link-site-btn:hover {
-  background-color: var(--cor-ouro-claro);
-  color: var(--cor-primaria);
+  background-color: #d4af37;
+  color: #0b2545;
 }
 
-/* ==========================================================================
-   ESTILOS DOS MEMBROS - MODO LISTA (.lista)
-   ========================================================================== */
+/* EXIBIÇÃO EM LISTA (.lista) */
 .membros-container.lista {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.5rem;
 }
 
 .membros-container.lista .cartao-membro {
-  background-color: var(--cor-card-bg);
-  border: 1px solid var(--cor-borda);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  box-shadow: var(--sombra-sm);
-  transition: var(--transicao-padrao);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.85rem 1.25rem;
 }
 
 .membros-container.lista .cartao-membro:nth-child(even) {
   background-color: #f8fafc;
 }
 
-.membros-container.lista .cartao-membro:hover {
-  background-color: #ffffff;
-  border-color: var(--cor-ouro-claro);
-  box-shadow: var(--sombra-md);
-  transform: translateX(4px);
-}
-
 .membros-container.lista .logo-empresa-wrapper,
+.membros-container.lista .categoria-empresa,
 .membros-container.lista .descricao-empresa {
-  display: none; /* Layout de lista focado em dados tabulares compactos */
-}
-
-.membros-container.lista .cabecalho-lista-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-
-.membros-container.lista .nome-empresa {
-  font-size: 1.15rem;
-  margin: 0;
-  color: var(--cor-primaria);
-}
-
-.membros-container.lista .badge-nivel {
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.membros-container.lista .categoria-empresa {
   display: none;
 }
 
+.membros-container.lista .nome-empresa {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
 .membros-container.lista .detalhes-contato {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
   font-size: 0.9rem;
-  color: var(--cor-texto-mutado);
+  margin-top: 0.35rem;
 }
 
 .membros-container.lista .item-contato {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  margin: 0.25rem 0;
 }
 
 .membros-container.lista .link-site-btn {
-  color: var(--cor-primaria-clara);
+  color: #133c55;
   font-weight: 600;
   text-decoration: underline;
 }
 
-.membros-container.lista .link-site-btn:hover {
-  color: var(--cor-ouro-claro);
-}
-
-/* Modo Lista em Telas Médias e Maiores (Formato de Linha Tabular) */
-@media (min-width: 768px) {
-  .membros-container.lista .cartao-membro {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.85rem 1.5rem;
-  }
-
-  .membros-container.lista .cabecalho-lista-item {
-    flex: 1 1 30%;
-    margin-right: 1rem;
-  }
-
-  .membros-container.lista .detalhes-contato {
-    flex: 2 1 65%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.25rem;
-  }
-
-  .membros-container.lista .item-endereco {
-    flex: 2 1 auto;
-  }
-
-  .membros-container.lista .item-telefone {
-    flex: 1 0 auto;
-    white-space: nowrap;
-  }
-
-  .membros-container.lista .item-site {
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
-}
-
-/* ==========================================================================
-   RODAPÉ PRINCIPAL
-   ========================================================================== */
+/* RODAPÉ */
 .rodape-principal {
-  background-color: var(--cor-primaria);
+  background-color: #0b2545;
   color: #cbd5e1;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  border-top: 4px solid var(--cor-ouro-claro);
-  margin-top: auto;
+  padding: 2.5rem 0 1.5rem;
+  border-top: 4px solid #d4af37;
 }
 
 .container-rodape {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.25rem;
-}
-
-.coluna-rodape h3,
-.coluna-rodape h4 {
-  color: #ffffff;
-  font-size: 1.15rem;
-  margin-bottom: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .identidade-rodape {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.85rem;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
 }
 
 .identidade-rodape img {
@@ -647,51 +394,59 @@ h1, h2, h3, h4 {
   height: 36px;
 }
 
+.titulo-rodape {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitulo-rodape {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
 .endereco-camara {
   font-style: normal;
-  line-height: 1.7;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+}
+
+.endereco-camara p {
+  margin: 0.2rem 0;
 }
 
 .endereco-camara a {
-  color: var(--cor-ouro-brilho);
-  display: inline-block;
-}
-
-.endereco-camara a:hover {
-  text-decoration: underline;
+  color: #f3d06a;
 }
 
 .links-redes {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.75rem;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .links-redes a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  width: 38px;
+  height: 38px;
+  background-color: #133c55;
+  border: 1px solid #d4af37;
   border-radius: 50%;
   color: #ffffff;
-  transition: var(--transicao-padrao);
 }
 
 .links-redes a:hover {
-  background-color: var(--cor-ouro-claro);
-  color: var(--cor-primaria);
-  transform: translateY(-3px);
-  border-color: var(--cor-ouro-claro);
+  background-color: #d4af37;
+  color: #0b2545;
 }
 
 .creditos-rodape p {
-  margin: 0.3rem 0;
-  font-size: 0.92rem;
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
 }
 
 .creditos-rodape strong {
@@ -699,70 +454,56 @@ h1, h2, h3, h4 {
 }
 
 .modificacao-texto {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #94a3b8;
-  margin-top: 0.5rem;
 }
 
-/* ==========================================================================
-   MEDIA QUERIES PARA TELAS MAIORES (TABLETS E DESKTOPS)
-   ========================================================================== */
+/* MEDIA QUERIES (TABLETS E DESKTOPS) */
 @media (min-width: 768px) {
-  /* Cabeçalho e Menu Desktop */
   .botao-hamburguer {
     display: none;
   }
 
   .navegacao-principal {
-    position: static;
-    background-color: transparent;
-    border-bottom: none;
     max-height: none;
     overflow: visible;
-    box-shadow: none;
   }
 
   .lista-navegacao {
     flex-direction: row;
     padding: 0;
-    gap: 0.25rem;
   }
 
   .link-navegacao {
     padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-  }
-
-  .link-navegacao:hover {
-    padding-left: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
   }
 
   .cabecalho-secao-diretorio {
-    flex-direction: row;
+    display: flex;
     align-items: flex-end;
     justify-content: space-between;
   }
 
-  .controles-visualizacao {
-    align-self: auto;
+  .descricao-pagina {
+    margin-bottom: 0;
+  }
+
+  .membros-container.lista .cartao-membro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .membros-container.lista .detalhes-contato {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
   }
 
   .container-rodape {
-    grid-template-columns: 1.5fr 1fr 1.2fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  .nome-camara {
-    font-size: 1.35rem;
-  }
-
-  .subtitulo-camara {
-    font-size: 0.82rem;
-  }
-
-  .titulo-area h1 {
-    font-size: 2.2rem;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
