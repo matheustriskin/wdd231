@@ -1,0 +1,607 @@
+/* ==========================================================================
+   CÂMARA DE COMÉRCIO DE SALVADOR - ESTILOS DA PÁGINA INICIAL (HOME)
+   Vanilla CSS Moderno e Responsivo | WDD 231 - Matheus Santana
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. SEÇÃO HERO & CALL TO ACTION (CTA)
+   -------------------------------------------------------------------------- */
+.secao-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #0b2545;
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+}
+
+/* A HERO IMAGE DEVE SER UMA TAG <img> (CONFORME REQUISITO DO PROJETO) */
+.hero-imagem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 37, 69, 0.9) 0%,
+    rgba(11, 37, 69, 0.75) 50%,
+    rgba(19, 60, 85, 0.6) 100%
+  );
+  z-index: 2;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 3.5rem 1.25rem;
+}
+
+.hero-cta-card {
+  max-width: 620px;
+  background-color: rgba(11, 37, 69, 0.88);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-left: 5px solid #d4af37;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.badge-hero {
+  display: inline-block;
+  background-color: #d4af37;
+  color: #0b2545;
+  font: 700 0.78rem 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.hero-titulo {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-texto {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.hero-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-cta-primario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #d4af37 0%, #f3d06a 100%);
+  color: #0b2545;
+  font: 700 1rem 'Montserrat', sans-serif;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-cta-primario:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55);
+  color: #0b2545;
+}
+
+.btn-cta-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font: 600 1rem 'Montserrat', sans-serif;
+  padding: 0.85rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-cta-secundario:hover {
+  background-color: #ffffff;
+  color: #0b2545;
+}
+
+/* --------------------------------------------------------------------------
+   2. CONTEÚDO PRINCIPAL (EVENTOS & PREVISÃO DO TEMPO)
+   -------------------------------------------------------------------------- */
+.conteudo-home {
+  padding: 3rem 0;
+}
+
+.grade-central {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* SEÇÃO DE EVENTOS */
+.secao-eventos {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.05);
+  padding: 1.75rem;
+}
+
+.titulo-secao {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.45rem;
+  color: #0b2545;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.icone-secao {
+  font-size: 1.4rem;
+}
+
+.lista-eventos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cartao-evento {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #133c55;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cartao-evento:hover {
+  transform: translateX(4px);
+  border-left-color: #d4af37;
+  background-color: #f1f5f9;
+}
+
+.data-evento-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+  background-color: #0b2545;
+  color: #ffffff;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.dia-evento {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #f3d06a;
+}
+
+.mes-evento {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.info-evento {
+  flex: 1;
+}
+
+.nome-evento {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0b2545;
+  margin-bottom: 0.25rem;
+}
+
+.detalhes-evento {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+}
+
+.descricao-evento {
+  font-size: 0.9rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* SEÇÃO DE TEMPO (METEOROLOGIA) */
+.secao-tempo {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.05);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-clima-atual {
+  background: linear-gradient(135deg, #0b2545 0%, #133c55 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(11, 37, 69, 0.15);
+}
+
+.cabecalho-clima-atual {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.cidade-clima {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subtitulo-clima {
+  font-size: 0.8rem;
+  color: #f3d06a;
+  margin: 0;
+}
+
+.corpo-clima-atual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.temp-bloco {
+  display: flex;
+  align-items: baseline;
+}
+
+.temperatura-atual {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.unidade-temp {
+  font-size: 1.5rem;
+  color: #d4af37;
+  font-weight: 600;
+  margin-left: 0.15rem;
+}
+
+.detalhe-visual-clima {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icone-clima-atual {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+
+.descricao-clima-atual {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f8fafc;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.dados-extras-clima {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+/* PREVISÃO DE 3 DIAS */
+.bloco-previsao {
+  margin-top: auto;
+}
+
+.subtitulo-previsao {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b2545;
+  margin-bottom: 0.85rem;
+}
+
+.grade-previsao-dias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.card-dia-previsao {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dia-semana-previsao {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0b2545;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.icone-previsao {
+  width: 44px;
+  height: 44px;
+}
+
+.temp-previsao {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #133c55;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.desc-previsao {
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: capitalize;
+  margin-top: 0.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. SEÇÃO DE MEMBROS EM DESTAQUE (SPOTLIGHTS)
+   -------------------------------------------------------------------------- */
+.secao-destaques {
+  margin-top: 1.5rem;
+}
+
+.cabecalho-destaques {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.titulo-destaques {
+  font-size: 1.85rem;
+  color: #0b2545;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-destaques-texto {
+  color: #64748b;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 0.98rem;
+}
+
+.grade-destaques {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.cartao-destaque {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  border-top: 5px solid #0b2545;
+  box-shadow: 0 4px 14px rgba(11, 37, 69, 0.06);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.cartao-destaque:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.12);
+}
+
+.cartao-destaque.ouro {
+  border-top-color: #d4af37;
+}
+
+.cartao-destaque.prata {
+  border-top-color: #94a3b8;
+}
+
+.badge-nivel-destaque {
+  display: inline-block;
+  align-self: center;
+  font: 700 0.75rem 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.badge-nivel-destaque.ouro {
+  background-color: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #facc15;
+}
+
+.badge-nivel-destaque.prata {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.logo-destaque-wrapper {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.logo-destaque-wrapper img {
+  max-height: 80px;
+  max-width: 170px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nome-destaque {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0b2545;
+  margin-bottom: 0.35rem;
+}
+
+.categoria-destaque {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-bottom: 0.75rem;
+}
+
+.descricao-destaque {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.info-contato-destaque {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  color: #334155;
+}
+
+.item-destaque-contato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.item-destaque-contato a {
+  color: #133c55;
+  font-weight: 600;
+}
+
+.item-destaque-contato a:hover {
+  color: #d4af37;
+  text-decoration: underline;
+}
+
+.btn-visitar-site {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #0b2545;
+  color: #ffffff;
+  font: 600 0.85rem 'Montserrat', sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-visitar-site:hover {
+  background-color: #d4af37;
+  color: #0b2545;
+}
+
+/* --------------------------------------------------------------------------
+   4. MEDIA QUERIES (TABLETS E COMPUTADORES)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .hero-wrapper {
+    min-height: 480px;
+  }
+
+  .hero-titulo {
+    font-size: 2.6rem;
+  }
+
+  .grade-central {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .grade-destaques {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-wrapper {
+    min-height: 520px;
+  }
+
+  .hero-conteudo {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .hero-titulo {
+    font-size: 2.9rem;
+  }
+
+  .grade-destaques {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
