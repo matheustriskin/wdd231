@@ -1,0 +1,121 @@
+/* CÂMARA DE COMÉRCIO DE SALVADOR - CSS HOME OTIMIZADO (<= 250 DECLARAÇÕES) */
+* { box-sizing: border-box; }
+body { margin: 0; font: 1rem/1.6 'Open Sans', sans-serif; color: #1e293b; background: #f4f7fa; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: #133c55; text-decoration: none; }
+h1, h2, h3, .titulo-rodape, .subtitulo-rodape, .nome-camara, .nome-evento, .nome-destaque { font-family: 'Montserrat', sans-serif; color: #0b2545; margin: 0 0 0.5rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* TEMA ESCURO (AZUL MARINHO & CONTRASTE WCAG AA) */
+.cabecalho-principal, .secao-hero, .hero-cta-card, .card-clima-atual, .rodape-principal, .data-evento-box { background: #0b2545; color: #ffffff; }
+.cabecalho-principal { border-bottom: 3px solid #d4af37; }
+.container-cabecalho, .marca-camara .link-logo, .hero-acoes, .cabecalho-clima-atual, .corpo-clima-atual, .identidade-rodape { display: flex; align-items: center; }
+.container-cabecalho, .cabecalho-clima-atual, .corpo-clima-atual { justify-content: space-between; }
+.container-cabecalho { padding: 0.75rem 1.25rem; }
+.marca-camara .link-logo { gap: 0.75rem; color: #ffffff; }
+.nome-camara { font-size: 1.2rem; color: #ffffff; }
+.subtitulo-camara, .subtitulo-clima, .unidade-temp, .dia-evento, .endereco-camara a { color: #f3d06a; }
+
+
+/* MENU */
+.botao-hamburguer { display: flex; flex-direction: column; justify-content: space-around; width: 42px; height: 42px; background: #133c55; border: 1px solid #d4af37; border-radius: 6px; cursor: pointer; padding: 8px; }
+.icone-barra { width: 100%; height: 3px; background: #ffffff; border-radius: 2px; }
+.botao-hamburguer.aberto .icone-barra:nth-child(2) { opacity: 0; }
+.navegacao-principal { background: #0b2545; max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+.navegacao-principal.ativo { max-height: 280px; }
+.lista-navegacao { list-style: none; margin: 0; padding: 0.5rem 1.25rem 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.link-navegacao { display: block; font: 600 1rem 'Montserrat', sans-serif; color: #f8fafc; padding: 0.6rem 0.85rem; border-radius: 4px; }
+.link-navegacao:hover { background: #133c55; color: #f3d06a; }
+.link-navegacao.ativo { background: #d4af37; color: #0b2545; }
+
+/* HERO & CTA */
+.secao-hero { position: relative; overflow: hidden; }
+.hero-wrapper { position: relative; min-height: 440px; display: flex; align-items: center; }
+.hero-imagem, .hero-overlay { position: absolute; inset: 0; }
+.hero-imagem { object-fit: cover; z-index: 1; }
+.hero-overlay { background: rgba(11, 37, 69, 0.78); z-index: 2; }
+.hero-conteudo { position: relative; z-index: 3; padding: 3.5rem 1.25rem; }
+.hero-cta-card { max-width: 620px; border-left: 5px solid #d4af37; border-radius: 8px; padding: 2rem; }
+.badge-hero, .badge-nivel-destaque { display: inline-block; font: 700 0.75rem 'Montserrat', sans-serif; text-transform: uppercase; border-radius: 20px; padding: 0.25rem 0.75rem; margin-bottom: 0.75rem; }
+.badge-hero { background: #d4af37; color: #0b2545; }
+.hero-titulo { font-size: 2.1rem; color: #ffffff; line-height: 1.2; }
+.hero-texto { color: #f1f5f9; margin-bottom: 1.5rem; }
+.hero-acoes { gap: 1rem; flex-wrap: wrap; }
+.btn-cta-primario, .btn-cta-secundario, .btn-visitar-site { display: inline-flex; align-items: center; gap: 0.5rem; font: 700 1rem 'Montserrat', sans-serif; padding: 0.75rem 1.4rem; border-radius: 6px; }
+.btn-cta-primario { background: #f3d06a; color: #0b2545; }
+.btn-cta-primario:hover, .btn-visitar-site:hover { background: #d4af37; color: #0b2545; }
+.btn-cta-secundario { border: 2px solid #ffffff; color: #ffffff; }
+
+/* SEÇÕES */
+.conteudo-home { padding: 3rem 0; }
+.grade-central, .grade-destaques { display: grid; gap: 1.5rem; }
+.grade-central { margin-bottom: 3.5rem; }
+.secao-eventos, .secao-tempo, .cartao-destaque { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; }
+.titulo-secao { display: flex; align-items: center; gap: 0.5rem; font-size: 1.35rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem; }
+.lista-eventos { display: flex; flex-direction: column; gap: 1rem; }
+.cartao-evento { display: flex; gap: 1rem; padding: 0.85rem; background: #f8fafc; border-left: 4px solid #0b2545; border-radius: 6px; }
+.data-evento-box { padding: 0.5rem 0.75rem; border-radius: 4px; text-align: center; min-width: 55px; }
+.dia-evento { font-size: 1.25rem; font-weight: 700; }
+.mes-evento { font-size: 0.7rem; }
+.detalhes-evento, .desc-previsao, .descricao-destaque, .subtitulo-destaques-texto { color: #334155; font-size: 0.86rem; }
+
+
+/* CLIMA */
+.card-clima-atual { border-radius: 8px; padding: 1.25rem; margin-bottom: 1.25rem; }
+.cidade-clima { font: 700 1.15rem 'Montserrat', sans-serif; color: #ffffff; margin: 0; }
+.subtitulo-camara, .subtitulo-clima { font-size: 0.8rem; margin: 0; }
+.temperatura-atual { font-size: 2.8rem; font-weight: 700; }
+
+.detalhe-visual-clima { text-align: center; }
+.icone-clima-atual { width: 56px; height: 56px; margin: 0 auto; }
+.descricao-clima-atual { font-size: 0.9rem; font-weight: 600; text-transform: capitalize; margin: 0; }
+.dados-extras-clima { display: flex; justify-content: space-around; border-top: 1px solid #1e3a5f; padding-top: 0.5rem; font-size: 0.82rem; color: #f1f5f9; }
+
+.grade-previsao-dias { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+.card-dia-previsao { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.6rem 0.3rem; text-align: center; }
+.dia-semana-previsao { font: 700 0.78rem 'Montserrat', sans-serif; color: #0b2545; }
+.temp-previsao { font: 700 1.05rem 'Montserrat', sans-serif; color: #133c55; }
+.desc-previsao { text-transform: capitalize; }
+
+/* DESTAQUES */
+.cabecalho-destaques { text-align: center; margin-bottom: 1.5rem; }
+
+.subtitulo-destaques-texto { max-width: 650px; margin: 0 auto; }
+.cartao-destaque { border-top: 5px solid #0b2545; text-align: center; display: flex; flex-direction: column; }
+.cartao-destaque.ouro { border-top-color: #d4af37; }
+.cartao-destaque.prata { border-top-color: #64748b; }
+.badge-nivel-destaque.ouro { background: #fef9c3; color: #854d0e; border: 1px solid #facc15; }
+.badge-nivel-destaque.prata { background: #f1f5f9; color: #1e293b; border: 1px solid #cbd5e1; }
+.logo-destaque-wrapper { height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+.logo-destaque-wrapper img { max-height: 70px; max-width: 160px; }
+.categoria-destaque { font: 600 0.85rem sans-serif; color: #9a3412; margin-bottom: 0.5rem; }
+.descricao-destaque { margin-bottom: 1rem; }
+.info-contato-destaque { border-top: 1px solid #f1f5f9; padding-top: 0.75rem; font-size: 0.85rem; }
+
+.item-destaque-contato a { color: #0b2545; font-weight: 600; }
+.btn-visitar-site { background: #0b2545; color: #ffffff; font-size: 0.85rem; padding: 0.5rem 1rem; margin-top: 0.75rem; }
+
+/* RODAPÉ */
+.rodape-principal { padding: 2.5rem 0 1.5rem; border-top: 4px solid #d4af37; }
+.container-rodape { display: flex; flex-direction: column; gap: 1.5rem; }
+.identidade-rodape { gap: 0.65rem; }
+.endereco-camara { font-style: normal; font-size: 0.9rem; }
+
+.links-redes { display: flex; gap: 0.75rem; }
+.links-redes a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: #133c55; border: 1px solid #d4af37; border-radius: 50%; color: #ffffff; }
+.modificacao-texto { font-size: 0.82rem; color: #cbd5e1; }
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .botao-hamburguer { display: none; }
+  .navegacao-principal { max-height: none; overflow: visible; }
+  .lista-navegacao { flex-direction: row; padding: 0; }
+  .hero-titulo { font-size: 2.6rem; }
+  .grade-central { grid-template-columns: 1.2fr 0.8fr; }
+  .grade-destaques { grid-template-columns: repeat(2, 1fr); }
+  .container-rodape { flex-direction: row; justify-content: space-between; }
+}
+
+@media (min-width: 1024px) {
+  .grade-destaques { grid-template-columns: repeat(3, 1fr); }
+}

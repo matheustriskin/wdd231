@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <rect width="200" height="120" rx="12" fill="#14532d"/>
+  <circle cx="52" cy="60" r="26" fill="#15803d" opacity="0.25"/>
+  <circle cx="52" cy="54" r="10" fill="#facc15"/>
+  <path d="M36 76 Q52 64 68 76 Z" fill="#4ade80"/>
+  <text x="88" y="54" fill="#f0fdf4" font-family="Arial, sans-serif" font-size="15" font-weight="bold">ECOBAHIA</text>
+  <text x="88" y="72" fill="#facc15" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">ENERGIA SOLAR</text>
+</svg>

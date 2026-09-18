@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <rect width="200" height="120" rx="12" fill="#18181b"/>
+  <circle cx="52" cy="60" r="26" fill="#e11d48" opacity="0.2"/>
+  <polygon points="49,42 55,42 58,74 46,74" fill="#fb7185"/>
+  <rect x="47" y="37" width="10" height="5" fill="#fecdd3"/>
+  <polygon points="52,32 46,37 58,37" fill="#e11d48"/>
+  <circle cx="52" cy="46" r="2" fill="#fef08a"/>
+  <text x="88" y="54" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="bold">FAROL CULTURAL</text>
+  <text x="88" y="72" fill="#fb7185" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">LIVRARIA &amp; CAFE</text>
+</svg>

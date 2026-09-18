@@ -1,0 +1,509 @@
+/* ==========================================================================
+   CÂMARA DE COMÉRCIO DE SALVADOR - DIRETÓRIO DE MEMBROS
+   Estilo Otimizado (Vanilla CSS) | WDD 231 - Matheus Santana
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1rem/1.6 'Open Sans', sans-serif;
+  color: #1e293b;
+  background-color: #f4f7fa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #133c55;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4af37;
+}
+
+h1, h2, h3, .titulo-rodape, .subtitulo-rodape {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b2545;
+  margin: 0 0 0.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+.cabecalho-principal {
+  background-color: #0b2545;
+  color: #ffffff;
+  border-bottom: 3px solid #d4af37;
+}
+
+.container-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+}
+
+.marca-camara .link-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+}
+
+.logo-camara {
+  width: 48px;
+  height: 48px;
+}
+
+.nome-camara {
+  display: block;
+  font: 700 1.2rem 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.subtitulo-camara {
+  display: block;
+  font-size: 0.75rem;
+  color: #f3d06a;
+}
+
+.botao-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 42px;
+  height: 42px;
+  background-color: #133c55;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icone-barra {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: 0.25s ease;
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(2) {
+  opacity: 0;
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navegacao-principal {
+  background-color: #0b2545;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.navegacao-principal.ativo {
+  max-height: 280px;
+}
+
+.lista-navegacao {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.link-navegacao {
+  display: block;
+  font: 600 1rem 'Montserrat', sans-serif;
+  color: #f8fafc;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+}
+
+.link-navegacao:hover {
+  background-color: #133c55;
+  color: #f3d06a;
+}
+
+.link-navegacao.ativo {
+  background-color: #d4af37;
+  color: #0b2545;
+}
+
+/* CONTEÚDO E CONTROLES DO DIRETÓRIO */
+.conteudo-diretorio {
+  padding: 2rem 0 3.5rem;
+}
+
+.cabecalho-secao-diretorio {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.titulo-area h1 {
+  font-size: 1.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.descricao-pagina {
+  color: #334155;
+  margin: 0 0 1.25rem;
+  max-width: 720px;
+}
+
+.controles-visualizacao {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rotulo-visualizacao {
+  font: 600 0.85rem 'Montserrat', sans-serif;
+  color: #334155;
+}
+
+.botao-modo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #334155;
+  font: 600 0.85rem 'Montserrat', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botao-modo:hover {
+  background-color: #f8fafc;
+  color: #0b2545;
+}
+
+.botao-modo.ativo {
+  background-color: #0b2545;
+  color: #ffffff;
+  border-color: #0b2545;
+}
+
+.botao-modo.ativo .icone-modo {
+  fill: #f3d06a;
+}
+
+/* EXIBIÇÃO EM GRADE (.grade) */
+.membros-container.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.membros-container.grade .cartao-membro {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #0b2545;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 8px #0b25450d;
+}
+
+.membros-container.grade .cartao-membro.ouro {
+  border-top-color: #d4af37;
+}
+
+.membros-container.grade .cartao-membro.prata {
+  border-top-color: #64748b;
+}
+
+.membros-container.grade .logo-empresa-wrapper {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.membros-container.grade .logo-empresa {
+  max-height: 80px;
+}
+
+.membros-container.grade .nome-empresa {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.badge-nivel {
+  display: inline-block;
+  font: 700 0.72rem 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.badge-nivel.ouro {
+  background-color: #d4af37;
+  color: #0b2545;
+}
+
+.badge-nivel.prata {
+  background-color: #64748b;
+  color: #ffffff;
+}
+
+.badge-nivel.membro {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.membros-container.grade .categoria-empresa {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #133c55;
+  margin: 0 0 0.4rem;
+}
+
+.membros-container.grade .descricao-empresa {
+  font-size: 0.88rem;
+  color: #334155;
+  margin: 0 0 1rem;
+}
+
+.membros-container.grade .detalhes-contato {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.membros-container.grade .item-contato {
+  margin: 0.35rem 0;
+  color: #334155;
+}
+
+.membros-container.grade .link-site-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.45rem 1rem;
+  background-color: #0b2545;
+  color: #ffffff;
+  font: 600 0.82rem 'Montserrat', sans-serif;
+  border-radius: 4px;
+}
+
+.membros-container.grade .link-site-btn:hover {
+  background-color: #d4af37;
+  color: #0b2545;
+}
+
+/* EXIBIÇÃO EM LISTA (.lista) */
+.membros-container.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.membros-container.lista .cartao-membro {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.85rem 1.25rem;
+}
+
+.membros-container.lista .cartao-membro:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.membros-container.lista .logo-empresa-wrapper,
+.membros-container.lista .categoria-empresa,
+.membros-container.lista .descricao-empresa {
+  display: none;
+}
+
+.membros-container.lista .nome-empresa {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.membros-container.lista .detalhes-contato {
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+.membros-container.lista .item-contato {
+  margin: 0.25rem 0;
+}
+
+.membros-container.lista .link-site-btn {
+  color: #133c55;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* RODAPÉ */
+.rodape-principal {
+  background-color: #0b2545;
+  color: #cbd5e1;
+  padding: 2.5rem 0 1.5rem;
+  border-top: 4px solid #d4af37;
+}
+
+.container-rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.identidade-rodape {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.identidade-rodape img {
+  width: 36px;
+  height: 36px;
+}
+
+.titulo-rodape {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitulo-rodape {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.endereco-camara {
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.endereco-camara p {
+  margin: 0.2rem 0;
+}
+
+.endereco-camara a {
+  color: #f3d06a;
+}
+
+.links-redes {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.links-redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #133c55;
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.links-redes a:hover {
+  background-color: #d4af37;
+  color: #0b2545;
+}
+
+.creditos-rodape p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.creditos-rodape strong {
+  color: #ffffff;
+}
+
+.modificacao-texto {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+/* MEDIA QUERIES (TABLETS E DESKTOPS) */
+@media (min-width: 768px) {
+  .botao-hamburguer {
+    display: none;
+  }
+
+  .navegacao-principal {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .lista-navegacao {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .link-navegacao {
+    padding: 0.5rem 1rem;
+  }
+
+  .cabecalho-secao-diretorio {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .descricao-pagina {
+    margin-bottom: 0;
+  }
+
+  .membros-container.lista .cartao-membro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .membros-container.lista .detalhes-contato {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+  }
+
+  .container-rodape {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
