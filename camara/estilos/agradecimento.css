@@ -1,0 +1,378 @@
+/* Câmara de Comércio de Salvador - Confirmação / Agradecimento | WDD 231 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1rem/1.6 'Open Sans', sans-serif;
+  color: #1e293b;
+  background-color: #f4f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #133c55;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+a:hover {
+  color: #d4af37;
+}
+
+h1, h2, h3, .titulo-rodape, .subtitulo-rodape {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b2545;
+  margin: 0 0 0.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* CABEÇALHO */
+.cabecalho-principal {
+  background-color: #0b2545;
+  color: #ffffff;
+  border-bottom: 3px solid #d4af37;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+}
+
+.marca-camara .link-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+}
+
+.logo-camara {
+  width: 48px;
+  height: 48px;
+}
+
+.nome-camara {
+  display: block;
+  font: 700 1.2rem 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.subtitulo-camara {
+  display: block;
+  font-size: 0.75rem;
+  color: #f3d06a;
+}
+
+.botao-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 42px;
+  height: 42px;
+  background-color: #133c55;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icone-barra {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: 0.25s ease;
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.botao-hamburguer.aberto .icone-barra:nth-child(2) { opacity: 0; }
+.botao-hamburguer.aberto .icone-barra:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+.navegacao-principal {
+  background-color: #0b2545;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.navegacao-principal.ativo {
+  max-height: 280px;
+}
+
+.lista-navegacao {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.link-navegacao {
+  display: block;
+  font: 600 1rem 'Montserrat', sans-serif;
+  color: #f8fafc;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+}
+
+.link-navegacao:hover {
+  background-color: #133c55;
+  color: #f3d06a;
+}
+
+/* ÁREA DE AGRADECIMENTO */
+.conteudo-agradecimento {
+  flex: 1;
+  padding: 2.5rem 0 4rem;
+}
+
+.cartao-confirmacao {
+  background-color: #ffffff;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 2.25rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 14px #0000000d;
+}
+
+.icone-sucesso-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  background-color: #ecfdf5;
+  border: 2px solid #10b981;
+  color: #059669;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.confirmacao-cabecalho {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.confirmacao-cabecalho h1 {
+  font-size: 1.85rem;
+  color: #0b2545;
+}
+
+.confirmacao-cabecalho p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.dados-confirmacao-grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.dado-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-bottom: 1px dashed #cbd5e1;
+  padding-bottom: 0.65rem;
+}
+
+.dado-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dado-rotulo {
+  font: 700 0.78rem 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+.dado-valor {
+  font-size: 1.05rem;
+  color: #0b2545;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.acoes-confirmacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-confirmacao-primario {
+  background-color: #0b2545;
+  color: #ffffff;
+  font: 700 0.95rem 'Montserrat', sans-serif;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+}
+
+.btn-confirmacao-primario:hover {
+  background-color: #133c55;
+  color: #f3d06a;
+}
+
+.btn-confirmacao-secundario {
+  background: none;
+  color: #133c55;
+  border: 1.5px solid #133c55;
+  font: 600 0.95rem 'Montserrat', sans-serif;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+}
+
+.btn-confirmacao-secundario:hover {
+  background-color: #133c55;
+  color: #ffffff;
+}
+
+/* RODAPÉ */
+.rodape-principal {
+  background-color: #0b2545;
+  color: #cbd5e1;
+  padding: 2rem 0 1.25rem;
+  margin-top: auto;
+  border-top: 3px solid #d4af37;
+}
+
+.container-rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.identidade-rodape {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-rodape {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.endereco-camara {
+  font-style: normal;
+  font-size: 0.88rem;
+}
+
+.endereco-camara p {
+  margin: 0.15rem 0;
+}
+
+.endereco-camara a {
+  color: #f3d06a;
+}
+
+.subtitulo-rodape {
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.links-redes {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.links-redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #133c55;
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.links-redes a:hover {
+  background-color: #d4af37;
+  color: #0b2545;
+}
+
+.creditos-rodape p {
+  margin: 0.2rem 0;
+  font-size: 0.88rem;
+}
+
+.creditos-rodape strong {
+  color: #ffffff;
+}
+
+.modificacao-texto {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 640px) {
+  .dados-confirmacao-grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dado-item.completo {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .botao-hamburguer {
+    display: none;
+  }
+  .navegacao-principal {
+    max-height: none;
+    overflow: visible;
+  }
+  .lista-navegacao {
+    flex-direction: row;
+    padding: 0;
+  }
+  .link-navegacao {
+    padding: 0.5rem 0.9rem;
+  }
+  .container-rodape {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
