@@ -1,0 +1,961 @@
+/* ==========================================================================
+   CÂMARA DE COMÉRCIO DE SALVADOR - PÁGINA ASSOCIE-SE & AGRADECIMENTO
+   WDD 231 - Matheus Santana | Vanilla CSS Moderno e Acessível
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. RESET E VARIÁVEIS DE DESIGN
+   -------------------------------------------------------------------------- */
+:root {
+  --cor-primaria: #0b2545;
+  --cor-secundaria: #133c55;
+  --cor-destaque: #d4af37;
+  --cor-destaque-claro: #f3d06a;
+  --cor-fundo: #f4f7fa;
+  --cor-fundo-card: #ffffff;
+  --cor-texto: #1e293b;
+  --cor-texto-suave: #475569;
+  --cor-borda: #cbd5e1;
+  --cor-borda-foco: #133c55;
+  --cor-sucesso: #059669;
+  --cor-np: #2563eb;
+  --cor-bronze: #cd7f32;
+  --cor-silver: #718096;
+  --cor-gold: #d4af37;
+  --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --sombra-card: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --sombra-destaque: 0 12px 24px -4px rgba(19, 60, 85, 0.18);
+  --raio-borda: 10px;
+  --transicao-suave: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1rem/1.6 'Open Sans', sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  transition: var(--transicao-suave);
+}
+
+a:hover {
+  color: var(--cor-destaque);
+}
+
+h1, h2, h3, h4, .titulo-rodape, .subtitulo-rodape {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-primaria);
+  margin: 0 0 0.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. CABEÇALHO E NAVEGAÇÃO
+   -------------------------------------------------------------------------- */
+.cabecalho-principal {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border-bottom: 3px solid var(--cor-destaque);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+}
+
+.marca-camara .link-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+}
+
+.logo-camara {
+  width: 48px;
+  height: 48px;
+}
+
+.nome-camara {
+  display: block;
+  font: 700 1.2rem 'Montserrat', sans-serif;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.subtitulo-camara {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--cor-destaque-claro);
+}
+
+.botao-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 42px;
+  height: 42px;
+  background-color: var(--cor-secundaria);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icone-barra {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: 0.25s ease;
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(2) {
+  opacity: 0;
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navegacao-principal {
+  background-color: var(--cor-primaria);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.navegacao-principal.ativo {
+  max-height: 280px;
+}
+
+.lista-navegacao {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.link-navegacao {
+  display: block;
+  font: 600 1rem 'Montserrat', sans-serif;
+  color: #f8fafc;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+}
+
+.link-navegacao:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-destaque-claro);
+}
+
+.link-navegacao.ativo {
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+}
+
+/* --------------------------------------------------------------------------
+   3. SEÇÃO PRINCIPAL - ASSOCIE-SE
+   -------------------------------------------------------------------------- */
+.conteudo-associacao,
+.conteudo-agradecimento {
+  flex: 1;
+  padding: 2.5rem 0 4rem;
+}
+
+.cabecalho-secao-associacao {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge-secao {
+  display: inline-block;
+  background-color: rgba(212, 175, 55, 0.15);
+  color: var(--cor-secundaria);
+  border: 1px solid var(--cor-destaque);
+  font: 700 0.8rem 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+.cabecalho-secao-associacao h1 {
+  font-size: 2.1rem;
+  color: var(--cor-primaria);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.descricao-pagina {
+  color: var(--cor-texto-suave);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. LAYOUT EM GRADE: FORMULÁRIO E CARTÕES DE MEMBRESIA
+   -------------------------------------------------------------------------- */
+.layout-associacao {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. FORMULÁRIO DE PEDIDO DE ASSOCIAÇÃO
+   -------------------------------------------------------------------------- */
+.area-formulario {
+  background-color: var(--cor-fundo-card);
+  padding: 2rem;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-card);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.formulario-titulo {
+  font-size: 1.4rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formulario-subtitulo {
+  font-size: 0.92rem;
+  color: var(--cor-texto-suave);
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--cor-borda);
+  padding-bottom: 1rem;
+}
+
+.form-associacao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Agrupamento de campos */
+.grupo-linha {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Cada controle encapsulado em <label> conforme exigência de acessibilidade */
+.campo-rotulo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+.campo-rotulo .texto-rotulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.campo-rotulo .obrigatorio {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.campo-rotulo .dica-campo {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--cor-texto-suave);
+}
+
+/* Estilo unificado para inputs, select e textarea */
+.campo-rotulo input[type="text"],
+.campo-rotulo input[type="email"],
+.campo-rotulo input[type="tel"],
+.campo-rotulo select,
+.campo-rotulo textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.75rem 0.95rem;
+  border: 1.5px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: var(--cor-texto);
+  transition: var(--transicao-suave);
+  outline: none;
+  width: 100%;
+}
+
+.campo-rotulo input:focus,
+.campo-rotulo select:focus,
+.campo-rotulo textarea:focus {
+  border-color: var(--cor-secundaria);
+  box-shadow: 0 0 0 3px rgba(19, 60, 85, 0.15);
+  background-color: #fafcff;
+}
+
+/* Validação visual de estado */
+.campo-rotulo input:required:valid,
+.campo-rotulo select:required:valid {
+  border-color: #10b981;
+}
+
+.campo-rotulo textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botão de envio */
+.btn-enviar {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.95rem 1.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.25);
+  transition: var(--transicao-suave);
+}
+
+.btn-enviar:hover {
+  background: linear-gradient(135deg, var(--cor-secundaria), #1a4f6e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 37, 69, 0.35);
+  color: var(--cor-destaque-claro);
+}
+
+.btn-enviar:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   6. CARTÕES DE NÍVEIS DE ASSOCIAÇÃO (COM ANIMAÇÃO DE CARREGAMENTO)
+   -------------------------------------------------------------------------- */
+.area-niveis {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.area-niveis-cabecalho {
+  margin-bottom: 0.5rem;
+}
+
+.area-niveis-cabecalho h2 {
+  font-size: 1.4rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.35rem;
+}
+
+.area-niveis-cabecalho p {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.grade-cartoes-niveis {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ANIMAÇÃO INICIAL REQUERIDA (Keyframes de carregamento suave com cor e escala) */
+@keyframes animacaoEntradaCartao {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    opacity: 0.85;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: var(--sombra-card);
+  }
+}
+
+.cartao-nivel {
+  background-color: var(--cor-fundo-card);
+  border-radius: var(--raio-borda);
+  padding: 1.5rem;
+  border-left: 6px solid var(--cor-primaria);
+  box-shadow: var(--sombra-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transicao-suave);
+
+  /* Aplicação da animação com preenchimento para frente */
+  animation: animacaoEntradaCartao 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0; /* Começa oculto até a animação disparar */
+}
+
+/* Delays escalonados para cada um dos 4 cartões */
+.cartao-nivel:nth-child(1) {
+  animation-delay: 0.12s;
+  border-left-color: var(--cor-np);
+}
+
+.cartao-nivel:nth-child(2) {
+  animation-delay: 0.26s;
+  border-left-color: var(--cor-bronze);
+}
+
+.cartao-nivel:nth-child(3) {
+  animation-delay: 0.40s;
+  border-left-color: var(--cor-silver);
+}
+
+.cartao-nivel:nth-child(4) {
+  animation-delay: 0.54s;
+  border-left-color: var(--cor-gold);
+}
+
+.cartao-nivel:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-destaque);
+}
+
+.cartao-topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cartao-nivel-nome {
+  font-size: 1.2rem;
+  margin: 0 0 0.25rem;
+  color: var(--cor-primaria);
+}
+
+.cartao-nivel-taxa {
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  background-color: #f1f5f9;
+  color: var(--cor-texto);
+  display: inline-block;
+}
+
+.cartao-nivel.np .cartao-nivel-taxa {
+  background-color: #eff6ff;
+  color: var(--cor-np);
+}
+
+.cartao-nivel.bronze .cartao-nivel-taxa {
+  background-color: #fdf6ec;
+  color: var(--cor-bronze);
+}
+
+.cartao-nivel.silver .cartao-nivel-taxa {
+  background-color: #f8fafc;
+  color: var(--cor-silver);
+}
+
+.cartao-nivel.gold .cartao-nivel-taxa {
+  background-color: #fefce8;
+  color: #a16207;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.cartao-nivel-resumo {
+  color: var(--cor-texto-suave);
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Link/botão de ação para abrir o modal */
+.btn-abrir-modal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: transparent;
+  color: var(--cor-secundaria);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: 1.5px solid var(--cor-secundaria);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: var(--transicao-suave);
+}
+
+.btn-abrir-modal:hover {
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   7. MODAIS HTML (<dialog>) PARA BENEFÍCIOS DOS NÍVEIS
+   -------------------------------------------------------------------------- */
+dialog.modal-beneficios {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 540px;
+  width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  background-color: #ffffff;
+  overflow: hidden;
+  margin: auto;
+}
+
+dialog.modal-beneficios::backdrop {
+  background-color: rgba(11, 37, 69, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.conteudo-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho-modal {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--cor-destaque);
+}
+
+.titulo-modal {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.btn-fechar-modal {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: var(--transicao-suave);
+}
+
+.btn-fechar-modal:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--cor-destaque-claro);
+}
+
+.corpo-modal {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.taxa-destaque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  padding: 0.85rem 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-destaque);
+  font-size: 0.95rem;
+}
+
+.taxa-destaque strong {
+  color: var(--cor-primaria);
+  font-size: 1.1rem;
+}
+
+.lista-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lista-beneficios li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+}
+
+.icone-check {
+  color: #059669;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.rodape-modal {
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--cor-borda);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-fechar-rodape {
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transicao-suave);
+}
+
+.btn-fechar-rodape:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* --------------------------------------------------------------------------
+   8. PÁGINA DE AGRADECIMENTO (CONFIRMAÇÃO)
+   -------------------------------------------------------------------------- */
+.cartao-confirmacao {
+  background-color: var(--cor-fundo-card);
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-card);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+}
+
+.icone-sucesso-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background-color: #ecfdf5;
+  border: 2px solid #10b981;
+  color: #059669;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  font-size: 2.2rem;
+}
+
+.confirmacao-cabecalho {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.confirmacao-cabecalho h1 {
+  font-size: 1.9rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
+
+.confirmacao-cabecalho p {
+  color: var(--cor-texto-suave);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.dados-confirmacao-grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.dado-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-bottom: 1px dashed #cbd5e1;
+  padding-bottom: 0.75rem;
+}
+
+.dado-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dado-rotulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--cor-texto-suave);
+  font-weight: 700;
+}
+
+.dado-valor {
+  font-size: 1.05rem;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.acoes-confirmacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-confirmacao-primario {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 0.85rem 1.5rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-confirmacao-primario:hover {
+  background: linear-gradient(135deg, var(--cor-secundaria), #1a4f6e);
+  color: var(--cor-destaque-claro);
+  transform: translateY(-2px);
+}
+
+.btn-confirmacao-secundario {
+  background-color: transparent;
+  color: var(--cor-secundaria);
+  border: 1.5px solid var(--cor-secundaria);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  border-radius: 6px;
+}
+
+.btn-confirmacao-secundario:hover {
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   9. RODAPÉ PADRÃO
+   -------------------------------------------------------------------------- */
+.rodape-principal {
+  background-color: var(--cor-primaria);
+  color: #cbd5e1;
+  padding: 2.5rem 0 1.5rem;
+  margin-top: auto;
+  border-top: 3px solid var(--cor-destaque);
+}
+
+.container-rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.identidade-rodape {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.titulo-rodape {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.endereco-camara {
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.endereco-camara p {
+  margin: 0.2rem 0;
+}
+
+.endereco-camara a {
+  color: var(--cor-destaque-claro);
+}
+
+.subtitulo-rodape {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.links-redes {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.links-redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: var(--cor-secundaria);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.links-redes a:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+  transform: translateY(-2px);
+}
+
+.creditos-rodape p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.creditos-rodape strong {
+  color: #ffffff;
+}
+
+.modificacao-texto {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   10. MEDIA QUERIES (TABLET E DESKTOP)
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .grupo-linha {
+    flex-direction: row;
+  }
+
+  .grupo-linha .campo-rotulo {
+    flex: 1;
+  }
+
+  .dados-confirmacao-grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dado-item.completo {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .botao-hamburguer {
+    display: none;
+  }
+
+  .navegacao-principal {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .lista-navegacao {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .link-navegacao {
+    padding: 0.5rem 1rem;
+  }
+
+  .container-rodape {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 900px) {
+  /* Em telas grandes, os 4 cartões são exibidos à direita do formulário */
+  .layout-associacao {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+    gap: 2.5rem;
+  }
+
+  .area-formulario {
+    padding: 2.25rem;
+  }
+}

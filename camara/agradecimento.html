@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diretório de Membros | Câmara de Comércio de Salvador</title>
+  <title>Agradecimento | Câmara de Comércio de Salvador</title>
   <meta name="description"
-    content="Diretório oficial de empresas e membros associados à Câmara de Comércio de Salvador e Região Metropolitana. Conecte-se com negócios locais de destaque.">
+    content="Confirmação de recebimento do pedido de associação à Câmara de Comércio de Salvador. Obrigado por fazer parte da nossa rede.">
   <meta name="author" content="Matheus Santana">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
 
-  <!-- Open Graph / Redes Sociais (Facebook & LinkedIn) -->
+  <!-- Open Graph / Redes Sociais -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Diretório de Membros | Câmara de Comércio de Salvador">
+  <meta property="og:title" content="Pedido de Associação Confirmado | Câmara de Comércio de Salvador">
   <meta property="og:description"
-    content="Encontre empresas parceiras, prestadores de serviços e indústrias associadas à Câmara de Comércio de Salvador. Apoie e impulsione a economia regional.">
-  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/camara/diretorio.html">
+    content="Seu pedido de filiação à Câmara de Comércio de Salvador foi registrado com sucesso.">
+  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/camara/agradecimento.html">
   <meta property="og:image" content="https://matheustriskin.github.io/wdd231/camara/imagens/og-camara.png">
-  <meta property="og:image:alt" content="Banner de divulgação da Câmara de Comércio de Salvador">
+  <meta property="og:image:alt" content="Confirmação da Câmara de Comércio de Salvador">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Tipografia Google Fonts -->
@@ -29,15 +29,16 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
 
-  <!-- Folhas de Estilo (Normalize primeiro) -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="estilos/normalize.css">
-  <link rel="stylesheet" href="estilos/diretorio.css">
+  <link rel="stylesheet" href="estilos/associacao.css">
 
   <!-- Script Principal -->
-  <script src="scripts/diretorio.js" defer></script>
+  <script src="scripts/agradecimento.js" defer></script>
 </head>
 
 <body>
+  <!-- CABEÇALHO PADRÃO DO PROJETO -->
   <header class="cabecalho-principal">
     <div class="container container-cabecalho">
       <div class="marca-camara">
@@ -61,7 +62,7 @@
       <nav id="menu-navegacao" class="navegacao-principal" aria-label="Navegação do Site da Câmara">
         <ul class="lista-navegacao">
           <li><a href="index.html" class="link-navegacao">Início</a></li>
-          <li><a href="diretorio.html" class="link-navegacao ativo" aria-current="page">Diretório</a></li>
+          <li><a href="diretorio.html" class="link-navegacao">Diretório</a></li>
           <li><a href="associacao.html" class="link-navegacao">Associe-se</a></li>
           <li><a href="descubra.html" class="link-navegacao">Descubra</a></li>
         </ul>
@@ -69,43 +70,95 @@
     </div>
   </header>
 
-  <main class="conteudo-diretorio">
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteudo-agradecimento">
     <div class="container">
-      <section class="cabecalho-secao-diretorio">
-        <div class="titulo-area">
-          <h1>Diretório de Membros</h1>
-          <p class="descricao-pagina">Conheça as empresas filiadas comprometidas com o desenvolvimento econômico,
-            inovação e sustentabilidade em Salvador e na Bahia.</p>
+      <article class="cartao-confirmacao">
+        <div class="icone-sucesso-container" aria-hidden="true">
+          <span>✓</span>
         </div>
 
-        <div class="controles-visualizacao" role="group" aria-label="Alternar modo de exibição dos membros">
-          <span class="rotulo-visualizacao">Visualização:</span>
-          <button id="botao-grade" class="botao-modo ativo" aria-pressed="true"
-            title="Alternar para exibição em grade">
-            <svg class="icone-modo" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
-              <path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z" />
-            </svg>
-            <span>Grade</span>
-          </button>
-          <button id="botao-lista" class="botao-modo" aria-pressed="false"
-            title="Alternar para exibição em lista">
-            <svg class="icone-modo" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
-              <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
-            </svg>
-            <span>Lista</span>
-          </button>
+        <div class="confirmacao-cabecalho">
+          <h1>Pedido de Associação Recebido!</h1>
+          <p>
+            Obrigado pelo seu interesse em fortalecer o ecossistema empresarial da Bahia.
+            Nossa equipe executiva entrará em contato em breve para os próximos passos de integração.
+          </p>
         </div>
-      </section>
 
-      <section class="secao-membros" aria-label="Relação de empresas associadas">
-        <h2 class="sr-only">Empresas Associadas</h2>
-        <div id="membros-container" class="membros-container grade" aria-live="polite">
-          <!-- Conteúdo gerado dinamicamente via JavaScript -->
+        <section class="secao-dados-confirmacao" aria-labelledby="titulo-resumo">
+          <h2 id="titulo-resumo" class="sr-only">Dados do Formulário Enviados</h2>
+
+          <div class="dados-confirmacao-grade">
+            <!-- NOME COMPLETO -->
+            <div class="dado-item">
+              <span class="dado-rotulo">Nome do Candidato</span>
+              <span id="resumo-primeiro-nome" class="dado-valor">Carregando...</span>
+            </div>
+
+            <!-- SOBRENOME -->
+            <div class="dado-item">
+              <span class="dado-rotulo">Sobrenome</span>
+              <span id="resumo-sobrenome" class="dado-valor">Carregando...</span>
+            </div>
+
+            <!-- E-MAIL -->
+            <div class="dado-item">
+              <span class="dado-rotulo">Endereço de E-mail</span>
+              <span id="resumo-email" class="dado-valor">Carregando...</span>
+            </div>
+
+            <!-- CELULAR -->
+            <div class="dado-item">
+              <span class="dado-rotulo">Número de Celular</span>
+              <span id="resumo-celular" class="dado-valor">Carregando...</span>
+            </div>
+
+            <!-- EMPRESA / ORGANIZAÇÃO -->
+            <div class="dado-item completo">
+              <span class="dado-rotulo">Empresa / Organização</span>
+              <span id="resumo-organizacao" class="dado-valor">Carregando...</span>
+            </div>
+
+            <!-- CARGO NA ORGANIZAÇÃO -->
+            <div class="dado-item">
+              <span class="dado-rotulo">Cargo na Organização</span>
+              <span id="resumo-cargo" class="dado-valor">Não informado</span>
+            </div>
+
+            <!-- NÍVEL DE ASSOCIAÇÃO -->
+            <div class="dado-item">
+              <span class="dado-rotulo">Nível Solicitado</span>
+              <span id="resumo-nivel" class="dado-valor">Carregando...</span>
+            </div>
+
+            <!-- DATA E HORA DO REGISTRO (TIMESTAMP OCULTO) -->
+            <div class="dado-item completo">
+              <span class="dado-rotulo">Data e Hora do Envio (Timestamp)</span>
+              <span id="resumo-timestamp" class="dado-valor">Carregando...</span>
+            </div>
+
+            <!-- DESCRIÇÃO DA ATIVIDADE (OPCIONAL) -->
+            <div id="container-descricao" class="dado-item completo" style="display: none;">
+              <span class="dado-rotulo">Descrição da Atividade</span>
+              <span id="resumo-descricao" class="dado-valor"></span>
+            </div>
+          </div>
+        </section>
+
+        <div class="acoes-confirmacao">
+          <a href="index.html" class="btn-confirmacao-primario">
+            <span>&larr; Retornar à Página Inicial</span>
+          </a>
+          <a href="diretorio.html" class="btn-confirmacao-secundario">
+            <span>Explorar Membros do Diretório</span>
+          </a>
         </div>
-      </section>
+      </article>
     </div>
   </main>
 
+  <!-- RODAPÉ PADRÃO DO PROJETO -->
   <footer class="rodape-principal">
     <div class="container container-rodape">
       <div class="coluna-rodape contato-camara">
