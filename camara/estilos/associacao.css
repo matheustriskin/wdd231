@@ -70,7 +70,7 @@ h1, h2, h3, .titulo-rodape {
   justify-content: space-around;
   width: 42px;
   height: 42px;
-  background: #133c55;
+  background-color: #133c55;
   border: 1px solid #d4af37;
   border-radius: 6px;
   cursor: pointer;
@@ -80,7 +80,7 @@ h1, h2, h3, .titulo-rodape {
 .icone-barra {
   width: 100%;
   height: 3px;
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 2px;
 }
 
@@ -101,12 +101,12 @@ h1, h2, h3, .titulo-rodape {
 }
 
 .link-navegacao:hover {
-  background: #133c55;
+  background-color: #133c55;
   color: #f3d06a;
 }
 
 .link-navegacao.ativo {
-  background: #d4af37;
+  background-color: #d4af37;
   color: #0b2545;
 }
 
@@ -122,7 +122,7 @@ h1, h2, h3, .titulo-rodape {
 
 .badge-secao {
   display: inline-block;
-  background: #fefce8;
+  background-color: #fefce8;
   color: #133c55;
   border: 1px solid #d4af37;
   font: 700 0.8rem 'Montserrat', sans-serif;
@@ -144,7 +144,7 @@ h1, h2, h3, .titulo-rodape {
 
 /* FORMULÁRIO */
 .area-formulario {
-  background: #ffffff;
+  background-color: #ffffff;
   padding: 1.75rem;
   border-radius: 10px;
   border: 1px solid #cbd5e1;
@@ -201,7 +201,7 @@ h1, h2, h3, .titulo-rodape {
 }
 
 .btn-enviar {
-  background: #0b2545;
+  background-color: #0b2545;
   color: #ffffff;
   font: 700 1rem 'Montserrat', sans-serif;
   padding: 0.85rem 1.5rem;
@@ -211,7 +211,7 @@ h1, h2, h3, .titulo-rodape {
 }
 
 .btn-enviar:hover {
-  background: #133c55;
+  background-color: #133c55;
   color: #f3d06a;
 }
 
@@ -229,7 +229,7 @@ h1, h2, h3, .titulo-rodape {
 }
 
 .cartao-nivel {
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 1.25rem;
   border: 1px solid #cbd5e1;
@@ -242,9 +242,9 @@ h1, h2, h3, .titulo-rodape {
 }
 
 .cartao-nivel:nth-child(1) { animation-delay: 0.1s; border-left-color: #2563eb; }
-.cartao-nivel:nth-child(2) { animation-delay: 0.2s; border-left-color: #cd7f32; }
-.cartao-nivel:nth-child(3) { animation-delay: 0.3s; border-left-color: #718096; }
-.cartao-nivel:nth-child(4) { animation-delay: 0.4s; border-left-color: #a16207; }
+.cartao-nivel:nth-child(2) { animation-delay: 0.2s; border-left-color: #7c2d12; }
+.cartao-nivel:nth-child(3) { animation-delay: 0.3s; border-left-color: #334155; }
+.cartao-nivel:nth-child(4) { animation-delay: 0.4s; border-left-color: #854d0e; }
 
 .cartao-topo {
   display: flex;
@@ -256,7 +256,8 @@ h1, h2, h3, .titulo-rodape {
   font: 700 0.85rem 'Montserrat', sans-serif;
   padding: 0.2rem 0.5rem;
   border-radius: 20px;
-  background: #f1f5f9;
+  background-color: #f1f5f9;
+  color: #1e293b;
 }
 
 .btn-abrir-modal {
@@ -272,21 +273,26 @@ h1, h2, h3, .titulo-rodape {
 
 /* REGRAS COMPLEMENTARES DE MODAIS E RODAPÉ */
 @media screen {
+  .cartao-nivel.np .cartao-nivel-taxa { color: #1d4ed8; }
+  .cartao-nivel.bronze .cartao-nivel-taxa { color: #7c2d12; }
+  .cartao-nivel.silver .cartao-nivel-taxa { color: #334155; }
+  .cartao-nivel.gold .cartao-nivel-taxa { color: #854d0e; }
+
   dialog.modal-beneficios {
     border: 0;
     border-radius: 10px;
     padding: 0;
     max-width: 500px;
     width: 90%;
-    background: #ffffff;
+    background-color: #ffffff;
   }
 
   dialog.modal-beneficios::backdrop {
-    background: #0b2545b3;
+    background-color: #0b2545b3;
   }
 
   .cabecalho-modal {
-    background: #0b2545;
+    background-color: #0b2545;
     color: #ffffff;
     padding: 1rem 1.25rem;
     display: flex;
@@ -311,7 +317,7 @@ h1, h2, h3, .titulo-rodape {
   }
 
   .taxa-destaque {
-    background: #f8fafc;
+    background-color: #f8fafc;
     padding: 0.75rem 1rem;
     border-radius: 6px;
     border-left: 4px solid #d4af37;
@@ -329,7 +335,7 @@ h1, h2, h3, .titulo-rodape {
   }
 
   .icone-check {
-    color: #10b981;
+    color: #065f46;
     font-weight: 700;
     margin-right: 0.4rem;
   }
@@ -341,7 +347,7 @@ h1, h2, h3, .titulo-rodape {
   }
 
   .btn-fechar-rodape {
-    background: #133c55;
+    background-color: #133c55;
     color: #ffffff;
     border: 0;
     font: 600 0.85rem 'Montserrat', sans-serif;
@@ -351,7 +357,7 @@ h1, h2, h3, .titulo-rodape {
   }
 
   .rodape-principal {
-    background: #0b2545;
+    background-color: #0b2545;
     color: #cbd5e1;
     padding: 2rem 0 1.25rem;
     border-top: 3px solid #d4af37;
@@ -389,14 +395,14 @@ h1, h2, h3, .titulo-rodape {
     justify-content: center;
     width: 36px;
     height: 36px;
-    background: #133c55;
+    background-color: #133c55;
     border: 1px solid #d4af37;
     border-radius: 50%;
     color: #ffffff;
   }
 
   .links-redes a:hover {
-    background: #d4af37;
+    background-color: #d4af37;
     color: #0b2545;
   }
 
@@ -413,7 +419,7 @@ h1, h2, h3, .titulo-rodape {
 /* MEDIA QUERIES RESPONSIVAS */
 @media (max-width: 767px) {
   .navegacao-principal {
-    background: #0b2545;
+    background-color: #0b2545;
     max-height: 0;
     overflow: hidden;
     transition: 0.3s;
