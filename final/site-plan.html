@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejamento do Site - Apex Energy | WDD 231</title>
+  <meta name="description"
+    content="Documento oficial de planejamento do site individual Apex Energy para o curso WDD 231 da BYU-Idaho. Inclui nome, propósito, cenários, esquema de cores, tipografia e wireframes responsivos.">
+  <meta name="author" content="Matheus Santana">
+  <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="estilos/site-plan.css">
+</head>
+
+<body>
+  <header class="cabecalho-planejamento">
+    <div class="cabecalho-topo">
+      <a href="site-plan.html" class="logo-link">
+        <img src="imagens/logo-apex.svg" alt="Logotipo oficial da Apex Energy" width="180" height="45">
+      </a>
+      <div class="cabecalho-titulos">
+        <h1>Documento de Planejamento do Site</h1>
+        <p class="subtitulo-plano">Projeto Individual: Portal Apex Energy</p>
+        <p class="autor-info">Estudante: <strong>Matheus Santana</strong> &bull; Disciplina: <strong>WDD 231 - Desenvolvimento Frontend para Web I</strong></p>
+      </div>
+    </div>
+    <nav class="nav-planejamento" aria-label="Navegação do Documento">
+      <a href="../index.html">&larr; Página Inicial do Curso</a>
+      <a href="#nome-site">Nome do Site</a>
+      <a href="#finalidade-site">Finalidade do Site</a>
+      <a href="#cenarios">Cenários</a>
+      <a href="#esquema-cores">Esquema de Cores</a>
+      <a href="#tipografia">Tipografia</a>
+      <a href="#wireframe">Wireframe</a>
+    </nav>
+  </header>
+
+  <main class="conteudo-plano">
+
+    <!-- 1. NOME DO SITE -->
+    <section id="nome-site" class="secao-plano">
+      <h2>1. Nome do Site</h2>
+      <div class="bloco-destaque">
+        <p><strong>Nome Oficial:</strong> Portal de Bebidas Energéticas &mdash; Apex Energy</p>
+        <p><strong>Disponibilidade de Domínio Opcional:</strong> apexenergydrinks.com.br</p>
+      </div>
+      <h3>Motivo da Escolha do Nome e do Assunto</h3>
+      <p>
+        O termo <strong>&ldquo;Apex&rdquo;</strong> (do latim ápice, ponto culminante ou pico de rendimento) sintetiza o propósito da marca: auxiliar o público a atingir seu ápice de foco, produtividade e performance de maneira informada e saudável.
+      </p>
+      <p>
+        <strong>Motivo da escolha do assunto:</strong> Escolhi o tema de bebidas energéticas por ser um nicho em grande expansão global e também porque <strong>possuo uma pequena loja de bebidas energéticas</strong>. Desenvolver este portal une o aprendizado prático de desenvolvimento web frontend avançado com uma aplicação de alto valor para o meu negócio, oferecendo aos clientes um canal confiável para consulta de dados nutricionais e consumo consciente.
+      </p>
+    </section>
+
+    <!-- 2. FINALIDADE DO SITE -->
+    <section id="finalidade-site" class="secao-plano">
+      <h2>2. Finalidade do Site (Conteúdo e Serviços)</h2>
+      <p>
+        O projeto consistirá em um website informativo e interativo de <strong>três páginas</strong> voltado para entusiastas de esportes, estudantes e profissionais que utilizam bebidas energéticas e buscam saber mais sobre as informações nutricionais.
+      </p>
+      <p>
+        A aplicação será construída com base em padrões modernos da web (HTML5 semântico, CSS3 responsivo e Vanilla JavaScript com Módulos ES, Fetch API, tratamento com <code>try...catch</code> e persistência no cliente). As três páginas planejadas são:
+      </p>
+
+      <div class="grade-paginas">
+        <article class="card-pagina">
+          <h4>Página 1: Página Inicial (Home)</h4>
+          <ul>
+            <li>Apresentação clara da proposta do portal e da marca Apex Energy.</li>
+            <li>Destaques das principais linhas de bebidas (tradicionais, zero açúcar, naturais/à base de plantas e pré-treino).</li>
+            <li>Seção detalhada sobre os benefícios dos ingredientes funcionais (taurina, cafeína, vitaminas do complexo B, extrato de chá verde).</li>
+            <li>Chamadas de ação (CTAs) interativas para explorar o catálogo completo e acessar o guia de consumo.</li>
+          </ul>
+        </article>
+
+        <article class="card-pagina">
+          <h4>Página 2: Catálogo Dinâmico de Produtos (Catalog / Drinks)</h4>
+          <ul>
+            <li>Listagem dinâmica de bebidas carregadas a partir de um arquivo local JSON via <code>Fetch API</code> assíncrona.</li>
+            <li>Filtros interativos por categoria: <em>Zero Açúcar</em>, <em>Natural</em>, <em>Foco/Gamer</em> e <em>Performance Esportiva</em>.</li>
+            <li>Recurso de ordenação dinâmica por nome e teor de cafeína.</li>
+            <li>Janelas modais acessíveis (<code>&lt;dialog&gt;</code>) com informações detalhadas de cada bebida (ingredientes, teores de cafeína e tabela nutricional).</li>
+            <li>Recurso de &ldquo;Favoritos&rdquo; salvo e persistido no <code>localStorage</code> do navegador.</li>
+          </ul>
+        </article>
+
+        <article class="card-pagina">
+          <h4>Página 3: Guia de Consumo Consciente &amp; Contato (Guide &amp; Contact)</h4>
+          <ul>
+            <li>Página educativa focada no consumo saudável e equilibrado de cafeína.</li>
+            <li><strong>Ferramenta Interativa:</strong> Calculadora em JavaScript de limite diário recomendado de cafeína com base no perfil do usuário (peso corporal e ingestão diária).</li>
+            <li>Seção interativa de Perguntas Frequentes (FAQ) com efeito de acordeão dinâmico.</li>
+            <li>Formulário de contato e newsletter com validação em tempo real e retorno amigável ao usuário.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. CENÁRIOS -->
+    <section id="cenarios" class="secao-plano">
+      <h2>3. Cenários</h2>
+      <p>
+        Cenários representando o público-alvo (estudantes, profissionais, praticantes de atividades físicas e clientes da loja) acessando o portal:
+      </p>
+
+      <div class="cenarios-lista">
+        <article class="card-cenario">
+          <p class="pergunta-cenario">Cenário 1 &mdash; Estudante / Gamer em Busca de Concentração:</p>
+          <p class="resposta-cenario">
+            <em>&ldquo;Preciso manter o foco para uma longa sessão de estudos ou jogos, mas sem consumir excesso de açúcar ou sofrer com o 'crash' energético. Quais bebidas do catálogo são 'Zero Açúcar' ou 'Foco/Gamer' e qual é a quantidade exata de cafeína de cada uma?&rdquo;</em>
+            <br><br>
+            <strong>Resposta do Site:</strong> Na página de Catálogo, o usuário utiliza o filtro por categoria &ldquo;Zero Açúcar&rdquo; ou &ldquo;Foco/Gamer&rdquo;, e clica em qualquer card para abrir o modal <code>&lt;dialog&gt;</code> com a quantidade exata de cafeína (em mg) e a lista completa de ingredientes.
+          </p>
+        </article>
+
+        <article class="card-cenario">
+          <p class="pergunta-cenario">Cenário 2 &mdash; Atleta / Praticante de Atividade Física:</p>
+          <p class="resposta-cenario">
+            <em>&ldquo;Vou iniciar um treino intenso de força e quero saber quais bebidas da categoria 'Performance Esportiva / Pré-Treino' contêm taurina e cafeína em dosagens adequadas para o meu treino.&rdquo;</em>
+            <br><br>
+            <strong>Resposta do Site:</strong> Na Página Inicial, o atleta encontra a seção de benefícios dos ingredientes funcionais (explicando a taurina e a cafeína). No Catálogo, filtra por &ldquo;Performance Esportiva&rdquo; e ordena pelo teor de cafeína para escolher a opção ideal.
+          </p>
+        </article>
+
+        <article class="card-cenario">
+          <p class="pergunta-cenario">Cenário 3 &mdash; Profissional Preocupado com a Saúde e Consumo Consciente:</p>
+          <p class="resposta-cenario">
+            <em>&ldquo;Já tomei café pela manhã e quero tomar um energético à tarde, mas tenho receio de ultrapassar meu limite seguro diário. Como calculo a dose recomendada para o meu peso corporal?&rdquo;</em>
+            <br><br>
+            <strong>Resposta do Site:</strong> Na página de Guia de Consumo Consciente, o usuário acessa a <em>Calculadora Interativa de Cafeína</em>, insere seu peso e hábitos diários, recebendo imediatamente seu limite recomendado em mg e um diagnóstico visual indicando se seu consumo está seguro.
+          </p>
+        </article>
+
+        <article class="card-cenario">
+          <p class="pergunta-cenario">Cenário 4 &mdash; Cliente da Loja de Energéticos do Empreendimento:</p>
+          <p class="resposta-cenario">
+            <em>&ldquo;Gostei de três bebidas específicas no catálogo e quero salvá-las para pedir na loja física. Além disso, tenho uma dúvida sobre um novo sabor e quero mandar uma mensagem.&rdquo;</em>
+            <br><br>
+            <strong>Resposta do Site:</strong> O cliente clica no botão de &ldquo;Favoritos&rdquo; das bebidas que deseja, e elas ficam salvas no <code>localStorage</code> para visualização a qualquer momento. Para tirar dúvidas, utiliza o formulário interativo de contato com validação em tempo real.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. ESQUEMA DE CORES -->
+    <section id="esquema-cores" class="secao-plano">
+      <h2>4. Esquema de Cores</h2>
+      <p>
+        O esquema de cores foi escolhido para transmitir energia, contraste e modernidade, combinando diretamente com o universo de bebidas energéticas e garantindo excelente legibilidade com contraste WCAG AA/AAA.
+      </p>
+
+      <div class="grade-cores">
+        <article class="card-cor">
+          <div class="swatch-cor swatch-primaria">#0f172a</div>
+          <div class="info-cor">
+            <h4>Fundo Primário (Slate 900)</h4>
+            <span class="hex-tag">#0f172a</span>
+            <p>Usado no fundo principal de todas as páginas, proporcionando estética dark moderna de alta performance.</p>
+          </div>
+        </article>
+
+        <article class="card-cor">
+          <div class="swatch-cor swatch-cartao">#1e293b</div>
+          <div class="info-cor">
+            <h4>Superfície / Cartão (Slate 800)</h4>
+            <span class="hex-tag">#1e293b</span>
+            <p>Usado nos cards de produtos, janelas modais, caixas do formulário, cabeçalho e rodapé.</p>
+          </div>
+        </article>
+
+        <article class="card-cor">
+          <div class="swatch-cor swatch-laranja">#f97316</div>
+          <div class="info-cor">
+            <h4>Laranja Elétrico Apex</h4>
+            <span class="hex-tag">#f97316</span>
+            <p>Cor de acento principal. Usada em botões de ação (CTAs), ícones de destaque, bordas ativas e chamadas importantes.</p>
+          </div>
+        </article>
+
+        <article class="card-cor">
+          <div class="swatch-cor swatch-ciano">#06b6d4</div>
+          <div class="info-cor">
+            <h4>Ciano Vibrante</h4>
+            <span class="hex-tag">#06b6d4</span>
+            <p>Cor de acento secundário. Usada em tags de categorias (Zero Açúcar, Natural), links em foco/hover e badges informativos.</p>
+          </div>
+        </article>
+
+        <article class="card-cor">
+          <div class="swatch-cor swatch-texto">#f8fafc</div>
+          <div class="info-cor">
+            <h4>Texto Principal (Slate 50)</h4>
+            <span class="hex-tag">#f8fafc</span>
+            <p>Usado em títulos, dados nutricionais em destaque e parágrafos (Contraste 15.1:1 contra #0f172a).</p>
+          </div>
+        </article>
+      </div>
+
+      <p>
+        <em>Nota de conformidade:</em> Este documento de planejamento foi estilizado exclusivamente utilizando a paleta de cores definida acima.
+      </p>
+    </section>
+
+    <!-- 5. TIPOGRAFIA -->
+    <section id="tipografia" class="secao-plano">
+      <h2>5. Tipografia</h2>
+      <p>
+        Foram selecionadas duas fontes modernas do Google Fonts, equilibrando força visual nos títulos e legibilidade nas tabelas nutricionais e textos:
+      </p>
+
+      <div class="bloco-tipografia">
+        <article class="card-fonte">
+          <div class="exemplo-montserrat">Montserrat &mdash; Pesos 700 (Bold) e 800 (Extra-Bold)</div>
+          <p>
+            <strong>Onde será aplicada:</strong> Logotipo textual da Apex Energy, títulos principais (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>), botões de chamada primária e nomes dos energéticos.
+          </p>
+          <p>
+            <strong>Justificativa:</strong> Fonte sem serifa geométrica de grande personalidade e impacto, perfeita para expressar vitalidade e energia.
+          </p>
+        </article>
+
+        <article class="card-fonte">
+          <div class="exemplo-inter">Inter &mdash; Pesos 400 (Regular), 500 (Medium) e 600 (Semi-Bold)</div>
+          <p>
+            <strong>Onde será aplicada:</strong> Parágrafos, listas descritivas, navegação, tabelas nutricionais dentro dos modais, campos de formulário e rodapé.
+          </p>
+          <p>
+            <strong>Justificativa:</strong> Projetada especificamente para telas digitais, com altura-x generosa e excelente legibilidade em qualquer dispositivo móvel ou desktop.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. WIREFRAME -->
+    <section id="wireframe" class="secao-plano">
+      <h2>6. Wireframes</h2>
+      <p>
+        Os wireframes a seguir consistem em esboços estruturais em preto e branco / escala de cinza da <strong>Página Inicial (Home)</strong>, demonstrando a adaptação do layout para telas pequenas (mobile) e telas amplas (desktop/tablet):
+      </p>
+
+      <div class="wireframes-grade">
+        <article class="card-wireframe">
+          <h3>Visualização Móvel (Viewport Pequena &mdash; 320px a 480px)</h3>
+          <p>
+            Estrutura vertical em coluna única com menu hambúrguer retrátil, botões de toque largos e blocos modulares empilhados para navegação fluida em smartphones:
+          </p>
+          <div class="wireframe-img-wrapper">
+            <img src="imagens/wireframe-mobile.svg" alt="Wireframe em preto e branco da página inicial em viewport móvel" width="380" height="1200" loading="lazy">
+          </div>
+          <ul>
+            <li><strong>Cabeçalho:</strong> Logo Apex Energy à esquerda e botão de menu hambúrguer retrátil à direita.</li>
+            <li><strong>Seção Hero:</strong> Apresentação da marca, chamada principal e botões de ação rápidos.</li>
+            <li><strong>Destaque das Linhas:</strong> Cartões verticais direcionando para as categorias (Tradicionais, Zero Açúcar, Naturais e Pré-Treino).</li>
+            <li><strong>Ingredientes Funcionais:</strong> Grade 2x2 resumindo os benefícios de Taurina, Cafeína, Vitaminas B e Chá Verde.</li>
+            <li><strong>Chamada Interativa:</strong> Banner convidando para a Calculadora de Cafeína no Guia Consciente.</li>
+            <li><strong>Rodapé:</strong> Direitos autorais, créditos e links essenciais.</li>
+          </ul>
+        </article>
+
+        <article class="card-wireframe">
+          <h3>Visualização Ampla (Desktop / Tablet &mdash; a partir de 768px)</h3>
+          <p>
+            Layout horizontal expansivo com navegação em barra contínua, Hero em duas colunas e grades de múltiplas colunas para distribuição limpa do conteúdo:
+          </p>
+          <div class="wireframe-img-wrapper">
+            <img src="imagens/wireframe-desktop.svg" alt="Wireframe em preto e branco da página inicial em viewport desktop" width="960" height="920" loading="lazy">
+          </div>
+          <ul>
+            <li><strong>Cabeçalho:</strong> Logo à esquerda, navegação horizontal completa com wayfinding e atalho rápido aos Favoritos.</li>
+            <li><strong>Hero em 2 Colunas:</strong> Mensagem principal e botões CTA à esquerda; imagem da lata em destaque à direita.</li>
+            <li><strong>Categorias em 4 Colunas:</strong> Linhas de bebidas distribuídas horizontalmente lado a lado.</li>
+            <li><strong>Ingredientes Funcionais em 4 Colunas:</strong> Explicações objetivas sobre Taurina, Cafeína Anidra, Vitaminas B e Extrato de Chá Verde.</li>
+            <li><strong>Destaque da Calculadora:</strong> Bloco horizontal largo com chamada para ação da ferramenta interativa.</li>
+            <li><strong>Rodapé em 4 Colunas:</strong> Sobre o portal, navegação rápida, transparência nutricional e identificação acadêmica da BYU-Idaho.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape-planejamento">
+    <p>&copy; 2026 &bull; Matheus Santana &bull; <strong>Portal Apex Energy</strong> &bull; WDD 231</p>
+    <p>Projeto de Desenvolvimento Frontend Web I &bull; Brigham Young University - Idaho</p>
+    <p><a href="../index.html">&larr; Retornar à Página Inicial do WDD 231</a></p>
+  </footer>
+</body>
+
+</html>
