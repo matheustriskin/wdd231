@@ -4,7 +4,7 @@ body { margin: 0; font: 1rem/1.6 'Open Sans', sans-serif; color: #1e293b; backgr
 img { max-width: 100%; height: auto; display: block; }
 a { color: #133c55; text-decoration: none; }
 a:hover { color: #d4af37; }
-h1, h2, h3, .titulo-rodape, .subtitulo-rodape { font-family: 'Montserrat', sans-serif; color: #0b2545; margin: 0 0 0.5rem; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: #0b2545; margin: 0 0 0.5rem; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
 
 /* CABEÇALHO & MENU */
@@ -68,7 +68,7 @@ h1, h2, h3, .titulo-rodape, .subtitulo-rodape { font-family: 'Montserrat', sans-
 .cartao-interesse figure { grid-area: imagem; margin: 0; border-radius: 8px; overflow: hidden; background-color: #e2e8f0; }
 .cartao-interesse figure img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
 .cartao-interesse p { grid-area: descricao; margin: 0; font-size: 0.92rem; color: #334155; }
-.cartao-interesse address, .endereco-modal { font-style: normal; font-size: 0.85rem; color: #64748b; }
+.cartao-interesse address, .endereco-modal { font-style: normal; font-size: 0.85rem; color: #334155; }
 .cartao-interesse address { grid-area: endereco; border-left: 2px solid #cbd5e1; padding-left: 0.5rem; margin: 0; align-self: end; }
 .cartao-interesse .btn-saiba-mais, .btn-acao-modal-fechar { background-color: #0b2545; color: #ffffff; border: 1px solid #0b2545; font: 700 0.95rem 'Montserrat', sans-serif; padding: 0.75rem; border-radius: 6px; cursor: pointer; text-align: center; width: 100%; }
 .cartao-interesse .btn-saiba-mais { grid-area: botao; }
@@ -87,6 +87,8 @@ h1, h2, h3, .titulo-rodape, .subtitulo-rodape { font-family: 'Montserrat', sans-
 /* RODAPÉ */
 .rodape-principal { padding: 2.5rem 0 1.5rem; border-top: 4px solid #d4af37; }
 .container-rodape { display: flex; flex-direction: column; gap: 1.5rem; }
+.titulo-rodape { font-family: 'Montserrat', sans-serif; color: #ffffff; margin: 0; }
+.subtitulo-rodape { font-family: 'Montserrat', sans-serif; color: #f3d06a; margin-bottom: 0.75rem; }
 .endereco-camara, .creditos-rodape { font-size: 0.9rem; color: #cbd5e1; }
 .endereco-camara { font-style: normal; }
 .links-redes { display: flex; gap: 0.75rem; }
