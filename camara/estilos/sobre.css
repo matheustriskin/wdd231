@@ -1,0 +1,770 @@
+/* ==========================================================================
+   CÂMARA DE COMÉRCIO DE SALVADOR - PÁGINA SOBRE A CÂMARA & REGIÃO
+   Layout Responsivo com Named Grid Areas (Mobile, Médio e Grande)
+   WDD 231 - Matheus Santana
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. RESET BÁSICO E TIPOGRAFIA
+   -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1rem/1.6 'Open Sans', sans-serif;
+  color: #1e293b;
+  background-color: #f4f7fa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #133c55;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d4af37;
+}
+
+h1,
+h2,
+h3,
+.titulo-rodape,
+.subtitulo-rodape {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b2545;
+  margin: 0 0 0.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. CABEÇALHO E NAVEGAÇÃO PADRÃO
+   -------------------------------------------------------------------------- */
+.cabecalho-principal {
+  background-color: #0b2545;
+  color: #ffffff;
+  border-bottom: 3px solid #d4af37;
+}
+
+.container-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+}
+
+.marca-camara .link-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+}
+
+.nome-camara {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+  color: #ffffff;
+}
+
+.subtitulo-camara {
+  font-size: 0.8rem;
+  color: #f3d06a;
+  display: block;
+}
+
+.botao-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 42px;
+  height: 42px;
+  background-color: #133c55;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icone-barra {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(2) {
+  opacity: 0;
+}
+
+.botao-hamburguer.aberto .icone-barra:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navegacao-principal {
+  background-color: #0b2545;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.navegacao-principal.ativo {
+  max-height: 280px;
+}
+
+.lista-navegacao {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.link-navegacao {
+  display: block;
+  font: 600 1rem 'Montserrat', sans-serif;
+  color: #f8fafc;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.link-navegacao:hover {
+  background-color: #133c55;
+  color: #f3d06a;
+}
+
+.link-navegacao.ativo {
+  background-color: #d4af37;
+  color: #0b2545;
+}
+
+/* --------------------------------------------------------------------------
+   3. ÁREA PRINCIPAL DA PÁGINA SOBRE
+   -------------------------------------------------------------------------- */
+.conteudo-sobre {
+  padding: 2rem 0 3.5rem;
+}
+
+.cabecalho-pagina-sobre {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 2rem;
+}
+
+.badge-secao {
+  display: inline-block;
+  background-color: #0b2545;
+  color: #f3d06a;
+  border: 1px solid #d4af37;
+  font: 700 0.78rem 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.cabecalho-pagina-sobre h1 {
+  font-size: 2.1rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.descricao-pagina-sobre {
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   4. MENSAGEM DE VISITA COM LOCALSTORAGE (ÁREA DE FEEDBACK)
+   -------------------------------------------------------------------------- */
+.mensagem-visita {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: linear-gradient(135deg, #0b2545 0%, #133c55 100%);
+  color: #ffffff;
+  border-left: 6px solid #d4af37;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(11, 37, 69, 0.12);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.conteudo-aviso-visita {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.icone-aviso-visita {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.texto-visita {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: #f8fafc;
+}
+
+.btn-fechar-aviso {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.btn-fechar-aviso:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   5. SEÇÃO DE DADOS DEMOGRÁFICOS E CARACTERÍSTICAS DA REGIÃO
+   -------------------------------------------------------------------------- */
+.secao-demografia {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.titulo-demografia {
+  font-size: 1.35rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.65rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.grade-demografia {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card-demografico {
+  background-color: #f8fafc;
+  border-left: 4px solid #133c55;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.card-demografico h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.card-demografico p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.dado-destaque {
+  display: block;
+  font: 700 1.5rem 'Montserrat', sans-serif;
+  color: #0b2545;
+  margin-bottom: 0.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. SEÇÃO E TÍTULO DA GALERIA DE INTERESSES
+   -------------------------------------------------------------------------- */
+.cabecalho-secao-galeria {
+  margin-bottom: 1.5rem;
+}
+
+.cabecalho-secao-galeria h2 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.cabecalho-secao-galeria p {
+  color: #475569;
+  font-size: 0.98rem;
+  margin-top: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. NAMED GRID AREAS - CARTÕES DE INTERESSE
+   --------------------------------------------------------------------------
+   Filhos diretos do cartão:
+   h2       -> grid-area: titulo
+   figure   -> grid-area: imagem
+   p        -> grid-area: descricao
+   address  -> grid-area: endereco
+   button   -> grid-area: botao
+   -------------------------------------------------------------------------- */
+
+.galeria-interesses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.cartao-interesse {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 3px 8px rgba(11, 37, 69, 0.06);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "titulo"
+    "imagem"
+    "descricao"
+    "endereco"
+    "botao";
+  row-gap: 0.85rem;
+}
+
+/* Atribuição explícita das Named Grid Areas em cada elemento do cartão */
+.cartao-interesse h2 {
+  grid-area: titulo;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 0;
+  color: #0b2545;
+}
+
+.cartao-interesse figure {
+  grid-area: imagem;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.cartao-interesse figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.cartao-interesse p {
+  grid-area: descricao;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.cartao-interesse address {
+  grid-area: endereco;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: #64748b;
+  border-left: 2px solid #cbd5e1;
+  padding-left: 0.5rem;
+  margin: 0;
+  align-self: end;
+}
+
+.cartao-interesse .btn-saiba-mais {
+  grid-area: botao;
+  background-color: #0b2545;
+  color: #ffffff;
+  border: none;
+  font: 700 0.95rem 'Montserrat', sans-serif;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.cartao-interesse .btn-saiba-mais:hover {
+  background-color: #133c55;
+  color: #f3d06a;
+}
+
+/* --------------------------------------------------------------------------
+   8. EFEITO DE HOVER NAS IMAGENS (EXCLUSIVO PARA NÃO-MÓVEL)
+   Requisito: "Use um efeito de propriedade CSS sempre que um usuário passar
+   o mouse sobre as imagens na galeria. Não use esse efeito em imagens na
+   visualização móvel."
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .cartao-interesse figure img {
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .cartao-interesse figure img {
+    transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .cartao-interesse figure:hover img,
+  .cartao-interesse:hover figure img {
+    transform: scale(1.05);
+    filter: brightness(1.08) saturate(1.12);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. TELAS MÉDIAS (641px a 1024px)
+   Named Grid Area com Imagem à esquerda, texto/endereço à direita,
+   título em cima e botão embaixo em largura total.
+   -------------------------------------------------------------------------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .galeria-interesses {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .cartao-interesse {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      "titulo titulo"
+      "imagem descricao"
+      "imagem endereco"
+      "botao botao";
+    column-gap: 1.5rem;
+    row-gap: 0.85rem;
+    align-items: start;
+  }
+
+  .cartao-interesse figure img {
+    height: 200px;
+    width: 300px;
+  }
+
+  .grade-demografia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. TELAS GRANDES (1025px e acima)
+   Grade de 2 colunas com cartões mantendo named grid areas internas.
+   -------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
+  .botao-hamburguer {
+    display: none;
+  }
+
+  .navegacao-principal {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .lista-navegacao {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .cabecalho-pagina-sobre h1 {
+    font-size: 2.5rem;
+  }
+
+  .grade-demografia {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .galeria-interesses {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .cartao-interesse {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      "titulo titulo"
+      "imagem descricao"
+      "imagem endereco"
+      "botao botao";
+    column-gap: 1.5rem;
+    row-gap: 0.85rem;
+    align-items: start;
+  }
+
+  .cartao-interesse figure img {
+    height: 200px;
+    width: 300px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. MEDIA QUERY PARA HEADER DESKTOP (>= 768px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .botao-hamburguer {
+    display: none;
+  }
+
+  .navegacao-principal {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .lista-navegacao {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. DIALOG / MODAL DE DETALHES ACESSÍVEL
+   -------------------------------------------------------------------------- */
+.dialog-detalhes {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 600px;
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 15px 35px rgba(11, 37, 69, 0.3);
+}
+
+.dialog-detalhes::backdrop {
+  background-color: rgba(11, 37, 69, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.corpo-modal-detalhes {
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+.cabecalho-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cabecalho-modal h3 {
+  font-size: 1.45rem;
+  color: #0b2545;
+  margin: 0;
+}
+
+.btn-fechar-modal {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #64748b;
+  line-height: 1;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+}
+
+.btn-fechar-modal:hover {
+  color: #0b2545;
+}
+
+.imagem-modal-wrapper {
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imagem-modal-wrapper img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.badge-modal-categoria {
+  display: inline-block;
+  background-color: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #facc15;
+  font: 700 0.75rem 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.descricao-modal {
+  font-size: 0.98rem;
+  color: #1e293b;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.detalhes-extras-modal {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.detalhes-extras-modal p {
+  margin: 0.35rem 0;
+  color: #334155;
+}
+
+.endereco-modal {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+}
+
+.btn-acao-modal-fechar {
+  display: block;
+  width: 100%;
+  background-color: #0b2545;
+  color: #ffffff;
+  border: none;
+  font: 700 0.95rem 'Montserrat', sans-serif;
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-acao-modal-fechar:hover {
+  background-color: #133c55;
+  color: #f3d06a;
+}
+
+/* --------------------------------------------------------------------------
+   13. RODAPÉ PADRÃO
+   -------------------------------------------------------------------------- */
+.rodape-principal {
+  background-color: #0b2545;
+  color: #ffffff;
+  padding: 2.5rem 0 1.5rem;
+  border-top: 4px solid #d4af37;
+}
+
+.container-rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.identidade-rodape {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.titulo-rodape {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.endereco-camara {
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.endereco-camara p {
+  margin: 0.2rem 0;
+}
+
+.endereco-camara a {
+  color: #f3d06a;
+}
+
+.endereco-camara a:hover {
+  text-decoration: underline;
+}
+
+.subtitulo-rodape {
+  font-size: 1.05rem;
+  color: #f3d06a;
+  margin-bottom: 0.75rem;
+}
+
+.links-redes {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.links-redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #133c55;
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.links-redes a:hover {
+  background-color: #d4af37;
+  color: #0b2545;
+  transform: translateY(-2px);
+}
+
+.creditos-rodape {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+}
+
+.creditos-rodape p {
+  margin: 0.25rem 0;
+}
+
+.modificacao-texto {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+@media (min-width: 768px) {
+  .container-rodape {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
