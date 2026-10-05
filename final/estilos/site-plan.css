@@ -189,7 +189,7 @@ li {
   border-top: 3px solid var(--cor-acento-ciano);
 }
 
-.card-pagina h4 {
+.card-pagina h3, .card-pagina h4 {
   font-family: var(--fonte-titulos);
   color: var(--cor-texto-claro);
   font-size: 1.05rem;
@@ -419,4 +419,12 @@ footer.rodape-planejamento a:hover {
   .wireframes-grade {
     grid-template-columns: 1fr;
   }
+}
+
+h3.pergunta-cenario {
+  font-family: var(--fonte-titulos);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cor-acento-laranja);
+  margin-bottom: 0.5rem;
 }

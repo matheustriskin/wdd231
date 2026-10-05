@@ -47,19 +47,13 @@ function inicializarCalculadoraCafeina() {
 
     if (diagnosticoEl) {
       if (porcentagemUso >= 100) {
-        diagnosticoEl.style.borderColor = '#ef4444';
-        diagnosticoEl.style.color = '#ef4444';
-        diagnosticoEl.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+        diagnosticoEl.className = 'resultado-diagnostico diag-perigo';
         diagnosticoEl.innerHTML = '<strong>Atenção:</strong> Você atingiu ou excedeu a ingestão diária recomendada de cafeína. Evite energéticos pelo restante do dia e hidrate-se com água pura!';
       } else if (porcentagemUso >= 70) {
-        diagnosticoEl.style.borderColor = '#fbbf24';
-        diagnosticoEl.style.color = '#fbbf24';
-        diagnosticoEl.style.backgroundColor = 'rgba(251, 191, 36, 0.1)';
+        diagnosticoEl.className = 'resultado-diagnostico diag-atencao';
         diagnosticoEl.innerHTML = `<strong>Zona de Atenção:</strong> Você já consumiu cerca de ${cafeinaJaIngerida} mg. Você ainda pode tomar com segurança até 1 lata leve (aprox. ${restante} mg de cafeína).`;
       } else {
-        diagnosticoEl.style.borderColor = '#10b981';
-        diagnosticoEl.style.color = '#10b981';
-        diagnosticoEl.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+        diagnosticoEl.className = 'resultado-diagnostico diag-seguro';
         diagnosticoEl.innerHTML = `<strong>Consumo Seguro:</strong> Sua ingestão atual é moderada. Você tem margem saudável para consumir até ${restante} mg de cafeína ao longo do dia.`;
       }
     }
