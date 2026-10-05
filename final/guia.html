@@ -4,21 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guia de Consumo Consciente &amp; Contato | Apex Energy</title>
-  <meta name="description"
-    content="Aprenda sobre o consumo seguro de cafeína, utilize a Calculadora de Limite Diário de Cafeína por peso corporal e tire suas dúvidas com nosso formulário e FAQ interativo.">
+  <title>Guia de Consumo Consciente e Contato | Apex Energy</title>
+  <meta name="description" content="Calcule seu limite di?rio seguro de cafe?na segundo normas da EFSA e Anvisa, tire d?vidas frequentes e fale com a equipe Apex Energy.">
   <meta name="author" content="Matheus Santana">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:title" content="Apex Energy - Calculadora de Cafeina e Guia">
+  <meta property="og:description" content="Calcule seu limite diario seguro de cafeina segundo normas da EFSA e Anvisa, tire duvidas frequentes e fale com a equipe Apex Energy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://matheustriskin.github.io/wdd231/final/imagens/og-image.png">
+  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/guia.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Guia de Consumo Consciente &amp; Contato | Apex Energy">
-  <meta property="og:description"
-    content="Calculadora interativa de limite diário de cafeína, guia de saúde, FAQ e formulário de contato com a equipe da Apex Energy.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="imagens/logo-apex.svg">
-  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/guia.html">
 
   <!-- Fontes Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -123,9 +122,9 @@
             <span class="resultado-unidade">por dia (24 horas)</span>
           </div>
 
-          <div style="width: 100%;">
-            <span style="font-size: 0.85rem; color: var(--cor-texto-mutado); display: block; margin-bottom: 0.25rem;">
-              Margem restante para energéticos hoje: <strong id="calc-resultado-restante" style="color: var(--cor-acento-laranja);">320 mg</strong>
+          <div class="largura-total">
+            <span class="calc-margem-rotulo">
+              Margem restante para energéticos hoje: <strong id="calc-resultado-restante" class="calc-destaque-laranja">320 mg</strong>
             </span>
             <div class="barra-termometro-container" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
               <div id="barra-termometro-preenchimento" class="barra-termometro-preenchimento"></div>
@@ -273,7 +272,7 @@
             <span class="msg-erro-validacao">Informe um e-mail válido com @ e domínio.</span>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="grade-dupla">
             <div class="campo-grupo">
               <label for="campo-perfil">Seu Perfil Principal:</label>
               <select id="campo-perfil" name="perfil">
@@ -323,7 +322,7 @@
             <label for="campo-newsletter">Desejo receber novidades sobre bebidas saudáveis e promoções da loja.</label>
           </div>
 
-          <button type="submit" class="btn btn-primario" style="width: 100%;">
+          <button type="submit" class="btn btn-primario btn-bloco">
             Enviar Mensagem &amp; Consultar Dados &#8594;
           </button>
         </form>
@@ -375,7 +374,7 @@
         <h3>Avaliação do Curso</h3>
         <p><strong>WDD 231 - Frontend Web I</strong></p>
         <p>Brigham Young University - Idaho</p>
-        <p style="margin-top: 0.75rem;">
+        <p class="rodape-video-paragrafo">
           <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação do projeto no Loom ou YouTube">
             &#9654; Vídeo de Demonstração
           </a>

@@ -292,3 +292,35 @@
     grid-template-columns: 0.9fr 1.1fr;
   }
 }
+
+/* Classes Utilitárias da Guia (substituição de inline-styles) */
+.largura-total {
+  width: 100%;
+}
+
+.calc-margem-rotulo {
+  font-size: 0.85rem;
+  color: var(--cor-texto-mutado);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.calc-destaque-laranja {
+  color: var(--cor-acento-laranja);
+}
+
+.grade-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .grade-dupla {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn-bloco {
+  width: 100%;
+}

@@ -17,7 +17,7 @@ function exibirDadosEnviados() {
   const urlParams = new URLSearchParams(window.location.search);
 
   if (!urlParams.has('nome') && !urlParams.has('email')) {
-    listaContainer.innerHTML = '<p style="color: var(--cor-texto-mutado);">Nenhum dado de formulário foi recebido diretamente. Acesse o formulário na página de Guia para realizar o envio.</p>';
+    listaContainer.innerHTML = '<p class="mensagem-vazia">Nenhum dado de formulário foi recebido diretamente. Acesse o formulário na página de Guia para realizar o envio.</p>';
     return;
   }
 

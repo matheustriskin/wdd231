@@ -87,3 +87,7 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+.mensagem-vazia {
+  color: var(--cor-texto-mutado);
+}

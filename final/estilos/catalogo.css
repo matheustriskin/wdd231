@@ -247,7 +247,7 @@
 .btn-favoritar-card.favoritado {
   color: var(--cor-acento-laranja);
   border-color: var(--cor-acento-laranja);
-  background-color: rgba(249, 115, 22, 0.15);
+  background-color: #0f172a;
 }
 
 .produto-topo {
@@ -282,11 +282,11 @@
   display: inline-block;
 }
 
-.badge-zero { background-color: rgba(6, 182, 212, 0.15); color: var(--cor-acento-ciano); border: 1px solid var(--cor-acento-ciano); }
-.badge-natural { background-color: rgba(16, 185, 129, 0.15); color: var(--cor-acento-verde); border: 1px solid var(--cor-acento-verde); }
-.badge-gamer { background-color: rgba(168, 85, 247, 0.15); color: var(--cor-acento-roxo); border: 1px solid var(--cor-acento-roxo); }
-.badge-performance { background-color: rgba(249, 115, 22, 0.15); color: var(--cor-acento-laranja); border: 1px solid var(--cor-acento-laranja); }
-.badge-tradicional { background-color: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid #fbbf24; }
+.badge-zero { background-color: var(--cor-acento-ciano); color: #000000; font-weight: 700; border: none; }
+.badge-natural { background-color: var(--cor-acento-verde); color: #000000; font-weight: 700; border: none; }
+.badge-gamer { background-color: #a855f7; color: #ffffff; font-weight: 700; border: none; }
+.badge-performance { background-color: var(--cor-acento-laranja); color: #000000; font-weight: 700; border: none; }
+.badge-tradicional { background-color: #fbbf24; color: #000000; font-weight: 700; border: none; }
 
 .produto-marca {
   font-size: 0.8rem;
@@ -495,4 +495,72 @@ dialog#modal-bebida::backdrop {
   .grade-produtos {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Classes Utilitárias do Catálogo (substituição de inline-styles) */
+.controles-grupo-botoes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.mensagem-erro {
+  text-align: center;
+  padding: 2rem;
+}
+
+.mensagem-erro-sub {
+  color: var(--cor-texto-mutado);
+  font-size: 0.9rem;
+}
+
+.sem-resultados {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 3rem 1rem;
+}
+
+.sem-resultados-titulo {
+  font-size: 1.2rem;
+  color: var(--cor-texto-claro);
+}
+
+.sem-resultados-sub {
+  color: var(--cor-texto-mutado);
+  font-size: 0.9rem;
+}
+
+.modal-marca {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.modal-categoria-texto {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-acento-laranja);
+}
+
+.modal-descricao {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.modal-tabela-titulo {
+  font-size: 1.1rem;
+  color: var(--cor-acento-laranja);
+  margin-top: 0.5rem;
+}
+
+.modal-td-cafeina {
+  color: var(--cor-acento-laranja);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.modal-ingredientes-titulo {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
 }

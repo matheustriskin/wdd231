@@ -1,0 +1,48 @@
+/* ==========================================================================
+   APEX ENERGY - ATRIBUIÇÕES E FONTES
+   WDD 231 - Matheus Santana
+   ========================================================================== */
+
+.atribuicoes-main {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.atribuicoes-card {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio);
+  padding: 2rem;
+}
+
+.atribuicoes-titulo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.atribuicoes-subtitulo {
+  font-size: 1.25rem;
+  color: var(--cor-acento-laranja);
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.atribuicoes-lista {
+  color: var(--cor-texto-mutado);
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.atribuicoes-link {
+  color: var(--cor-acento-ciano);
+  text-decoration: underline;
+}
+
+.atribuicoes-link:hover,
+.atribuicoes-link:focus {
+  color: #38bdf8;
+}
+
+.atribuicoes-acoes {
+  margin-top: 2rem;
+}

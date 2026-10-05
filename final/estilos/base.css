@@ -164,9 +164,19 @@ body {
 
 /* Wayfinding: Link Ativo */
 .menu-link.ativo {
-  color: var(--cor-texto-claro);
+  color: #000000;
   background-color: var(--cor-acento-laranja);
   font-weight: 700;
+}
+
+.btn-menu-acao {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.rodape-video-paragrafo {
+  margin-top: 0.75rem;
 }
 
 .badge-favoritos {

@@ -4,21 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de Bebidas Energéticas | Apex Energy</title>
-  <meta name="description"
-    content="Explore o catálogo dinâmico de bebidas energéticas da Apex Energy. Filtre por categorias, confira teores de cafeína, calorias e consulte a tabela nutricional completa em janelas modais.">
+  <title>Cat?logo de Bebidas Energ?ticas | Apex Energy</title>
+  <meta name="description" content="Explore bebidas energ?ticas filtradas por categoria, veja teor de cafe?na e salve seus favoritos no cat?logo din?mico do portal Apex Energy.">
   <meta name="author" content="Matheus Santana">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:title" content="Apex Energy - Catalogo de Bebidas e Nutricao">
+  <meta property="og:description" content="Explore bebidas energeticas filtradas por categoria, veja teor de cafeina e salve seus favoritos no catalogo dinamico do portal Apex Energy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://matheustriskin.github.io/wdd231/final/imagens/og-image.png">
+  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/catalogo.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Catálogo de Bebidas Energéticas | Apex Energy">
-  <meta property="og:description"
-    content="Catálogo interativo com mais de 15 opções de energéticos: Zero Açúcar, Naturais, Nootrópicos e Pré-Treinos esportivos.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="imagens/logo-apex.svg">
-  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/catalogo.html">
 
   <!-- Fontes Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +58,7 @@
           <li><a href="catalogo.html" class="menu-link ativo">Catálogo de Bebidas</a></li>
           <li><a href="guia.html" class="menu-link">Guia Consciente &amp; Contato</a></li>
           <li>
-            <button id="btn-menu-favoritos" class="menu-link" style="background: none; border: none; cursor: pointer;" aria-label="Filtrar por favoritos">
+            <button id="btn-menu-favoritos" class="menu-link btn-menu-acao" aria-label="Filtrar por favoritos">
               &#9733; Favoritos <span class="badge-favoritos badge-favoritos-contador">0</span>
             </button>
           </li>
@@ -113,7 +112,7 @@
 
       <!-- Controles de Exibição e Filtro de Favoritos -->
       <div class="controles-visualizacao">
-        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <div class="controles-grupo-botoes">
           <button id="btn-filtro-favoritos" class="btn-favoritos-filtro" aria-label="Exibir apenas favoritos salvos">
             &#9733; Ver Apenas Favoritos
           </button>
@@ -192,7 +191,7 @@
         <h3>Avaliação do Curso</h3>
         <p><strong>WDD 231 - Frontend Web I</strong></p>
         <p>Brigham Young University - Idaho</p>
-        <p style="margin-top: 0.75rem;">
+        <p class="rodape-video-paragrafo">
           <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação do projeto no Loom ou YouTube">
             &#9654; Vídeo de Demonstração
           </a>

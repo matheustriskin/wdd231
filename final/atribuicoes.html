@@ -4,13 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fontes e Atribuições | Apex Energy</title>
-  <meta name="description"
-    content="Página oficial de atribuições e fontes de dados nutricionais, científicas e visuais do portal Apex Energy para WDD 231.">
+  <title>Fontes de Dados e Atribui??es | Apex Energy</title>
+  <meta name="description" content="Cr?ditos, fontes de dados de produtos energ?ticos, limites cient?ficos da EFSA e recursos visuais utilizados no projeto Apex Energy.">
   <meta name="author" content="Matheus Santana">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:title" content="Apex Energy - Fontes de Dados e Atribuicoes">
+  <meta property="og:description" content="Creditos, fontes de dados de produtos energeticos, limites cientificos da EFSA e recursos visuais utilizados no projeto Apex Energy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://matheustriskin.github.io/wdd231/final/imagens/og-image.png">
+  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/atribuicoes.html">
+
+  <!-- Open Graph / Redes Sociais -->
 
   <!-- Fontes Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +29,9 @@
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="estilos/normalize.css">
   <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/atribuicoes.css">
 
-  <script type="module" src="scripts/home.js"></script>
+  <script type="module" src="scripts/comum.js"></script>
 </head>
 
 <body>
@@ -57,18 +65,18 @@
   </header>
 
   <!-- Conteúdo de Atribuições -->
-  <main style="max-width: 900px;">
-    <section style="background-color: var(--cor-fundo-cartao); border: 1px solid var(--cor-borda); border-radius: var(--borda-raio); padding: 2rem;">
-      <h1 style="font-size: 2rem; margin-bottom: 1rem;">Fontes de Dados &amp; <span>Atribuições</span></h1>
+  <main class="atribuicoes-main">
+    <section class="atribuicoes-card">
+      <h1 class="atribuicoes-titulo">Fontes de Dados &amp; <span>Atribuições</span></h1>
       <p>
         Este portal foi desenvolvido como projeto individual para a disciplina <strong>WDD 231 (Desenvolvimento Frontend Web I)</strong> na Brigham Young University - Idaho. Todas as referências científicas, nutricionais e recursos visuais utilizados estão documentados abaixo:
       </p>
 
-      <h2 style="font-size: 1.25rem; color: var(--cor-acento-laranja); margin: 1.5rem 0 0.5rem 0;">1. Referências Científicas e Limites de Cafeína</h2>
-      <ul style="color: var(--cor-texto-mutado); margin-left: 1.5rem; line-height: 1.8;">
+      <h2 class="atribuicoes-subtitulo">1. Referências Científicas e Limites de Cafeína</h2>
+      <ul class="atribuicoes-lista">
         <li>
           <strong>EFSA (European Food Safety Authority):</strong> 
-          <a href="https://www.efsa.europa.eu/en/topics/topic/caffeine" target="_blank" rel="noopener" style="color: var(--cor-acento-ciano);">
+          <a href="https://www.efsa.europa.eu/en/topics/topic/caffeine" target="_blank" rel="noopener" class="atribuicoes-link">
             Scientific Opinion on the safety of caffeine (2015)
           </a> &bull; Estabelece a dose máxima diária segura de 5,7 mg/kg até o teto de 400 mg para adultos saudáveis.
         </li>
@@ -78,18 +86,18 @@
         </li>
       </ul>
 
-      <h2 style="font-size: 1.25rem; color: var(--cor-acento-laranja); margin: 1.5rem 0 0.5rem 0;">2. Informações Nutricionais dos Produtos</h2>
-      <ul style="color: var(--cor-texto-mutado); margin-left: 1.5rem; line-height: 1.8;">
+      <h2 class="atribuicoes-subtitulo">2. Informações Nutricionais dos Produtos</h2>
+      <ul class="atribuicoes-lista">
         <li>Dados obtidos diretamente dos rótulos oficiais dos fabricantes (Monster Beverage Corp, Red Bull GmbH, Celsius Holdings, Cellucor, Guayakí).</li>
       </ul>
 
-      <h2 style="font-size: 1.25rem; color: var(--cor-acento-laranja); margin: 1.5rem 0 0.5rem 0;">3. Recursos Visuais e Tipografia</h2>
-      <ul style="color: var(--cor-texto-mutado); margin-left: 1.5rem; line-height: 1.8;">
+      <h2 class="atribuicoes-subtitulo">3. Recursos Visuais e Tipografia</h2>
+      <ul class="atribuicoes-lista">
         <li><strong>Tipografia:</strong> Famílias Montserrat e Inter disponibilizadas gratuitamente via Google Fonts sob licença aberta SIL Open Font License.</li>
         <li><strong>Ícones e Ilustrações SVG:</strong> Desenvolvidos e otimizados em formato vetorial SVG exclusivo para o projeto Apex Energy.</li>
       </ul>
 
-      <div style="margin-top: 2rem;">
+      <div class="atribuicoes-acoes">
         <a href="index.html" class="btn btn-primario">&larr; Voltar para a Página Inicial</a>
       </div>
     </section>
@@ -126,7 +134,7 @@
         <h3>Avaliação do Curso</h3>
         <p><strong>WDD 231 - Frontend Web I</strong></p>
         <p>Brigham Young University - Idaho</p>
-        <p style="margin-top: 0.75rem;">
+        <p class="rodape-video-paragrafo">
           <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação">
             &#9654; Vídeo de Demonstração
           </a>

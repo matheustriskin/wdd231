@@ -39,9 +39,9 @@ async function inicializarCatalogo() {
   } catch (erro) {
     console.error('Erro ao carregar dados do catálogo:', erro);
     container.innerHTML = `
-      <div class="mensagem-erro" style="text-align: center; padding: 2rem;">
+      <div class="mensagem-erro" >
         <p><strong>Não foi possível carregar o catálogo de bebidas no momento.</strong></p>
-        <p style="color: var(--cor-texto-mutado); font-size: 0.9rem;">Verifique sua conexão ou tente novamente mais tarde.</p>
+        <p class="mensagem-erro-sub">Verifique sua conexão ou tente novamente mais tarde.</p>
       </div>
     `;
   }
@@ -159,9 +159,9 @@ function aplicarFiltrosERenderizar() {
 
   if (filtradas.length === 0) {
     container.innerHTML = `
-      <div style="text-align: center; grid-column: 1 / -1; padding: 3rem 1rem;">
-        <p style="font-size: 1.2rem; color: var(--cor-texto-claro);">Nenhuma bebida encontrada para os filtros selecionados.</p>
-        <p style="color: var(--cor-texto-mutado); font-size: 0.9rem;">Tente limpar os termos da busca ou selecionar outra categoria.</p>
+      <div class="sem-resultados">
+        <p class="sem-resultados-titulo">Nenhuma bebida encontrada para os filtros selecionados.</p>
+        <p class="mensagem-erro-sub">Tente limpar os termos da busca ou selecionar outra categoria.</p>
       </div>
     `;
     return;
@@ -187,7 +187,7 @@ function criarCardBebidaHTML(b) {
       <div class="produto-topo">
         <img src="${b.imagem}" alt="Lata da bebida ${b.nome}" class="produto-imagem" width="120" height="195" loading="lazy">
         <span class="badge-categoria ${classeBadge}">${b.categoria}</span>
-        <span class="produto-marca">${b.marca}</span>
+        <span class="produto-marca modal-marca">${b.marca}</span>
         <h3 class="produto-nome">${b.nome}</h3>
       </div>
 
@@ -278,17 +278,17 @@ function abrirModalBebida(b) {
       <img src="${b.imagem}" alt="Lata ${b.nome}" class="modal-imagem" width="90" height="145">
       <div class="modal-titulos">
         <span class="badge-categoria ${obterClasseBadgeCategoria(b.categoria)}">${b.categoria}</span>
-        <span class="produto-marca" style="display: block; margin-top: 0.2rem;">${b.marca}</span>
+        <span class="produto-marca modal-marca" >${b.marca}</span>
         <h2>${b.nome}</h2>
-        <p style="margin: 0; font-size: 0.9rem; color: var(--cor-acento-laranja);">
+        <p class="modal-categoria-texto">
           <strong>Sabor:</strong> ${b.perfilSabor}
         </p>
       </div>
     </div>
 
-    <p style="font-size: 0.95rem; line-height: 1.5; margin-top: 0.5rem;">${b.descricao}</p>
+    <p class="modal-descricao">${b.descricao}</p>
 
-    <h3 style="font-size: 1.1rem; color: var(--cor-acento-laranja); margin-top: 0.5rem;">Composição Nutricional</h3>
+    <h3 class="modal-tabela-titulo">Composição Nutricional</h3>
     <table class="modal-tabela-nutricional" aria-label="Tabela Nutricional de ${b.nome}">
       <tbody>
         <tr>
@@ -297,7 +297,7 @@ function abrirModalBebida(b) {
         </tr>
         <tr>
           <th scope="row">Teor Total de Cafeína:</th>
-          <td style="color: var(--cor-acento-laranja); font-size: 1.05rem;">${b.cafeina} mg</td>
+          <td class="modal-td-cafeina">${b.cafeina} mg</td>
         </tr>
         <tr>
           <th scope="row">Taurina:</th>
@@ -315,7 +315,7 @@ function abrirModalBebida(b) {
     </table>
 
     <div>
-      <h4 style="font-size: 0.95rem; margin-bottom: 0.35rem;">Ingredientes Chave e Bioativos:</h4>
+      <h4 class="modal-ingredientes-titulo">Ingredientes Chave e Bioativos:</h4>
       <ul class="modal-ingredientes-lista">
         ${b.ingredientesChave.map((ing) => `<li>${ing}</li>`).join('')}
       </ul>
