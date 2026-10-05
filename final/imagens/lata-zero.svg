@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" width="160" height="260">
+  <defs>
+    <linearGradient id="canGrad_Zero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="metalRim_Zero" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="50%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Borda Superior da Lata (Metal) -->
+  <path d="M40 24 C40 18 120 18 120 24 L120 30 C120 34 40 34 40 30 Z" fill="url(#metalRim_Zero)" />
+  <ellipse cx="80" cy="22" rx="35" ry="8" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5" />
+  <ellipse cx="80" cy="22" rx="16" ry="4" fill="#94a3b8" />
+  <rect x="75" y="16" width="10" height="8" rx="2" fill="#64748b" />
+
+  <!-- Corpo Principal da Lata -->
+  <rect x="35" y="30" width="90" height="195" rx="8" fill="url(#canGrad_Zero)" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Detalhe Grafico / Faixa Dinamica -->
+  <path d="M35 70 Q80 95 125 70 L125 155 Q80 180 35 155 Z" fill="#06b6d4" opacity="0.2" />
+  <path d="M35 110 L125 90 L125 105 L35 125 Z" fill="#06b6d4" opacity="0.6" />
+
+  <!-- Simbolo do Raio -->
+  <polygon points="82,65 72,95 80,95 74,120 92,88 84,88" fill="#06b6d4" />
+
+  <!-- Textos da Marca -->
+  <text x="80" y="145" font-family="'Montserrat', sans-serif" font-size="13" font-weight="800" fill="#f8fafc" text-anchor="middle" letter-spacing="1">APEX</text>
+  <text x="80" y="160" font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" fill="#06b6d4" text-anchor="middle" letter-spacing="2">ZERO</text>
+  <text x="80" y="175" font-family="'Inter', sans-serif" font-size="7.5" font-weight="500" fill="#cbd5e1" text-anchor="middle">0g Açúcar • 160mg</text>
+
+  <!-- Borda Inferior da Lata -->
+  <path d="M37 225 C37 232 123 232 123 225 L120 238 C120 242 40 242 40 238 Z" fill="url(#metalRim_Zero)" />
+</svg>

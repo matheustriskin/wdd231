@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Consumo Consciente &amp; Contato | Apex Energy</title>
+  <meta name="description"
+    content="Aprenda sobre o consumo seguro de cafeína, utilize a Calculadora de Limite Diário de Cafeína por peso corporal e tire suas dúvidas com nosso formulário e FAQ interativo.">
+  <meta name="author" content="Matheus Santana">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Guia de Consumo Consciente &amp; Contato | Apex Energy">
+  <meta property="og:description"
+    content="Calculadora interativa de limite diário de cafeína, guia de saúde, FAQ e formulário de contato com a equipe da Apex Energy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="imagens/logo-apex.svg">
+  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/guia.html">
+
+  <!-- Fontes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/guia.css">
+
+  <!-- JavaScript ES Module -->
+  <script type="module" src="scripts/guia.js"></script>
+</head>
+
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-container">
+      <a href="index.html" class="marca-link" aria-label="Página Inicial Apex Energy">
+        <img src="imagens/logo-apex.svg" alt="Logotipo da Apex Energy" width="160" height="40">
+      </a>
+
+      <!-- Botão Hambúrguer Móvel -->
+      <button id="botao-menu-hamburguer" class="botao-menu-hamburguer" aria-label="Abrir Menu de Navegação"
+        aria-expanded="false" aria-controls="menu-navegacao">
+        <span class="linha-hamburguer linha-1"></span>
+        <span class="linha-hamburguer linha-2"></span>
+        <span class="linha-hamburguer linha-3"></span>
+      </button>
+
+      <!-- Navegação Principal com Wayfinding -->
+      <nav id="menu-navegacao" class="menu-navegacao" aria-label="Navegação Principal do Site">
+        <ul class="menu-lista">
+          <li><a href="index.html" class="menu-link">Início</a></li>
+          <li><a href="catalogo.html" class="menu-link">Catálogo de Bebidas</a></li>
+          <li><a href="guia.html" class="menu-link ativo">Guia Consciente &amp; Contato</a></li>
+          <li>
+            <a href="catalogo.html?filtro=favoritos" class="menu-link" aria-label="Ver produtos favoritos">
+              &#9733; Favoritos <span class="badge-favoritos badge-favoritos-contador">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <header class="cabecalho-pagina">
+      <h1>Guia de Consumo Consciente &amp; <span>Contato</span></h1>
+      <p>
+        Bebidas energéticas são ferramentas poderosas para foco e desempenho quando consumidas com conhecimento e
+        moderação. Calcule sua tolerância diária, tire dúvidas no FAQ e envie sua mensagem para nossa loja.
+      </p>
+    </header>
+
+    <!-- Seção 1: Calculadora Interativa de Cafeína -->
+    <section id="calculadora" class="calculadora-card" aria-labelledby="titulo-calc">
+      <div class="calculadora-topo">
+        <h2 id="titulo-calc">Calculadora Interativa de <span>Limite Diário de Cafeína</span></h2>
+        <p>
+          De acordo com as diretrizes da <strong>EFSA</strong> (Autoridade Europeia para a Segurança dos Alimentos) e da
+          <strong>Anvisa</strong>, o consumo diário seguro para adultos saudáveis é de aproximadamente <strong>5,7 mg de
+          cafeína por quilo de peso corporal</strong>, com teto diário fixado em 400 mg.
+        </p>
+      </div>
+
+      <div class="calculadora-grid">
+        <!-- Controles de Entrada -->
+        <div class="calc-formulario">
+          <div class="campo-grupo">
+            <label for="calc-peso">Seu Peso Corporal Atual (em kg):</label>
+            <input type="number" id="calc-peso" min="40" max="180" value="70" step="1"
+              aria-describedby="dica-peso">
+            <span id="dica-peso" class="dica-campo">Exemplo: 70 kg</span>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="calc-atividade">Nível de Atividade Física / Rotina:</label>
+            <select id="calc-atividade">
+              <option value="1.0">Moderada / Dia a Dia Normal (Fator 1.0)</option>
+              <option value="1.05">Atleta / Treinos Intensos Diários (Fator 1.05)</option>
+              <option value="0.9">Sensível à Cafeína / Sedentário (Fator 0.9)</option>
+            </select>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="calc-cafe-doses">Cafés ou outras fontes já ingeridas hoje (xícaras ~80mg):</label>
+            <input type="number" id="calc-cafe-doses" min="0" max="10" value="1" step="1">
+            <span class="dica-campo">Cada xícara tradicional de café filtrado contém em média 80 mg de cafeína.</span>
+          </div>
+        </div>
+
+        <!-- Painel de Resultados Interativo -->
+        <div class="calc-resultado" aria-live="polite">
+          <div>
+            <span class="resultado-unidade">Seu Limite Máximo Recomendado:</span>
+            <div id="calc-resultado-limite" class="resultado-numero-destaque">400 mg</div>
+            <span class="resultado-unidade">por dia (24 horas)</span>
+          </div>
+
+          <div style="width: 100%;">
+            <span style="font-size: 0.85rem; color: var(--cor-texto-mutado); display: block; margin-bottom: 0.25rem;">
+              Margem restante para energéticos hoje: <strong id="calc-resultado-restante" style="color: var(--cor-acento-laranja);">320 mg</strong>
+            </span>
+            <div class="barra-termometro-container" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              <div id="barra-termometro-preenchimento" class="barra-termometro-preenchimento"></div>
+            </div>
+          </div>
+
+          <div id="calc-diagnostico" class="resultado-diagnostico">
+            <strong>Consumo Seguro:</strong> Sua ingestão estimada está dentro dos limites saudáveis.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: Perguntas Frequentes (FAQ com Acordeão Interativo) -->
+    <section id="faq" class="secao-faq" aria-labelledby="titulo-faq">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-faq">Perguntas Frequentes sobre Energéticos</h2>
+        <p>Tire suas principais dúvidas sobre ingredientes, horários de consumo e segurança.</p>
+      </div>
+
+      <div class="faq-lista">
+        <!-- Item 1 -->
+        <div class="faq-item">
+          <button class="faq-pergunta-btn" aria-expanded="false">
+            <span>Energéticos fazem mal ao coração se tomados com moderação?</span>
+            <span class="faq-icone-seta" aria-hidden="true">&#9660;</span>
+          </button>
+          <div class="faq-resposta">
+            <p>
+              Para adultos saudáveis sem cardiopatias pré-existentes, o consumo moderado (dentro de até 400 mg de cafeína
+              por dia, equivalente a cerca de 1 a 2 latas padrão) é considerado seguro pelas principais autoridades
+              sanitárias mundiais (EFSA, FDA e Anvisa). O risco está no consumo excessivo, rápido ou combinado com
+              bebidas alcoólicas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item">
+          <button class="faq-pergunta-btn" aria-expanded="false">
+            <span>Qual é a diferença entre cafeína anidra e cafeína de fontes naturais?</span>
+            <span class="faq-icone-seta" aria-hidden="true">&#9660;</span>
+          </button>
+          <div class="faq-resposta">
+            <p>
+              A cafeína anidra é uma forma pura e desidratada de cafeína, absorvida com extrema rapidez pelo organismo,
+              sendo muito eficiente para pré-treino e pico de foco imediato. Já a cafeína de fontes naturais (como chá
+              verde, guaraná ou erva-mate) vem acompanhada de polifenóis e L-teanina, proporcionando uma liberação mais
+              gradual e contínua no sangue, sem o efeito de queda súbita (crash).
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item">
+          <button class="faq-pergunta-btn" aria-expanded="false">
+            <span>A taurina é derivada de touro ou é sintética?</span>
+            <span class="faq-icone-seta" aria-hidden="true">&#9660;</span>
+          </button>
+          <div class="faq-resposta">
+            <p>
+              Mito comum! A taurina utilizada em todas as marcas modernas de bebidas energéticas é 100% sintetizada em
+              laboratório farmacêutico e vegana, garantindo pureza absoluta e segurança alimentar, sem qualquer origem
+              animal.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item">
+          <button class="faq-pergunta-btn" aria-expanded="false">
+            <span>Qual o melhor horário para tomar energético sem prejudicar o sono?</span>
+            <span class="faq-icone-seta" aria-hidden="true">&#9660;</span>
+          </button>
+          <div class="faq-resposta">
+            <p>
+              A meia-vida da cafeína no corpo humano varia entre 5 e 8 horas. Por isso, especialistas recomendam cessar a
+              ingestão de qualquer estimulante pelo menos 6 horas antes do seu horário habitual de dormir para não
+              comprometer a fase profunda do sono reparador (sono REM).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Formulário de Contato & Newsletter -->
+    <section id="contato" class="secao-contato" aria-labelledby="titulo-contato">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-contato">Fale com a Equipe da Apex Energy</h2>
+        <p>
+          Tem dúvidas sobre alguma bebida, gostaria de sugerir um produto para a nossa loja ou assinar nossa newsletter
+          nutricional? Preencha o formulário abaixo:
+        </p>
+      </div>
+
+      <div class="contato-grid">
+        <!-- Informações de Contato / Loja -->
+        <div class="contato-info-bloco">
+          <div class="info-item">
+            <span class="info-icone" aria-hidden="true">&#127970;</span>
+            <div class="info-texto">
+              <h4>Loja Física &amp; Distribuição</h4>
+              <p>Apex Energy Store &bull; Salvador, Bahia &bull; Brasil</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icone" aria-hidden="true">&#128222;</span>
+            <div class="info-texto">
+              <h4>Atendimento Direto</h4>
+              <p>Segunda a Sábado, das 09h às 19h &bull; WhatsApp e Telefone</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icone" aria-hidden="true">&#128231;</span>
+            <div class="info-texto">
+              <h4>E-mail de Suporte</h4>
+              <p>contato@apexenergy.com.br</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icone" aria-hidden="true">&#9889;</span>
+            <div class="info-texto">
+              <h4>Compromisso com o Cliente</h4>
+              <p>Transparência total nos rótulos, produtos originais e incentivo à saúde preventiva.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário HTML com Validação -->
+        <form id="form-contato-apex" class="formulario-contato" method="get" action="agradecimento.html" novalidate>
+          <div class="campo-grupo">
+            <label for="campo-nome">Nome Completo: *</label>
+            <input type="text" id="campo-nome" name="nome" required minlength="3" placeholder="Seu nome completo"
+              autocomplete="name">
+            <span class="msg-erro-validacao">Por favor, digite seu nome completo (mínimo 3 caracteres).</span>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="campo-email">Endereço de E-mail: *</label>
+            <input type="email" id="campo-email" name="email" required placeholder="seuemail@exemplo.com"
+              autocomplete="email">
+            <span class="msg-erro-validacao">Informe um e-mail válido com @ e domínio.</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="campo-grupo">
+              <label for="campo-perfil">Seu Perfil Principal:</label>
+              <select id="campo-perfil" name="perfil">
+                <option value="Estudante">Estudante</option>
+                <option value="Atleta / Esportista">Atleta / Esportista</option>
+                <option value="Gamer / Criador">Gamer / Criador</option>
+                <option value="Profissional / Escritório">Profissional / Escritório</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="campo-grupo">
+              <label for="campo-peso-form">Peso (kg):</label>
+              <input type="number" id="campo-peso-form" name="peso" min="35" max="220" value="70">
+            </div>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="campo-consumo">Quantas latas de energético costuma consumir por semana?</label>
+            <select id="campo-consumo" name="consumo">
+              <option value="1 a 2 latas">1 a 2 latas (Consumo Ocasional)</option>
+              <option value="3 a 5 latas">3 a 5 latas (Consumo Moderado)</option>
+              <option value="6 ou mais latas">6 ou mais latas (Consumo Frequente)</option>
+              <option value="Raramente / Primeira vez">Raramente / Primeira vez</option>
+            </select>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="campo-assunto">Assunto da Mensagem:</label>
+            <select id="campo-assunto" name="assunto">
+              <option value="Dúvida Nutricional">Dúvida sobre Composição / Nutrição</option>
+              <option value="Informação de Produto">Informação sobre Bebida da Loja</option>
+              <option value="Sugestão de Marca">Sugestão de Novo Sabor ou Marca</option>
+              <option value="Outro">Outro Assunto</option>
+            </select>
+          </div>
+
+          <div class="campo-grupo">
+            <label for="campo-mensagem">Sua Mensagem ou Dúvida: *</label>
+            <textarea id="campo-mensagem" name="mensagem" rows="4" required minlength="5"
+              placeholder="Como podemos te ajudar?"></textarea>
+            <span class="msg-erro-validacao">Por favor, escreva sua mensagem (mínimo 5 caracteres).</span>
+          </div>
+
+          <div class="checkbox-grupo">
+            <input type="checkbox" id="campo-newsletter" name="newsletter" checked>
+            <label for="campo-newsletter">Desejo receber novidades sobre bebidas saudáveis e promoções da loja.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primario" style="width: 100%;">
+            Enviar Mensagem &amp; Consultar Dados &#8594;
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Global -->
+  <footer class="rodape-site">
+    <div class="rodape-container">
+      <div class="rodape-coluna">
+        <h3>Apex Energy</h3>
+        <p>
+          Portal informativo e guia nutricional especializado em bebidas energéticas funcionais. Projeto acadêmico
+          desenvolvido para a disciplina WDD 231 na BYU-Idaho.
+        </p>
+        <p>
+          Apoio oficial ao empreendimento local de bebidas energéticas de Matheus Santana.
+        </p>
+        <div class="redes-sociais-links">
+          <a href="https://github.com/matheustriskin" target="_blank" rel="noopener" aria-label="GitHub de Matheus Santana">GH</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn de Matheus Santana">IN</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram da Apex Energy">IG</a>
+        </div>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Navegação Rápida</h3>
+        <ul class="rodape-links">
+          <li><a href="index.html">Página Inicial (Home)</a></li>
+          <li><a href="catalogo.html">Catálogo Dinâmico</a></li>
+          <li><a href="guia.html">Guia de Cafeína</a></li>
+          <li><a href="guia.html#contato">Formulário de Contato</a></li>
+          <li><a href="site-plan.html">Planejamento do Site</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Transparência &amp; Saúde</h3>
+        <ul class="rodape-links">
+          <li><a href="guia.html#calculadora">Calculadora de Cafeína</a></li>
+          <li><a href="guia.html#faq">Perguntas Frequentes</a></li>
+          <li><a href="atribuicoes.html">Fontes e Atribuições</a></li>
+          <li><a href="../index.html">Página Inicial WDD 231</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Avaliação do Curso</h3>
+        <p><strong>WDD 231 - Frontend Web I</strong></p>
+        <p>Brigham Young University - Idaho</p>
+        <p style="margin-top: 0.75rem;">
+          <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação do projeto no Loom ou YouTube">
+            &#9654; Vídeo de Demonstração
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="rodape-inferior">
+      <p>&copy; <span id="anoAtual"></span> &bull; Matheus Santana &bull; Bahia, Brasil &bull; Todos os direitos reservados.</p>
+      <p id="ultimaModificacao"></p>
+    </div>
+  </footer>
+</body>
+
+</html>

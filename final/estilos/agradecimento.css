@@ -1,0 +1,89 @@
+/* ==========================================================================
+   APEX ENERGY - PÁGINA DE AGRADECIMENTO / CONFIRMAÇÃO DO FORMULÁRIO
+   WDD 231 - Matheus Santana
+   ========================================================================== */
+
+.secao-confirmacao {
+  max-width: 750px;
+  margin: 2rem auto;
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-top: 4px solid var(--cor-acento-verde);
+  border-radius: var(--borda-raio);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.confirmacao-topo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.icone-sucesso {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--cor-acento-verde);
+  border: 2px solid var(--cor-acento-verde);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.confirmacao-topo h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bloco-dados-resumo {
+  background-color: var(--cor-fundo-primaria);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio-sm);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bloco-dados-resumo h2 {
+  font-size: 1.2rem;
+  color: var(--cor-acento-laranja);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--cor-borda);
+  padding-bottom: 0.5rem;
+}
+
+.lista-dados-enviados {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.lista-dados-enviados li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--cor-borda);
+  padding-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.dado-rotulo {
+  color: var(--cor-texto-mutado);
+  font-weight: 500;
+}
+
+.dado-valor {
+  color: var(--cor-texto-claro);
+  font-weight: 700;
+  text-align: right;
+  word-break: break-all;
+}
+
+.botoes-retorno {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

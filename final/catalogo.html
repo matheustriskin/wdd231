@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Bebidas Energéticas | Apex Energy</title>
+  <meta name="description"
+    content="Explore o catálogo dinâmico de bebidas energéticas da Apex Energy. Filtre por categorias, confira teores de cafeína, calorias e consulte a tabela nutricional completa em janelas modais.">
+  <meta name="author" content="Matheus Santana">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Catálogo de Bebidas Energéticas | Apex Energy">
+  <meta property="og:description"
+    content="Catálogo interativo com mais de 15 opções de energéticos: Zero Açúcar, Naturais, Nootrópicos e Pré-Treinos esportivos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="imagens/logo-apex.svg">
+  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/catalogo.html">
+
+  <!-- Fontes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/catalogo.css">
+
+  <!-- JavaScript ES Module -->
+  <script type="module" src="scripts/catalogo.js"></script>
+</head>
+
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-container">
+      <a href="index.html" class="marca-link" aria-label="Página Inicial Apex Energy">
+        <img src="imagens/logo-apex.svg" alt="Logotipo da Apex Energy" width="160" height="40">
+      </a>
+
+      <!-- Botão Hambúrguer Móvel -->
+      <button id="botao-menu-hamburguer" class="botao-menu-hamburguer" aria-label="Abrir Menu de Navegação"
+        aria-expanded="false" aria-controls="menu-navegacao">
+        <span class="linha-hamburguer linha-1"></span>
+        <span class="linha-hamburguer linha-2"></span>
+        <span class="linha-hamburguer linha-3"></span>
+      </button>
+
+      <!-- Navegação Principal com Wayfinding -->
+      <nav id="menu-navegacao" class="menu-navegacao" aria-label="Navegação Principal do Site">
+        <ul class="menu-lista">
+          <li><a href="index.html" class="menu-link">Início</a></li>
+          <li><a href="catalogo.html" class="menu-link ativo">Catálogo de Bebidas</a></li>
+          <li><a href="guia.html" class="menu-link">Guia Consciente &amp; Contato</a></li>
+          <li>
+            <button id="btn-menu-favoritos" class="menu-link" style="background: none; border: none; cursor: pointer;" aria-label="Filtrar por favoritos">
+              &#9733; Favoritos <span class="badge-favoritos badge-favoritos-contador">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal do Catálogo -->
+  <main>
+    <header class="cabecalho-pagina">
+      <h1>Catálogo Dinâmico de <span>Bebidas Energéticas</span></h1>
+      <p>
+        Compare informações nutricionais detalhadas, teores exatos de cafeína e ingredientes funcionais das melhores
+        marcas do mercado. Filtre por objetivos e salve suas bebidas favoritas no seu navegador!
+      </p>
+    </header>
+
+    <!-- Painel de Controles e Filtros Dinâmicos -->
+    <section class="painel-controles" aria-label="Painel de filtros e controles do catálogo">
+      <div class="linha-filtros-topo">
+        <!-- Campo de Busca por Texto -->
+        <div class="busca-container">
+          <span class="icone-busca" aria-hidden="true">&#128269;</span>
+          <input type="text" id="campo-busca-bebidas" class="campo-busca"
+            placeholder="Buscar por nome, marca, sabor ou ingrediente..." aria-label="Buscar bebidas no catálogo">
+        </div>
+
+        <!-- Seletor de Ordenação -->
+        <div class="controles-ordenacao">
+          <label for="select-ordenacao">Ordenar por:</label>
+          <select id="select-ordenacao" class="select-ordenacao" aria-label="Ordenar produtos">
+            <option value="padrao">Destaques Recomendados</option>
+            <option value="cafeina-desc">Mais Cafeína (mg)</option>
+            <option value="cafeina-asc">Menos Cafeína (mg)</option>
+            <option value="calorias-asc">Menos Calorias (kcal)</option>
+            <option value="nome-asc">Nome (A - Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Filtros Rápidos de Categoria -->
+      <div class="grupo-categorias" role="group" aria-label="Filtrar por categorias">
+        <button class="btn-categoria ativo" data-categoria="todos">Todos os Produtos</button>
+        <button class="btn-categoria" data-categoria="Zero Açúcar">Zero Açúcar</button>
+        <button class="btn-categoria" data-categoria="Natural">Naturais / Plant-Based</button>
+        <button class="btn-categoria" data-categoria="Foco/Gamer">Foco &amp; Gamer</button>
+        <button class="btn-categoria" data-categoria="Performance Esportiva">Performance Esportiva</button>
+        <button class="btn-categoria" data-categoria="Tradicional">Tradicionais</button>
+      </div>
+
+      <!-- Controles de Exibição e Filtro de Favoritos -->
+      <div class="controles-visualizacao">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <button id="btn-filtro-favoritos" class="btn-favoritos-filtro" aria-label="Exibir apenas favoritos salvos">
+            &#9733; Ver Apenas Favoritos
+          </button>
+          <span id="contador-resultados" class="contador-resultados">Carregando catálogo...</span>
+        </div>
+
+        <!-- Alternância Grade / Lista -->
+        <div class="botoes-modo-vista" role="group" aria-label="Modo de visualização do catálogo">
+          <button id="btn-vista-grade" class="btn-modo ativo" aria-label="Visualização em Grade" title="Visualização em Grade">
+            &#8862;
+          </button>
+          <button id="btn-vista-lista" class="btn-modo" aria-label="Visualização em Lista" title="Visualização em Lista">
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grade Dinâmica dos Produtos (Renderizada via JavaScript Fetch API) -->
+    <section id="produtos-container" class="grade-produtos" aria-label="Lista de bebidas energéticas">
+      <p class="carregando">Carregando catálogo de bebidas...</p>
+    </section>
+  </main>
+
+  <!-- Modal Acessível com Detalhes Nutricionais (<dialog>) -->
+  <dialog id="modal-bebida" aria-labelledby="modal-titulo-bebida">
+    <div class="modal-conteudo">
+      <button id="btn-fechar-modal" class="btn-fechar-modal" aria-label="Fechar janela de detalhes">&times;</button>
+      <div id="modal-detalhes-corpo">
+        <!-- Conteúdo dinâmico injetado via JavaScript -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Rodapé Global -->
+  <footer class="rodape-site">
+    <div class="rodape-container">
+      <div class="rodape-coluna">
+        <h3>Apex Energy</h3>
+        <p>
+          Portal informativo e guia nutricional especializado em bebidas energéticas funcionais. Projeto acadêmico
+          desenvolvido para a disciplina WDD 231 na BYU-Idaho.
+        </p>
+        <p>
+          Apoio oficial ao empreendimento local de bebidas energéticas de Matheus Santana.
+        </p>
+        <div class="redes-sociais-links">
+          <a href="https://github.com/matheustriskin" target="_blank" rel="noopener" aria-label="GitHub de Matheus Santana">GH</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn de Matheus Santana">IN</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram da Apex Energy">IG</a>
+        </div>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Navegação Rápida</h3>
+        <ul class="rodape-links">
+          <li><a href="index.html">Página Inicial (Home)</a></li>
+          <li><a href="catalogo.html">Catálogo Dinâmico</a></li>
+          <li><a href="guia.html">Guia de Cafeína</a></li>
+          <li><a href="guia.html#contato">Formulário de Contato</a></li>
+          <li><a href="site-plan.html">Planejamento do Site</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Transparência &amp; Saúde</h3>
+        <ul class="rodape-links">
+          <li><a href="guia.html#calculadora">Calculadora de Cafeína</a></li>
+          <li><a href="guia.html#faq">Perguntas Frequentes</a></li>
+          <li><a href="atribuicoes.html">Fontes e Atribuições</a></li>
+          <li><a href="../index.html">Página Inicial WDD 231</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Avaliação do Curso</h3>
+        <p><strong>WDD 231 - Frontend Web I</strong></p>
+        <p>Brigham Young University - Idaho</p>
+        <p style="margin-top: 0.75rem;">
+          <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação do projeto no Loom ou YouTube">
+            &#9654; Vídeo de Demonstração
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="rodape-inferior">
+      <p>&copy; <span id="anoAtual"></span> &bull; Matheus Santana &bull; Bahia, Brasil &bull; Todos os direitos reservados.</p>
+      <p id="ultimaModificacao"></p>
+    </div>
+  </footer>
+</body>
+
+</html>

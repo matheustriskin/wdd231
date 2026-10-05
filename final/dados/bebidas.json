@@ -1,0 +1,380 @@
+[
+  {
+    "id": "apex-ignite-zero",
+    "nome": "Apex Ignite Ultra Zero",
+    "marca": "Apex Energy",
+    "categoria": "Zero Açúcar",
+    "cafeina": 160,
+    "volume": "473 ml",
+    "calorias": 5,
+    "acucar": "0g",
+    "taurina": "1000 mg",
+    "ingredientesChave": [
+      "Taurina",
+      "Cafeína Anidra",
+      "Vitaminas B3, B6, B12",
+      "Extrato de Guaraná"
+    ],
+    "descricao": "Formulação pura e potente com zero açúcar e zero carboidratos, ideal para foco mental prolongado sem picos glicêmicos.",
+    "perfilSabor": "Citrus Elétrico & Tangerina",
+    "destaque": true,
+    "imagem": "imagens/lata-zero.svg"
+  },
+  {
+    "id": "apex-botanical-green",
+    "nome": "Apex Botanical Clean Energy",
+    "marca": "Apex Energy",
+    "categoria": "Natural",
+    "cafeina": 120,
+    "volume": "355 ml",
+    "calorias": 25,
+    "acucar": "4g (frutas)",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "Extrato de Chá Verde EGCG",
+      "Café Verde Orgânico",
+      "Suco de Maçã Concentrado",
+      "Vitamina C"
+    ],
+    "descricao": "Energia 100% à base de plantas, livre de conservantes artificiais e taurina sintética. Fornece disposição suave e equilibrada.",
+    "perfilSabor": "Chá Verde com Limão Siciliano & Gengibre",
+    "destaque": true,
+    "imagem": "imagens/lata-natural.svg"
+  },
+  {
+    "id": "apex-synapse-focus",
+    "nome": "Apex Synapse Brain Fuel",
+    "marca": "Apex Energy",
+    "categoria": "Foco/Gamer",
+    "cafeina": 150,
+    "volume": "473 ml",
+    "calorias": 10,
+    "acucar": "0g",
+    "taurina": "800 mg",
+    "ingredientesChave": [
+      "L-Teanina",
+      "Bitartarato de Colina",
+      "Cafeína Microencapsulada",
+      "Complexo B Ativo"
+    ],
+    "descricao": "Combinação de nootrópicos e cafeína com L-teanina, proporcionando alta acuidade visual, clareza mental e tempo de reação para gamers e estudantes.",
+    "perfilSabor": "Blue Raspberry & Mirtilo",
+    "destaque": true,
+    "imagem": "imagens/lata-gamer.svg"
+  },
+  {
+    "id": "apex-turbo-preworkout",
+    "nome": "Apex Turbo Max Pre-Workout",
+    "marca": "Apex Energy",
+    "categoria": "Performance Esportiva",
+    "cafeina": 200,
+    "volume": "473 ml",
+    "calorias": 15,
+    "acucar": "0g",
+    "taurina": "1500 mg",
+    "ingredientesChave": [
+      "Beta-Alanina",
+      "L-Arginina",
+      "Eletrólitos (Sódio/Potássio)",
+      "Cafeína Anidra 200mg"
+    ],
+    "descricao": "Dose concentrada para atletas e treinos de alta intensidade. Com eletrólitos essenciais para hidratação e beta-alanina para resistência muscular.",
+    "perfilSabor": "Frutas Vermelhas Explosivas",
+    "destaque": true,
+    "imagem": "imagens/lata-performance.svg"
+  },
+  {
+    "id": "apex-classic-gold",
+    "nome": "Apex Classic Gold Original",
+    "marca": "Apex Energy",
+    "categoria": "Tradicional",
+    "cafeina": 150,
+    "volume": "473 ml",
+    "calorias": 110,
+    "acucar": "26g",
+    "taurina": "1000 mg",
+    "ingredientesChave": [
+      "Taurina",
+      "Inositol",
+      "Vitaminas B2, B3, B6, B12",
+      "Glicuronolactona"
+    ],
+    "descricao": "O clássico sabor refrescante de frutas com o blend tradicional de energia e carboidratos de rápida absorção.",
+    "perfilSabor": "Original Tutti-Frutti Refrescante",
+    "destaque": false,
+    "imagem": "imagens/lata-tradicional.svg"
+  },
+  {
+    "id": "monster-ultra-white",
+    "nome": "Monster Energy Ultra Paradise",
+    "marca": "Monster Energy",
+    "categoria": "Zero Açúcar",
+    "cafeina": 140,
+    "volume": "473 ml",
+    "calorias": 10,
+    "acucar": "0g",
+    "taurina": "800 mg",
+    "ingredientesChave": [
+      "Taurina",
+      "L-Carnitina",
+      "Panax Ginseng",
+      "Vitaminas do Complexo B"
+    ],
+    "descricao": "Sabor tropical leve e fresco, sem açúcar e com a renomada fórmula energética da linha Ultra.",
+    "perfilSabor": "Kiwi, Limão e Pepino Suave",
+    "destaque": false,
+    "imagem": "imagens/lata-zero.svg"
+  },
+  {
+    "id": "celsius-live-fit",
+    "nome": "Celsius Live Fit Termogênico",
+    "marca": "Celsius",
+    "categoria": "Performance Esportiva",
+    "cafeina": 200,
+    "volume": "355 ml",
+    "calorias": 10,
+    "acucar": "0g",
+    "taurina": "1000 mg",
+    "ingredientesChave": [
+      "Extrato de Chá Verde",
+      "Raiz de Gengibre",
+      "Guaraná",
+      "Cromo e Biotina"
+    ],
+    "descricao": "Fórmula termogênica clinicamente testada que acelera o metabolismo e potencializa a queima calórica durante os exercícios.",
+    "perfilSabor": "Laranja Espumante & Manga",
+    "destaque": false,
+    "imagem": "imagens/lata-performance.svg"
+  },
+  {
+    "id": "red-bull-sugarfree",
+    "nome": "Red Bull Sugarfree",
+    "marca": "Red Bull",
+    "categoria": "Zero Açúcar",
+    "cafeina": 80,
+    "volume": "250 ml",
+    "calorias": 5,
+    "acucar": "0g",
+    "taurina": "1000 mg",
+    "ingredientesChave": [
+      "Taurina",
+      "Cafeína Alpina",
+      "Aspartame e Acessulfame K",
+      "Vitaminas B"
+    ],
+    "descricao": "As clássicas asas de energia do Red Bull em uma versão leve e livre de açúcares adicionados.",
+    "perfilSabor": "Tradicional Acidulado Suave",
+    "destaque": false,
+    "imagem": "imagens/lata-zero.svg"
+  },
+  {
+    "id": "ghost-energy-sour",
+    "nome": "Ghost Energy Focus & Legend",
+    "marca": "Ghost",
+    "categoria": "Foco/Gamer",
+    "cafeina": 200,
+    "volume": "473 ml",
+    "calorias": 5,
+    "acucar": "0g",
+    "taurina": "1000 mg",
+    "ingredientesChave": [
+      "Alfa-GPC 50%",
+      "NeuroFactor",
+      "AstraGin",
+      "Cafeína Natural"
+    ],
+    "descricao": "Rótulo totalmente transparente com nootrópicos avançados para cognição suprema, sensação de alerta contínua e sem aditivos ocultos.",
+    "perfilSabor": "Maçã Verde Ácida (Sour Apple)",
+    "destaque": false,
+    "imagem": "imagens/lata-gamer.svg"
+  },
+  {
+    "id": "guayaki-yerba-mate",
+    "nome": "Guayakí Organic Yerba Mate Revel Berry",
+    "marca": "Guayakí",
+    "categoria": "Natural",
+    "cafeina": 150,
+    "volume": "458 ml",
+    "calorias": 60,
+    "acucar": "14g (cana orgânica)",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "Erva-Mate Orgânica",
+      "Suco de Amora",
+      "Suco de Framboesa",
+      "Hibisco"
+    ],
+    "descricao": "Infusão revigorante de erva-mate cultivada na sombra da mata atlântica, rica em antioxidantes polifenólicos e cafeína botânica pura.",
+    "perfilSabor": "Frutas Silvestres & Chá Mate",
+    "destaque": false,
+    "imagem": "imagens/lata-natural.svg"
+  },
+  {
+    "id": "reign-total-body",
+    "nome": "Reign Total Body Fuel Orange Dreamsicle",
+    "marca": "Reign",
+    "categoria": "Performance Esportiva",
+    "cafeina": 200,
+    "volume": "473 ml",
+    "calorias": 10,
+    "acucar": "0g",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "BCAAs (Leucina, Isoleucina, Valina)",
+      "Coenzima Q10",
+      "Eletrólitos",
+      "Cafeína Natural 200mg"
+    ],
+    "descricao": "Combustível muscular para treinos exaustivos, combinando aminoácidos de cadeia ramificada (BCAAs) com CoQ10 e hidratação ativa.",
+    "perfilSabor": "Creme de Laranja & Baunilha",
+    "destaque": false,
+    "imagem": "imagens/lata-performance.svg"
+  },
+  {
+    "id": "c4-smart-energy",
+    "nome": "C4 Smart Energy Cognitivo",
+    "marca": "Cellucor",
+    "categoria": "Foco/Gamer",
+    "cafeina": 200,
+    "volume": "473 ml",
+    "calorias": 0,
+    "acucar": "0g",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "Innovathea (Cafeína de Chá)",
+      "Cognizin Citicolina",
+      "Niacinamida",
+      "Sem Corantes"
+    ],
+    "descricao": "Desenvolvido para impulsionar a agilidade mental, memória de trabalho e concentração sem causar tremores ou palpitações.",
+    "perfilSabor": "Melancia Gelada & Limão",
+    "destaque": false,
+    "imagem": "imagens/lata-gamer.svg"
+  },
+  {
+    "id": "zevia-energy-organic",
+    "nome": "Zevia Organic Energy Grapefruit",
+    "marca": "Zevia",
+    "categoria": "Natural",
+    "cafeina": 120,
+    "volume": "355 ml",
+    "calorias": 0,
+    "acucar": "0g",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "Extrato de Estévia Orgânico",
+      "Cafeína de Café Verde",
+      "Água com Gás",
+      "Aromas Naturais"
+    ],
+    "descricao": "Refrigerante energético orgânico transparente, sem corantes, adoçado exclusivamente com folhas de estévia natural.",
+    "perfilSabor": "Toranja Rosa Cítrica",
+    "destaque": false,
+    "imagem": "imagens/lata-natural.svg"
+  },
+  {
+    "id": "rockstar-pure-zero",
+    "nome": "Rockstar Pure Zero Silver Ice",
+    "marca": "Rockstar Energy",
+    "categoria": "Zero Açúcar",
+    "cafeina": 160,
+    "volume": "473 ml",
+    "calorias": 10,
+    "acucar": "0g",
+    "taurina": "1000 mg",
+    "ingredientesChave": [
+      "Taurina",
+      "Ginseng",
+      "Guaraná",
+      "Complexo B Completo"
+    ],
+    "descricao": "Zero açúcar com perfil gelado e crocante, combinando taurina e ginseng para suporte de energia ao longo de todo o expediente.",
+    "perfilSabor": "Gelo Ártico & Limão Suave",
+    "destaque": false,
+    "imagem": "imagens/lata-zero.svg"
+  },
+  {
+    "id": "bang-energy-rainbow",
+    "nome": "Bang Energy Super Creatine Star Blast",
+    "marca": "Bang",
+    "categoria": "Performance Esportiva",
+    "cafeina": 200,
+    "volume": "473 ml",
+    "calorias": 0,
+    "acucar": "0g",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "Ultra CoQ10",
+      "Super Creatina patenteada",
+      "EAA Aminoácidos",
+      "Cafeína 200mg"
+    ],
+    "descricao": "Alta octanagem para fisiculturistas e esportistas, livre de açúcares, calorias e carboidratos, com foco em força muscular.",
+    "perfilSabor": "Doce Cósmico & Frutas Doces",
+    "destaque": false,
+    "imagem": "imagens/lata-performance.svg"
+  },
+  {
+    "id": "prime-energy-punch",
+    "nome": "Prime Energy Drink Tropical Punch",
+    "marca": "Prime",
+    "categoria": "Foco/Gamer",
+    "cafeina": 140,
+    "volume": "355 ml",
+    "calorias": 10,
+    "acucar": "0g",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "Água de Coco 10%",
+      "Eletrólitos Minerais",
+      "Vitaminas B6 e B12",
+      "Cafeína 140mg"
+    ],
+    "descricao": "Sensação das redes com 10% de água de coco na composição, oferecendo hidratação imediata aliada ao estímulo cognitivo da cafeína.",
+    "perfilSabor": "Ponche Tropical com Maracujá",
+    "destaque": false,
+    "imagem": "imagens/lata-gamer.svg"
+  },
+  {
+    "id": "red-bull-original",
+    "nome": "Red Bull Energy Drink Original",
+    "marca": "Red Bull",
+    "categoria": "Tradicional",
+    "cafeina": 80,
+    "volume": "250 ml",
+    "calorias": 115,
+    "acucar": "27g",
+    "taurina": "1000 mg",
+    "ingredientesChave": [
+      "Taurina",
+      "Açúcares Simples",
+      "Vitaminas do Grupo B",
+      "Água Mineral Alpina"
+    ],
+    "descricao": "A bebida energética pioneira mais consumida no planeta, ideal para momentos de exigência física e mental imediata.",
+    "perfilSabor": "Clássico Original Red Bull",
+    "destaque": false,
+    "imagem": "imagens/lata-tradicional.svg"
+  },
+  {
+    "id": "matcha-warrior-energy",
+    "nome": "Matcha Zen Energy Cerimonial",
+    "marca": "Apex Energy",
+    "categoria": "Natural",
+    "cafeina": 90,
+    "volume": "330 ml",
+    "calorias": 20,
+    "acucar": "2g",
+    "taurina": "0 mg",
+    "ingredientesChave": [
+      "Matcha Japonês Puro Grau Cerimonial",
+      "Clorofila",
+      "L-Teanina Natural",
+      "Água de Coco"
+    ],
+    "descricao": "Matcha batido a frio com água de coco. Proporciona estado de alerta calmo (fluxo mental zen) sem taquicardia por até 6 horas.",
+    "perfilSabor": "Chá Verde Matcha Doce & Refrescante",
+    "destaque": false,
+    "imagem": "imagens/lata-natural.svg"
+  }
+]

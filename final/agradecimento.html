@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Recebida | Apex Energy</title>
+  <meta name="description"
+    content="Confirmação de recebimento de mensagem e dados enviados pelo formulário da Apex Energy.">
+  <meta name="author" content="Matheus Santana">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+
+  <!-- Fontes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/agradecimento.css">
+
+  <!-- JavaScript ES Module -->
+  <script type="module" src="scripts/agradecimento.js"></script>
+</head>
+
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-container">
+      <a href="index.html" class="marca-link" aria-label="Página Inicial Apex Energy">
+        <img src="imagens/logo-apex.svg" alt="Logotipo da Apex Energy" width="160" height="40">
+      </a>
+
+      <!-- Botão Hambúrguer Móvel -->
+      <button id="botao-menu-hamburguer" class="botao-menu-hamburguer" aria-label="Abrir Menu de Navegação"
+        aria-expanded="false" aria-controls="menu-navegacao">
+        <span class="linha-hamburguer linha-1"></span>
+        <span class="linha-hamburguer linha-2"></span>
+        <span class="linha-hamburguer linha-3"></span>
+      </button>
+
+      <!-- Navegação Principal -->
+      <nav id="menu-navegacao" class="menu-navegacao" aria-label="Navegação Principal do Site">
+        <ul class="menu-lista">
+          <li><a href="index.html" class="menu-link">Início</a></li>
+          <li><a href="catalogo.html" class="menu-link">Catálogo de Bebidas</a></li>
+          <li><a href="guia.html" class="menu-link">Guia Consciente &amp; Contato</a></li>
+          <li>
+            <a href="catalogo.html?filtro=favoritos" class="menu-link" aria-label="Ver produtos favoritos">
+              &#9733; Favoritos <span class="badge-favoritos badge-favoritos-contador">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo de Confirmação -->
+  <main>
+    <section class="secao-confirmacao" aria-labelledby="titulo-sucesso">
+      <div class="confirmacao-topo">
+        <div class="icone-sucesso" aria-hidden="true">&#10003;</div>
+        <h1 id="titulo-sucesso">Mensagem Recebida com Sucesso!</h1>
+        <p>
+          Agradecemos pelo seu contato. Nossa equipe revisará suas informações e retornará o mais breve possível no
+          e-mail informado.
+        </p>
+      </div>
+
+      <div class="bloco-dados-resumo">
+        <h2>Resumo dos Dados Enviados</h2>
+        <ul id="lista-dados-formulario" class="lista-dados-enviados">
+          <li>Carregando dados da submissão...</li>
+        </ul>
+      </div>
+
+      <div class="botoes-retorno">
+        <a href="catalogo.html" class="btn btn-primario">
+          Explorar o Catálogo &#8594;
+        </a>
+        <a href="index.html" class="btn btn-secundario">
+          Voltar para a Página Inicial
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Global -->
+  <footer class="rodape-site">
+    <div class="rodape-container">
+      <div class="rodape-coluna">
+        <h3>Apex Energy</h3>
+        <p>
+          Portal informativo e guia nutricional especializado em bebidas energéticas funcionais. Projeto acadêmico
+          desenvolvido para a disciplina WDD 231 na BYU-Idaho.
+        </p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Navegação Rápida</h3>
+        <ul class="rodape-links">
+          <li><a href="index.html">Página Inicial (Home)</a></li>
+          <li><a href="catalogo.html">Catálogo Dinâmico</a></li>
+          <li><a href="guia.html">Guia de Cafeína</a></li>
+          <li><a href="site-plan.html">Planejamento do Site</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Transparência &amp; Saúde</h3>
+        <ul class="rodape-links">
+          <li><a href="guia.html#calculadora">Calculadora de Cafeína</a></li>
+          <li><a href="guia.html#faq">Perguntas Frequentes</a></li>
+          <li><a href="atribuicoes.html">Fontes e Atribuições</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Avaliação do Curso</h3>
+        <p><strong>WDD 231 - Frontend Web I</strong></p>
+        <p>Brigham Young University - Idaho</p>
+        <p style="margin-top: 0.75rem;">
+          <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação">
+            &#9654; Vídeo de Demonstração
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="rodape-inferior">
+      <p>&copy; <span id="anoAtual"></span> &bull; Matheus Santana &bull; Bahia, Brasil &bull; Todos os direitos reservados.</p>
+      <p id="ultimaModificacao"></p>
+    </div>
+  </footer>
+</body>
+
+</html>

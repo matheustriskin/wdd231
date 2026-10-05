@@ -1,0 +1,399 @@
+/* ==========================================================================
+   APEX ENERGY - CSS BASE & GLOBAL
+   WDD 231 - Matheus Santana
+   ========================================================================== */
+
+:root {
+  /* Paleta de Cores Oficial do Site Plan */
+  --cor-fundo-primaria: #0f172a;       /* Slate 900 */
+  --cor-fundo-cartao: #1e293b;         /* Slate 800 */
+  --cor-fundo-elevado: #273549;        /* Slate 750 */
+  --cor-acento-laranja: #f97316;       /* Laranja Elétrico Apex */
+  --cor-acento-laranja-hover: #ea580c;
+  --cor-acento-ciano: #06b6d4;         /* Ciano Vibrante */
+  --cor-acento-verde: #10b981;         /* Verde Botânico */
+  --cor-acento-roxo: #a855f7;          /* Roxo Nootrópico */
+  --cor-texto-claro: #f8fafc;          /* Slate 50 */
+  --cor-texto-mutado: #cbd5e1;         /* Slate 300 */
+  --cor-borda: #334155;                /* Slate 700 */
+  --cor-borda-ativa: #f97316;
+
+  /* Tipografia Oficial do Site Plan */
+  --fonte-titulos: 'Montserrat', sans-serif;
+  --fonte-corpo: 'Inter', sans-serif;
+
+  /* Espaçamentos & Bordas */
+  --borda-raio: 10px;
+  --borda-raio-sm: 6px;
+  --transicao-padrao: 0.25s ease;
+  --max-largura: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo-primaria);
+  color: var(--cor-texto-claro);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   CABEÇALHO & NAVEGAÇÃO
+   ========================================================================== */
+.cabecalho-site {
+  background-color: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cabecalho-container {
+  max-width: var(--max-largura);
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marca-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.marca-link img {
+  height: 40px;
+  width: auto;
+}
+
+/* Botão Menu Hambúrguer Móvel */
+.botao-menu-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio-sm);
+  cursor: pointer;
+  padding: 10px 8px;
+  transition: var(--transicao-padrao);
+}
+
+.botao-menu-hamburguer:hover,
+.botao-menu-hamburguer:focus {
+  border-color: var(--cor-acento-laranja);
+  background-color: rgba(249, 115, 22, 0.1);
+  outline: none;
+}
+
+.linha-hamburguer {
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--cor-texto-claro);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animação do X no botão hambúrguer */
+.botao-menu-hamburguer.aberto .linha-1 {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.botao-menu-hamburguer.aberto .linha-2 {
+  opacity: 0;
+}
+
+.botao-menu-hamburguer.aberto .linha-3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navegação Principal */
+.menu-navegacao {
+  display: none;
+  background-color: var(--cor-fundo-cartao);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 1rem 1.25rem;
+}
+
+.menu-navegacao.ativo {
+  display: block;
+}
+
+.menu-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cor-texto-mutado);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--borda-raio-sm);
+  transition: var(--transicao-padrao);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--cor-texto-claro);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Wayfinding: Link Ativo */
+.menu-link.ativo {
+  color: var(--cor-texto-claro);
+  background-color: var(--cor-acento-laranja);
+  font-weight: 700;
+}
+
+.badge-favoritos {
+  background-color: var(--cor-acento-laranja);
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 12px;
+  margin-left: 0.25rem;
+}
+
+.menu-link.ativo .badge-favoritos {
+  background-color: #000000;
+  color: var(--cor-acento-laranja);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================================== */
+main {
+  flex: 1;
+  max-width: var(--max-largura);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem 1.25rem;
+}
+
+/* Títulos Globais */
+h1, h2, h3, h4 {
+  font-family: var(--fonte-titulos);
+  color: var(--cor-texto-claro);
+  letter-spacing: -0.3px;
+}
+
+p {
+  color: var(--cor-texto-mutado);
+  margin-bottom: 1rem;
+}
+
+/* Botões Globais */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--fonte-titulos);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: var(--borda-raio-sm);
+  cursor: pointer;
+  transition: var(--transicao-padrao);
+  border: 1px solid transparent;
+}
+
+.btn-primario {
+  background-color: var(--cor-acento-laranja);
+  color: #000000;
+}
+
+.btn-primario:hover,
+.btn-primario:focus {
+  background-color: var(--cor-acento-laranja-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: var(--cor-texto-claro);
+  border-color: var(--cor-borda);
+}
+
+.btn-secundario:hover,
+.btn-secundario:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--cor-acento-ciano);
+  color: var(--cor-acento-ciano);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RODAPÉ GLOBAL (4 COLUNAS EM TELAS GRANDES)
+   ========================================================================== */
+.rodape-site {
+  background-color: var(--cor-fundo-cartao);
+  border-top: 1px solid var(--cor-borda);
+  padding: 3rem 1.25rem 1.5rem 1.25rem;
+  margin-top: auto;
+}
+
+.rodape-container {
+  max-width: var(--max-largura);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.rodape-coluna h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cor-acento-laranja);
+  margin-bottom: 0.85rem;
+  border-left: 3px solid var(--cor-acento-laranja);
+  padding-left: 0.5rem;
+}
+
+.rodape-coluna p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.rodape-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rodape-links a {
+  color: var(--cor-texto-mutado);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transicao-padrao);
+}
+
+.rodape-links a:hover,
+.rodape-links a:focus {
+  color: var(--cor-acento-laranja);
+  padding-left: 4px;
+}
+
+.redes-sociais-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.redes-sociais-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--cor-fundo-primaria);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: var(--transicao-padrao);
+}
+
+.redes-sociais-links a:hover,
+.redes-sociais-links a:focus {
+  background-color: var(--cor-acento-laranja);
+  color: #000000;
+  border-color: var(--cor-acento-laranja);
+  transform: translateY(-2px);
+}
+
+.rodape-inferior {
+  max-width: var(--max-largura);
+  margin: 2rem auto 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cor-borda);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--cor-texto-mutado);
+}
+
+.link-video-destaque {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--cor-acento-ciano);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link-video-destaque:hover {
+  text-decoration: underline;
+  color: var(--cor-acento-laranja);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE: TELAS AMPLAS (DESKTOP >= 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .botao-menu-hamburguer {
+    display: none;
+  }
+
+  .menu-navegacao {
+    display: block !important;
+    background: transparent;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .menu-lista {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .menu-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .rodape-container {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+
+  .rodape-inferior {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

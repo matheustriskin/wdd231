@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fontes e Atribuições | Apex Energy</title>
+  <meta name="description"
+    content="Página oficial de atribuições e fontes de dados nutricionais, científicas e visuais do portal Apex Energy para WDD 231.">
+  <meta name="author" content="Matheus Santana">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+
+  <!-- Fontes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/base.css">
+
+  <script type="module" src="scripts/home.js"></script>
+</head>
+
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-container">
+      <a href="index.html" class="marca-link" aria-label="Página Inicial Apex Energy">
+        <img src="imagens/logo-apex.svg" alt="Logotipo da Apex Energy" width="160" height="40">
+      </a>
+
+      <button id="botao-menu-hamburguer" class="botao-menu-hamburguer" aria-label="Abrir Menu de Navegação"
+        aria-expanded="false" aria-controls="menu-navegacao">
+        <span class="linha-hamburguer linha-1"></span>
+        <span class="linha-hamburguer linha-2"></span>
+        <span class="linha-hamburguer linha-3"></span>
+      </button>
+
+      <nav id="menu-navegacao" class="menu-navegacao" aria-label="Navegação Principal do Site">
+        <ul class="menu-lista">
+          <li><a href="index.html" class="menu-link">Início</a></li>
+          <li><a href="catalogo.html" class="menu-link">Catálogo de Bebidas</a></li>
+          <li><a href="guia.html" class="menu-link">Guia Consciente &amp; Contato</a></li>
+          <li>
+            <a href="catalogo.html?filtro=favoritos" class="menu-link" aria-label="Ver produtos favoritos">
+              &#9733; Favoritos <span class="badge-favoritos badge-favoritos-contador">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo de Atribuições -->
+  <main style="max-width: 900px;">
+    <section style="background-color: var(--cor-fundo-cartao); border: 1px solid var(--cor-borda); border-radius: var(--borda-raio); padding: 2rem;">
+      <h1 style="font-size: 2rem; margin-bottom: 1rem;">Fontes de Dados &amp; <span>Atribuições</span></h1>
+      <p>
+        Este portal foi desenvolvido como projeto individual para a disciplina <strong>WDD 231 (Desenvolvimento Frontend Web I)</strong> na Brigham Young University - Idaho. Todas as referências científicas, nutricionais e recursos visuais utilizados estão documentados abaixo:
+      </p>
+
+      <h2 style="font-size: 1.25rem; color: var(--cor-acento-laranja); margin: 1.5rem 0 0.5rem 0;">1. Referências Científicas e Limites de Cafeína</h2>
+      <ul style="color: var(--cor-texto-mutado); margin-left: 1.5rem; line-height: 1.8;">
+        <li>
+          <strong>EFSA (European Food Safety Authority):</strong> 
+          <a href="https://www.efsa.europa.eu/en/topics/topic/caffeine" target="_blank" rel="noopener" style="color: var(--cor-acento-ciano);">
+            Scientific Opinion on the safety of caffeine (2015)
+          </a> &bull; Estabelece a dose máxima diária segura de 5,7 mg/kg até o teto de 400 mg para adultos saudáveis.
+        </li>
+        <li>
+          <strong>Anvisa (Agência Nacional de Vigilância Sanitária - Brasil):</strong>
+          Instrução Normativa IN nº 28/2018 e RDC nº 243/2018 sobre suplementos alimentares e compostos bioativos (Taurina e Cafeína).
+        </li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; color: var(--cor-acento-laranja); margin: 1.5rem 0 0.5rem 0;">2. Informações Nutricionais dos Produtos</h2>
+      <ul style="color: var(--cor-texto-mutado); margin-left: 1.5rem; line-height: 1.8;">
+        <li>Dados obtidos diretamente dos rótulos oficiais dos fabricantes (Monster Beverage Corp, Red Bull GmbH, Celsius Holdings, Cellucor, Guayakí).</li>
+      </ul>
+
+      <h2 style="font-size: 1.25rem; color: var(--cor-acento-laranja); margin: 1.5rem 0 0.5rem 0;">3. Recursos Visuais e Tipografia</h2>
+      <ul style="color: var(--cor-texto-mutado); margin-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Tipografia:</strong> Famílias Montserrat e Inter disponibilizadas gratuitamente via Google Fonts sob licença aberta SIL Open Font License.</li>
+        <li><strong>Ícones e Ilustrações SVG:</strong> Desenvolvidos e otimizados em formato vetorial SVG exclusivo para o projeto Apex Energy.</li>
+      </ul>
+
+      <div style="margin-top: 2rem;">
+        <a href="index.html" class="btn btn-primario">&larr; Voltar para a Página Inicial</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Global -->
+  <footer class="rodape-site">
+    <div class="rodape-container">
+      <div class="rodape-coluna">
+        <h3>Apex Energy</h3>
+        <p>Portal informativo e guia nutricional especializado em bebidas energéticas funcionais. WDD 231 &bull; Matheus Santana.</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Navegação Rápida</h3>
+        <ul class="rodape-links">
+          <li><a href="index.html">Página Inicial (Home)</a></li>
+          <li><a href="catalogo.html">Catálogo Dinâmico</a></li>
+          <li><a href="guia.html">Guia de Cafeína</a></li>
+          <li><a href="site-plan.html">Planejamento do Site</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Transparência &amp; Saúde</h3>
+        <ul class="rodape-links">
+          <li><a href="guia.html#calculadora">Calculadora de Cafeína</a></li>
+          <li><a href="guia.html#faq">Perguntas Frequentes</a></li>
+          <li><a href="atribuicoes.html">Fontes e Atribuições</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Avaliação do Curso</h3>
+        <p><strong>WDD 231 - Frontend Web I</strong></p>
+        <p>Brigham Young University - Idaho</p>
+        <p style="margin-top: 0.75rem;">
+          <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação">
+            &#9654; Vídeo de Demonstração
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="rodape-inferior">
+      <p>&copy; <span id="anoAtual"></span> &bull; Matheus Santana &bull; Bahia, Brasil &bull; Todos os direitos reservados.</p>
+      <p id="ultimaModificacao"></p>
+    </div>
+  </footer>
+</body>
+
+</html>

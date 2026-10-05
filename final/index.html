@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Energy | Portal &amp; Guia de Bebidas Energéticas</title>
+  <meta name="description"
+    content="Portal oficial Apex Energy. Descubra os benefícios dos ingredientes funcionais, conheça nosso catálogo completo de bebidas energéticas e calcule seu limite seguro de cafeína.">
+  <meta name="author" content="Matheus Santana">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/logo-apex.svg">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:title" content="Apex Energy | Portal &amp; Guia de Bebidas Energéticas">
+  <meta property="og:description"
+    content="Informações nutricionais transparentes, catálogo dinâmico e guia de consumo consciente de cafeína para estudantes, atletas e profissionais.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="imagens/logo-apex.svg">
+  <meta property="og:url" content="https://matheustriskin.github.io/wdd231/final/index.html">
+
+  <!-- Fontes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/home.css">
+
+  <!-- JavaScript ES Module -->
+  <script type="module" src="scripts/home.js"></script>
+</head>
+
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho-site">
+    <div class="cabecalho-container">
+      <a href="index.html" class="marca-link" aria-label="Página Inicial Apex Energy">
+        <img src="imagens/logo-apex.svg" alt="Logotipo da Apex Energy" width="160" height="40">
+      </a>
+
+      <!-- Botão Hambúrguer Móvel -->
+      <button id="botao-menu-hamburguer" class="botao-menu-hamburguer" aria-label="Abrir Menu de Navegação"
+        aria-expanded="false" aria-controls="menu-navegacao">
+        <span class="linha-hamburguer linha-1"></span>
+        <span class="linha-hamburguer linha-2"></span>
+        <span class="linha-hamburguer linha-3"></span>
+      </button>
+
+      <!-- Navegação Principal com Wayfinding -->
+      <nav id="menu-navegacao" class="menu-navegacao" aria-label="Navegação Principal do Site">
+        <ul class="menu-lista">
+          <li><a href="index.html" class="menu-link ativo">Início</a></li>
+          <li><a href="catalogo.html" class="menu-link">Catálogo de Bebidas</a></li>
+          <li><a href="guia.html" class="menu-link">Guia Consciente &amp; Contato</a></li>
+          <li>
+            <a href="catalogo.html?filtro=favoritos" class="menu-link" aria-label="Ver produtos favoritos">
+              &#9733; Favoritos <span class="badge-favoritos badge-favoritos-contador">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Seção Hero / Destaque -->
+    <section class="secao-hero" aria-labelledby="titulo-hero">
+      <div class="hero-conteudo">
+        <span class="hero-tag">&#9889; Performance, Foco &amp; Consciência</span>
+        <h1 id="titulo-hero" class="hero-titulo">
+          Potencialize Sua Energia no <span>Nível Máximo</span>
+        </h1>
+        <p class="hero-descricao">
+          O portal definitivo para entusiastas de esportes, estudantes e profissionais que buscam energia de verdade,
+          com transparência nutricional, teores exatos de cafeína e consumo responsável.
+        </p>
+        <div class="hero-botoes">
+          <a href="catalogo.html" class="btn btn-primario">
+            Explorar Catálogo Completo &#8594;
+          </a>
+          <a href="guia.html#calculadora" class="btn btn-secundario">
+            Calcular Limite de Cafeína
+          </a>
+        </div>
+      </div>
+      <div class="hero-imagem-wrapper">
+        <img src="imagens/hero-banner.svg" alt="Lata Apex Energy com brilho e compostos bioativos" class="hero-imagem"
+          width="540" height="380">
+      </div>
+    </section>
+
+    <!-- Faixa de Números e Estatísticas -->
+    <section class="faixa-estatisticas" aria-label="Estatísticas e destaques do portal">
+      <div class="card-stat">
+        <span class="stat-numero">+18</span>
+        <span class="stat-legenda">Bebidas Cadastradas no Catálogo</span>
+      </div>
+      <div class="card-stat">
+        <span class="stat-numero">100%</span>
+        <span class="stat-legenda">Tabelas Nutricionais Verificadas</span>
+      </div>
+      <div class="card-stat">
+        <span class="stat-numero">4</span>
+        <span class="stat-legenda">Linhas Especiais de Performance</span>
+      </div>
+      <div class="card-stat">
+        <span class="stat-numero">0g</span>
+        <span class="stat-legenda">Açúcar nas Opções Ultra Zero</span>
+      </div>
+    </section>
+
+    <!-- Seção: Linhas de Bebidas em Destaque -->
+    <section class="secao-categorias" aria-labelledby="titulo-categorias">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-categorias">Encontre a Bebida Ideal para o Seu Ritmo</h2>
+        <p>
+          Do atleta em busca de explosão física ao estudante focado em longas horas de estudo, conheça as linhas
+          especialmente selecionadas para cada objetivo.
+        </p>
+      </div>
+
+      <div class="grade-categorias">
+        <!-- Categoria 1 -->
+        <article class="card-categoria cat-zero">
+          <div>
+            <div class="categoria-icone" aria-hidden="true">&#10052;</div>
+            <h3>Linha Zero Açúcar</h3>
+            <p>
+              Máxima intensidade sem calorias vazias. Formulada para fornecer estado de alerta constante sem provocar
+              quedas bruscas de glicemia ou fadiga reativa.
+            </p>
+          </div>
+          <a href="catalogo.html?categoria=Zero%20A%C3%A7%C3%BAcar" class="link-categoria">
+            Ver Opções Zero Açúcar &#8594;
+          </a>
+        </article>
+
+        <!-- Categoria 2 -->
+        <article class="card-categoria cat-natural">
+          <div>
+            <div class="categoria-icone" aria-hidden="true">&#127807;</div>
+            <h3>Naturais &amp; Plant-Based</h3>
+            <p>
+              Cafeína botânica pura extraída de café verde, chá verde e erva-mate orgânica. Livre de corantes,
+              conservantes sintéticos e adoçantes artificiais.
+            </p>
+          </div>
+          <a href="catalogo.html?categoria=Natural" class="link-categoria">
+            Ver Linha Natural &#8594;
+          </a>
+        </article>
+
+        <!-- Categoria 3 -->
+        <article class="card-categoria cat-gamer">
+          <div>
+            <div class="categoria-icone" aria-hidden="true">&#127918;</div>
+            <h3>Foco Mental &amp; Gamer</h3>
+            <p>
+              Nootrópicos ativos, citicolina e L-teanina combinados com cafeína para alta agilidade cognitiva,
+              concentração prolongada e tempo de reação afiado.
+            </p>
+          </div>
+          <a href="catalogo.html?categoria=Foco%2FGamer" class="link-categoria">
+            Ver Linha Foco &amp; Gamer &#8594;
+          </a>
+        </article>
+
+        <!-- Categoria 4 -->
+        <article class="card-categoria cat-performance">
+          <div>
+            <div class="categoria-icone" aria-hidden="true">&#128170;</div>
+            <h3>Performance &amp; Pré-Treino</h3>
+            <p>
+              Doses elevadas de cafeína anidra (até 200 mg), beta-alanina, eletrólitos essenciais e taurina para
+              resistência muscular em treinos de alta octanagem.
+            </p>
+          </div>
+          <a href="catalogo.html?categoria=Performance%20Esportiva" class="link-categoria">
+            Ver Pré-Treinos Esportivos &#8594;
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção: Ingredientes Funcionais -->
+    <section class="secao-ingredientes" aria-labelledby="titulo-ingredientes">
+      <div class="secao-cabecalho">
+        <h2 id="titulo-ingredientes">O Que Está Dentro da Sua Lata?</h2>
+        <p>
+          Entenda a ciência por trás dos principais compostos bioativos presentes nas bebidas energéticas modernas.
+        </p>
+      </div>
+
+      <div class="grade-ingredientes">
+        <article class="card-ingrediente">
+          <div class="ingrediente-topo">
+            <span class="ingrediente-badge">Aminoácido</span>
+            <h3>Taurina</h3>
+          </div>
+          <p>
+            Auxilia na contração muscular, atua como regulador osmótico celular e protege o sistema cardiovascular,
+            modulando a resposta do corpo à cafeína.
+          </p>
+        </article>
+
+        <article class="card-ingrediente">
+          <div class="ingrediente-topo">
+            <span class="ingrediente-badge">Estimulante</span>
+            <h3>Cafeína Anidra</h3>
+          </div>
+          <p>
+            Bloqueia os receptores de adenosina no cérebro, retardando a sensação de cansaço, aguçando o foco mental e
+            aumentando a taxa metabólica basal.
+          </p>
+        </article>
+
+        <article class="card-ingrediente">
+          <div class="ingrediente-topo">
+            <span class="ingrediente-badge">Micronutrientes</span>
+            <h3>Complexo B (B3, B6, B12)</h3>
+          </div>
+          <p>
+            Coenzimas vitais na conversão dos alimentos ingeridos em ATP (energia celular), prevenindo a sensação de
+            exaustão física e mental.
+          </p>
+        </article>
+
+        <article class="card-ingrediente">
+          <div class="ingrediente-topo">
+            <span class="ingrediente-badge">Antioxidante</span>
+            <h3>Extrato de Chá Verde &amp; EGCG</h3>
+          </div>
+          <p>
+            Rico em polifenóis protetores e L-teanina, promovendo liberação energética suave e sustentada sem causar
+            nervosismo ou tremores.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Banner CTA: Guia de Consumo Consciente -->
+    <section class="banner-cta-guia" aria-labelledby="titulo-cta-guia">
+      <h2 id="titulo-cta-guia">Você Sabe Qual É o Seu Limite Seguro Diário de Cafeína?</h2>
+      <p>
+        A dosagem segura recomendada por autoridades de saúde (como a Anvisa e a EFSA) varia conforme o peso corporal e a
+        tolerância individual. Utilize nossa ferramenta exclusiva para calcular sua margem diária ideal!
+      </p>
+      <a href="guia.html" class="btn btn-primario">
+        Acessar Calculadora &amp; Guia Consciente &#8594;
+      </a>
+    </section>
+  </main>
+
+  <!-- Rodapé Global -->
+  <footer class="rodape-site">
+    <div class="rodape-container">
+      <div class="rodape-coluna">
+        <h3>Apex Energy</h3>
+        <p>
+          Portal informativo e guia nutricional especializado em bebidas energéticas funcionais. Projeto acadêmico
+          desenvolvido para a disciplina WDD 231 na BYU-Idaho.
+        </p>
+        <p>
+          Apoio oficial ao empreendimento local de bebidas energéticas de Matheus Santana.
+        </p>
+        <div class="redes-sociais-links">
+          <a href="https://github.com/matheustriskin" target="_blank" rel="noopener" aria-label="GitHub de Matheus Santana">GH</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn de Matheus Santana">IN</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram da Apex Energy">IG</a>
+        </div>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Navegação Rápida</h3>
+        <ul class="rodape-links">
+          <li><a href="index.html">Página Inicial (Home)</a></li>
+          <li><a href="catalogo.html">Catálogo Dinâmico</a></li>
+          <li><a href="guia.html">Guia de Cafeína</a></li>
+          <li><a href="guia.html#contato">Formulário de Contato</a></li>
+          <li><a href="site-plan.html">Planejamento do Site</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Transparência &amp; Saúde</h3>
+        <ul class="rodape-links">
+          <li><a href="guia.html#calculadora">Calculadora de Cafeína</a></li>
+          <li><a href="guia.html#faq">Perguntas Frequentes</a></li>
+          <li><a href="atribuicoes.html">Fontes e Atribuições</a></li>
+          <li><a href="../index.html">Página Inicial WDD 231</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Avaliação do Curso</h3>
+        <p><strong>WDD 231 - Frontend Web I</strong></p>
+        <p>Brigham Young University - Idaho</p>
+        <p style="margin-top: 0.75rem;">
+          <a href="#" class="link-video-destaque" aria-label="Link para o vídeo de apresentação do projeto no Loom ou YouTube">
+            &#9654; Vídeo de Demonstração
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="rodape-inferior">
+      <p>&copy; <span id="anoAtual"></span> &bull; Matheus Santana &bull; Bahia, Brasil &bull; Todos os direitos reservados.</p>
+      <p id="ultimaModificacao"></p>
+    </div>
+  </footer>
+</body>
+
+</html>

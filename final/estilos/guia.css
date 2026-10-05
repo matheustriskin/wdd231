@@ -1,0 +1,294 @@
+/* ==========================================================================
+   APEX ENERGY - GUIA CONSCIENTE & CONTATO
+   WDD 231 - Matheus Santana
+   ========================================================================== */
+
+/* Seção da Calculadora de Cafeína */
+.calculadora-card {
+  background-color: var(--cor-fundo-cartao);
+  border: 2px solid var(--cor-acento-laranja);
+  border-radius: var(--borda-raio);
+  padding: 2rem 1.5rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.calculadora-topo {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.calculadora-topo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.calculadora-topo h2 span {
+  color: var(--cor-acento-laranja);
+}
+
+.calculadora-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.calc-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-grupo label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--cor-texto-claro);
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--cor-fundo-primaria);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio-sm);
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  transition: border-color var(--transicao-padrao);
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+  outline: none;
+  border-color: var(--cor-acento-laranja);
+}
+
+.dica-campo {
+  font-size: 0.8rem;
+  color: var(--cor-texto-mutado);
+}
+
+/* Painel de Resultados do Cálculo */
+.calc-resultado {
+  background-color: var(--cor-fundo-primaria);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.resultado-numero-destaque {
+  font-family: var(--fonte-titulos);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--cor-acento-laranja);
+  line-height: 1;
+}
+
+.resultado-unidade {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cor-texto-mutado);
+}
+
+.barra-termometro-container {
+  width: 100%;
+  background-color: #334155;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.barra-termometro-preenchimento {
+  height: 100%;
+  width: 60%;
+  background: linear-gradient(90deg, #10b981 0%, #fbbf24 70%, #ef4444 100%);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.resultado-diagnostico {
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  border-radius: var(--borda-raio-sm);
+  background-color: rgba(6, 182, 212, 0.1);
+  color: var(--cor-acento-ciano);
+  border: 1px solid var(--cor-acento-ciano);
+  width: 100%;
+}
+
+/* Seção de FAQ com Acordeão Interativo */
+.secao-faq {
+  margin-bottom: 3.5rem;
+}
+
+.faq-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio);
+  overflow: hidden;
+  transition: border-color var(--transicao-padrao);
+}
+
+.faq-item.aberto {
+  border-color: var(--cor-acento-laranja);
+}
+
+.faq-pergunta-btn {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-titulos);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-icone-seta {
+  font-size: 0.85rem;
+  color: var(--cor-acento-laranja);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.aberto .faq-icone-seta {
+  transform: rotate(180deg);
+}
+
+.faq-resposta {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  display: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-item.aberto .faq-resposta {
+  display: block;
+}
+
+/* Seção de Contato e Formulário */
+.secao-contato {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio);
+  padding: 2.5rem 1.5rem;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.contato-info-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-icone {
+  font-size: 1.5rem;
+  color: var(--cor-acento-laranja);
+}
+
+.info-texto h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.info-texto p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Formulário com Validação em Tempo Real */
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.campo-grupo.invalido input,
+.campo-grupo.invalido textarea {
+  border-color: #ef4444;
+}
+
+.campo-grupo.valido input,
+.campo-grupo.valido textarea {
+  border-color: #10b981;
+}
+
+.msg-erro-validacao {
+  display: none;
+  color: #f87171;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.campo-grupo.invalido .msg-erro-validacao {
+  display: block;
+}
+
+.checkbox-grupo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.checkbox-grupo input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--cor-acento-laranja);
+  cursor: pointer;
+}
+
+.checkbox-grupo label {
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .calculadora-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .contato-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
