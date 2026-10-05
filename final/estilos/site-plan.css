@@ -94,7 +94,8 @@ header.cabecalho-planejamento {
   font-weight: 500;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
   transition: all 0.2s ease;
 }
 
@@ -161,7 +162,8 @@ li {
 
 /* Destaque do Nome & Domínio */
 .bloco-destaque {
-  background-color: rgba(249, 115, 22, 0.08);
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
   border-left: 4px solid var(--cor-acento-laranja);
   padding: 1rem 1.25rem;
   border-radius: 0 var(--borda-raio) var(--borda-raio) 0;
